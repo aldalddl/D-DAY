@@ -81,7 +81,7 @@ extension AddViewController {
             isTodayCountedButton.setImage(UIImage(systemName: "square", withConfiguration: smallConfig), for: .normal)
         }
     }
-    
+        
     /****
      IBAction for '취소(cancel)' button
      */
@@ -101,8 +101,6 @@ extension AddViewController {
         txtColor = colorForTXT?.toHexString() ?? "ddayWhite"
 
         let newDdayInfo = DdayInfo(title: self.txtFieldForTitle.text!, subTitle: self.txtFieldForSubtitle.text!, date: self.theDate, isTodayCounted: self.isTodayCounted, widgetTextColor: txtColor, widgetBGColor: bgColor, language: self.language)
-        
-        print("add iscounted : \(self.isTodayCounted)")
                 
         let encodedData = UserDefaults.shared.array(forKey: KeyForUserDefaults) as? [Data] ?? []
 

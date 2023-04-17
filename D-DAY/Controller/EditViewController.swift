@@ -76,6 +76,14 @@ class EditViewController: UIViewController {
 extension EditViewController {
     
     /****
+     IBAction for 'Countdown' button
+     */
+    @IBAction func isTodayCountedButtonTapped(_ sender: Any) {
+        isTodayCounted.toggle()
+        countdownConfiguration()
+    }
+    
+    /****
      IBAction for '취소(cancel)' button
      */
     @IBAction func cancelButtonTapped(_ sender: Any) {
@@ -124,6 +132,18 @@ extension EditViewController {
         
         fontConfigurationForSmall()
         fontConfigurationForMedium()
+    }
+    
+    /****
+     Countdown on/off 표시
+     */
+    func countdownConfiguration() {
+        let smallConfig = UIImage.SymbolConfiguration(pointSize: 17, weight: .regular, scale: .small)
+        if isTodayCounted { // true
+            isTodayCountedButton.setImage(UIImage(systemName: "checkmark.square", withConfiguration: smallConfig), for: .normal)
+        } else { // false
+            isTodayCountedButton.setImage(UIImage(systemName: "square", withConfiguration: smallConfig), for: .normal)
+        }
     }
     
     /****
@@ -387,6 +407,9 @@ extension EditViewController: UITableViewDataSource {
             cellForDatepicker.accDatePicker.date = ddayList[cellTag].date
             self.language = ddayList[cellTag].language ?? "English"
             languageButtonConfiguration(lan: self.language)
+            
+            self.isTodayCounted = ddayList[cellTag].isTodayCounted
+            countdownConfiguration()
             
             cellForDatepicker.delegate = self
             

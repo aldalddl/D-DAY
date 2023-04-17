@@ -16,13 +16,13 @@ class TextFieldCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        accTextField.frame = CGRect(x: 0, y: 0, width: 220, height: 100)
+        accTextField.frame = CGRect(x: 0, y: 0, width: 230, height: 100)
         
 //        accTextField.placeholder = "입력하기"
         accTextField.placeholder = NSLocalizedString("입력하기", comment: "") // 지역화 객체
 //        alertLabel.text = "입력하기".localized()
 
-        accTextField.frame = CGRect(x: 0, y: 0, width: 200, height: 100)
+        accTextField.frame = CGRect(x: 0, y: 0, width: 230, height: 100)
 //        accTextField.placeholder = "입력하기"
         accTextField.textAlignment = .right
         accTextField.clearButtonMode = .whileEditing

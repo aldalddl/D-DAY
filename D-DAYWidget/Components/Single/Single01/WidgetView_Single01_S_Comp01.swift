@@ -11,22 +11,11 @@ struct WidgetView_Single01_S_Comp01: View { // disable shadow
     
     var entry: Provider.Entry
     
+    var ddaySymbolMenu: [DdaySymbol]
+    
     var body: some View {
         
         let localizedKey = LocalizedStringKey("길게 눌러서 디데이 추가하기")
-        
-        let defaultDdaySymbolMenu: [DdaySymbol] = [0].map { index in
-            let symbolDdayItem = DdaySymbol (identifier: "identifier", display: "diaplay")
-            symbolDdayItem.ddayTitle = localizedKey.stringValue()
-            symbolDdayItem.ddayDate = "2023.06.24"
-            symbolDdayItem.ddayBgColor = "ddayBlack"
-            symbolDdayItem.ddayTxtColor = "ddayWhite"
-            symbolDdayItem.ddayIsCountdown = "false"
-
-            return symbolDdayItem
-        }
-            
-        let ddaySymbolMenu: [DdaySymbol] = entry.configuration.ddaySymbol ?? defaultDdaySymbolMenu
         
         let isTodayCounted: String = ddaySymbolMenu[safe: 0]?.ddayIsCountdown ?? "false"
         let dateInt = CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu[safe: 0]?.ddayDate ??  "2024.02.16"), isTodayCounted: isTodayCounted)
