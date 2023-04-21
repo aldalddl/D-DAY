@@ -81,7 +81,6 @@ struct WidgetView_Multi03EntryView : View { // hex done
                 
             case "1": // enable shadow
                 switch UIScreen.main.bounds.size { // Depends on Device
-
                     case CGSize(width: 430, height: 932), CGSize(width: 428, height: 926): // (364x170)
                         HStack(spacing: 25) {
                             WidgetView_Multi03_L_Comp02_364x382_(entry: self.entry, ddaySymbolMenu: ddaySymbolMenu).body
@@ -116,7 +115,7 @@ struct WidgetView_Multi03EntryView : View { // hex done
                         }
                         .frame(width: 400, height: 400)
                         .background(Color(hex: entry.configuration.ddaySymbol?[safe: 0]?.ddayBgColor ?? "ddayBlack"))
-                        
+                    
                     default:
                         Text("CGSize default M03-2")
                     }

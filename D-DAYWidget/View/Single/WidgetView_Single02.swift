@@ -87,8 +87,11 @@ struct WidgetView_Single02EntryView : View {
                 case CGSize(width: 414, height: 896): // (360x379)
                     WidgetView_Single02_L_Comp01_360x379_(entry: self.entry, ddaySymbolMenu: ddaySymbolMenu).body
                     
+                    
                 case CGSize(width: 414, height: 736), CGSize(width: 393, height: 852), CGSize(width: 390, height: 844): // (348x357, 338x354)
                     WidgetView_Single02_L_Comp01_338x354_(entry: self.entry, ddaySymbolMenu: ddaySymbolMenu).body
+                    
+                    
                     
                 case CGSize(width: 375, height: 812): // (329x345)
                     WidgetView_Single02_L_Comp01_329x345_(entry: self.entry, ddaySymbolMenu: ddaySymbolMenu).body

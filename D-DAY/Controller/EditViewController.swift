@@ -81,6 +81,7 @@ extension EditViewController {
     @IBAction func isTodayCountedButtonTapped(_ sender: Any) {
         isTodayCounted.toggle()
         countdownConfiguration()
+        saveButtonEnabled()
     }
     
     /****

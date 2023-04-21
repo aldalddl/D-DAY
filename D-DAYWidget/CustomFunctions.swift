@@ -64,6 +64,14 @@ struct CustomFunctions {
         }
     }
     
+    func dateIntSign3(dateIntParam: Int) -> String {
+        if dateIntParam < 0 {
+            return String(format: "%03d", (-1) * dateIntParam)
+        } else {
+            return String(format: "%03d", dateIntParam)
+        }
+    }
+    
     func makeSignedDateNumber(dateIntParam: Int) -> String {
         if dateIntParam >= 0 {
             return "+\(dateIntParam)"
