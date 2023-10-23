@@ -53,5 +53,4 @@ class IntentHandler: INExtension, ConfigurationIntentHandling {
         
         completion(collection, nil)
     }
-    
 }

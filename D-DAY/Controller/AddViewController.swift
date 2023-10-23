@@ -80,6 +80,8 @@ extension AddViewController {
         } else { // false
             isTodayCountedButton.setImage(UIImage(systemName: "square", withConfiguration: smallConfig), for: .normal)
         }
+        
+        let tableViewDdayList = UserDefaults(suiteName: "group.dday.ddayApp")!.getDdayInfo()
     }
         
     /****
