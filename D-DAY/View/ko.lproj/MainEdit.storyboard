@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -276,11 +277,11 @@
                                                     <constraint firstItem="miC-di-dTD" firstAttribute="top" secondItem="Yaq-3O-ocw" secondAttribute="top" constant="-15" id="vpD-lp-T9n"/>
                                                 </constraints>
                                             </view>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fhk-Ne-C6E">
-                                                <rect key="frame" x="220" y="194" width="153" height="35"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fhk-Ne-C6E">
+                                                <rect key="frame" x="124" y="194" width="250" height="35"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="35" id="5VW-Bl-4dj"/>
-                                                    <constraint firstAttribute="width" constant="153" id="bys-DZ-9Cs"/>
+                                                    <constraint firstAttribute="width" constant="250" id="bys-DZ-9Cs"/>
                                                 </constraints>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="설정일을 카운트다운" imagePadding="4" titleAlignment="center">
@@ -310,7 +311,7 @@
                                             <constraint firstItem="gPx-JO-zBB" firstAttribute="centerY" secondItem="NYV-KG-zds" secondAttribute="centerY" id="b6W-ZT-jP6"/>
                                             <constraint firstItem="iUS-yc-hRX" firstAttribute="top" secondItem="1Br-7S-n7q" secondAttribute="bottom" constant="10" id="mS5-cq-Haa"/>
                                             <constraint firstItem="Fhk-Ne-C6E" firstAttribute="top" secondItem="l6J-nq-zuL" secondAttribute="top" constant="194" id="ovs-Qb-vtD"/>
-                                            <constraint firstItem="Fhk-Ne-C6E" firstAttribute="leading" secondItem="l6J-nq-zuL" secondAttribute="trailing" constant="-174" id="rtA-rC-aoX"/>
+                                            <constraint firstAttribute="trailing" secondItem="Fhk-Ne-C6E" secondAttribute="trailing" constant="20" symbolic="YES" id="xIB-pc-5Ek"/>
                                             <constraint firstItem="l6J-nq-zuL" firstAttribute="leading" secondItem="i0L-B7-2Sk" secondAttribute="leading" id="y5U-4k-f29"/>
                                         </constraints>
                                     </view>
