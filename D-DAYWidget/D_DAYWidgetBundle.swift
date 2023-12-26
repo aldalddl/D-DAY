@@ -13,6 +13,9 @@ struct D_DAYWidgetBundle: WidgetBundle {
     
     @WidgetBundleBuilder
     var body: some Widget {
+        WidgetView_Multi06()
+        WidgetView_Multi07()
+        
         WidgetView_Single01()
         WidgetView_Single02()
         
@@ -23,8 +26,6 @@ struct D_DAYWidgetBundle: WidgetBundle {
         WidgetView_Multi05()
         WidgetView_Multi03()
         
-        WidgetView_Multi06()
-        WidgetView_Multi07()
-        WidgetView_Multi08()
+//        WidgetView_Multi08()
     }
 }

@@ -33,4 +33,10 @@ struct Provider: IntentTimelineProvider {
         let timeline = Timeline(entries: entries, policy: .atEnd)
         completion(timeline)
     }
+    
+    // 수정
+    private func readDataFromUserDefaults() -> String {
+        let sharedUserDefaults = UserDefaults(suiteName: "group.dday.ddayApp")
+        return sharedUserDefaults?.string(forKey: "키") ?? ""
+    }
 }

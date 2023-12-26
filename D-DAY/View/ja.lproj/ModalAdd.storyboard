@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -30,7 +30,7 @@
                                 <rect key="frame" x="10" y="59" width="373" height="80"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pEU-3E-Li3">
-                                        <rect key="frame" x="0.0" y="0.0" width="110.66666666666667" height="80"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="97.666666666666671" height="80"/>
                                         <color key="tintColor" systemColor="systemRedColor"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="キャンセル"/>
@@ -39,13 +39,13 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="新規イベント" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w0a-tB-u83">
-                                        <rect key="frame" x="147.66666666666666" y="0.0" width="104" height="80"/>
+                                        <rect key="frame" x="153.33333333333334" y="0.0" width="88.333333333333343" height="80"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GyN-tl-FUp">
-                                        <rect key="frame" x="314.33333333333331" y="0.0" width="58.666666666666686" height="80"/>
+                                        <rect key="frame" x="319.33333333333331" y="0.0" width="53.666666666666686" height="80"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="完了">
                                             <fontDescription key="titleFontDescription" type="boldSystem" pointSize="17"/>
@@ -278,7 +278,7 @@
                                                 </constraints>
                                             </view>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fa6-Go-cNh">
-                                                <rect key="frame" x="128" y="197" width="250" height="35"/>
+                                                <rect key="frame" x="128" y="195" width="250" height="35"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="250" id="Olx-7O-Bxb"/>
                                                     <constraint firstAttribute="height" constant="35" id="WX7-Ek-ya6"/>
@@ -297,7 +297,6 @@
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstItem="Fa6-Go-cNh" firstAttribute="top" secondItem="Wn9-yC-ZcK" secondAttribute="top" constant="197" id="0dO-pV-wSw"/>
                                             <constraint firstItem="kpr-xT-bOn" firstAttribute="top" secondItem="Wn9-yC-ZcK" secondAttribute="bottom" constant="8" id="3KV-z6-khS"/>
                                             <constraint firstAttribute="trailing" secondItem="Wn9-yC-ZcK" secondAttribute="trailing" id="86h-oM-yX6"/>
                                             <constraint firstItem="fp8-q4-4GD" firstAttribute="leading" secondItem="nbM-yP-vzL" secondAttribute="leading" id="CER-7i-lg8"/>
@@ -312,6 +311,7 @@
                                             <constraint firstItem="Wn9-yC-ZcK" firstAttribute="top" secondItem="U7K-85-cvE" secondAttribute="top" id="Xu4-Oy-KkN"/>
                                             <constraint firstItem="Wn9-yC-ZcK" firstAttribute="leading" secondItem="U7K-85-cvE" secondAttribute="leading" id="bTZ-Nb-2bi"/>
                                             <constraint firstItem="kpr-xT-bOn" firstAttribute="leading" secondItem="U7K-85-cvE" secondAttribute="leading" constant="35" id="gQ3-Ui-w7S"/>
+                                            <constraint firstItem="Fa6-Go-cNh" firstAttribute="bottom" secondItem="Wn9-yC-ZcK" secondAttribute="bottom" constant="-60" id="gYJ-M6-PB5"/>
                                             <constraint firstAttribute="height" constant="780" id="lbW-I1-Pxu"/>
                                             <constraint firstItem="G8J-ik-qzu" firstAttribute="leading" secondItem="fp8-q4-4GD" secondAttribute="leading" id="oi8-4e-aX3"/>
                                         </constraints>

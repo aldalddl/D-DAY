@@ -130,6 +130,7 @@
 		B394D16529E50662008841F5 /* WidgetView_Multi05_L_Comp02(329x345).swift in Sources */ = {isa = PBXBuildFile; fileRef = B394D16429E50662008841F5 /* WidgetView_Multi05_L_Comp02(329x345).swift */; };
 		B394D16729E5066D008841F5 /* WidgetView_Multi05_L_Comp01(321x324).swift in Sources */ = {isa = PBXBuildFile; fileRef = B394D16629E5066D008841F5 /* WidgetView_Multi05_L_Comp01(321x324).swift */; };
 		B394D16929E50673008841F5 /* WidgetView_Multi05_L_Comp02(321x324).swift in Sources */ = {isa = PBXBuildFile; fileRef = B394D16829E50673008841F5 /* WidgetView_Multi05_L_Comp02(321x324).swift */; };
+		B397F2B92AEBC5F700EC2FD8 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B397F2B82AEBC5F700EC2FD8 /* TestView.swift */; };
 		B39BBFCD297A7FA3001D408A /* ModalAddMultiSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39BBFCC297A7FA3001D408A /* ModalAddMultiSection.swift */; };
 		B39BBFCF297A85DC001D408A /* DatePickerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39BBFCE297A85DC001D408A /* DatePickerCell.swift */; };
 		B39BBFD1297A8609001D408A /* TextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39BBFD0297A8609001D408A /* TextFieldCell.swift */; };
@@ -361,6 +362,7 @@
 		B394D16429E50662008841F5 /* WidgetView_Multi05_L_Comp02(329x345).swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WidgetView_Multi05_L_Comp02(329x345).swift"; sourceTree = "<group>"; };
 		B394D16629E5066D008841F5 /* WidgetView_Multi05_L_Comp01(321x324).swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WidgetView_Multi05_L_Comp01(321x324).swift"; sourceTree = "<group>"; };
 		B394D16829E50673008841F5 /* WidgetView_Multi05_L_Comp02(321x324).swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WidgetView_Multi05_L_Comp02(321x324).swift"; sourceTree = "<group>"; };
+		B397F2B82AEBC5F700EC2FD8 /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 		B39BBFCC297A7FA3001D408A /* ModalAddMultiSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalAddMultiSection.swift; sourceTree = "<group>"; };
 		B39BBFCE297A85DC001D408A /* DatePickerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerCell.swift; sourceTree = "<group>"; };
 		B39BBFD0297A8609001D408A /* TextFieldCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldCell.swift; sourceTree = "<group>"; };
@@ -965,6 +967,7 @@
 			children = (
 				B3C3050929ABA23500AF2B33 /* Single */,
 				B3C3050A29ABA23C00AF2B33 /* Multiple */,
+				B397F2B82AEBC5F700EC2FD8 /* TestView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1221,6 +1224,7 @@
 				472FC84E29D7406D00E97C91 /* LocalizeExtension.swift in Sources */,
 				430CFEF529C55A1E00C40015 /* UIColorExtension.swift in Sources */,
 				4323CD5929A32FCC008B75A8 /* DdayInfo.swift in Sources */,
+				B397F2B92AEBC5F700EC2FD8 /* TestView.swift in Sources */,
 				B39BBFD1297A8609001D408A /* TextFieldCell.swift in Sources */,
 				B38A476129875CA00088DC56 /* Color.swift in Sources */,
 				4338D54B298945D100AB3F54 /* UserDefaultsExtension.swift in Sources */,

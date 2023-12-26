@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -30,7 +30,7 @@
                                 <rect key="frame" x="10" y="59" width="374" height="80"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S5T-A0-FKY">
-                                        <rect key="frame" x="0.0" y="0.0" width="110.66666666666667" height="80"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="97.666666666666671" height="80"/>
                                         <color key="tintColor" systemColor="systemRedColor"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="キャンセル"/>
@@ -39,13 +39,13 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="イベント編集" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qBB-w6-wdc">
-                                        <rect key="frame" x="148" y="0.0" width="104" height="80"/>
+                                        <rect key="frame" x="154" y="0.0" width="88.333333333333314" height="80"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z2y-Kp-Zcg">
-                                        <rect key="frame" x="315.33333333333331" y="0.0" width="58.666666666666686" height="80"/>
+                                        <rect key="frame" x="320.33333333333331" y="0.0" width="53.666666666666686" height="80"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="完了">
                                             <fontDescription key="titleFontDescription" type="boldSystem" pointSize="17"/>
@@ -278,7 +278,7 @@
                                                 </constraints>
                                             </view>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nlb-Au-gti">
-                                                <rect key="frame" x="130" y="197" width="250" height="35"/>
+                                                <rect key="frame" x="130" y="195" width="250" height="35"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="250" id="BlY-q6-tPR"/>
                                                     <constraint firstAttribute="height" constant="35" id="b1q-lw-4BN"/>
@@ -304,10 +304,10 @@
                                             <constraint firstItem="M37-Pg-TAg" firstAttribute="top" secondItem="dcN-c3-fc9" secondAttribute="bottom" constant="15" id="DSQ-2f-dqk"/>
                                             <constraint firstItem="VQY-E0-ZNA" firstAttribute="leading" secondItem="dcN-c3-fc9" secondAttribute="trailing" constant="10" id="Fl3-ox-e95"/>
                                             <constraint firstAttribute="trailing" secondItem="M37-Pg-TAg" secondAttribute="trailing" constant="28" id="HrN-xf-y52"/>
-                                            <constraint firstItem="nlb-Au-gti" firstAttribute="top" secondItem="l6J-nq-zuL" secondAttribute="top" constant="197" id="SRE-yo-3Ms"/>
                                             <constraint firstItem="1Br-7S-n7q" firstAttribute="top" secondItem="l6J-nq-zuL" secondAttribute="bottom" constant="8" id="VHo-q9-sm2"/>
                                             <constraint firstAttribute="trailing" secondItem="l6J-nq-zuL" secondAttribute="trailing" id="ZpU-pQ-6mD"/>
                                             <constraint firstAttribute="trailing" secondItem="nlb-Au-gti" secondAttribute="trailing" constant="14" id="bhG-SM-orQ"/>
+                                            <constraint firstItem="nlb-Au-gti" firstAttribute="bottom" secondItem="l6J-nq-zuL" secondAttribute="bottom" constant="-60" id="jqR-Ov-CKA"/>
                                             <constraint firstItem="VQY-E0-ZNA" firstAttribute="centerY" secondItem="dcN-c3-fc9" secondAttribute="centerY" id="lTO-S2-bk7"/>
                                             <constraint firstItem="iUS-yc-hRX" firstAttribute="top" secondItem="1Br-7S-n7q" secondAttribute="bottom" constant="10" id="mS5-cq-Haa"/>
                                             <constraint firstItem="dcN-c3-fc9" firstAttribute="bottom" secondItem="iUS-yc-hRX" secondAttribute="bottom" constant="50" id="mid-5K-Jxg"/>
