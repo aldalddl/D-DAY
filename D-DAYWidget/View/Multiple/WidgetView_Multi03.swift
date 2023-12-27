@@ -15,117 +15,145 @@ struct WidgetView_Multi03EntryView : View { // hex done
 
     var body: some View {
         
-        let ddaySymbolMenu: [DdaySymbol] = DefaultArrForWidget_M03().getDaySymbolMenu(entry: self.entry)
-        
-        switch self.family {
-            /*
-        case .systemMedium:
-            switch entry.configuration.shadow?.stringValue ?? "0" {
-            case "0": // disable shadow
-                WidgetView_Multi02_M_Comp01(entry: self.entry).body
-                
-            case "1": // enable shadow
-                WidgetView_Multi02_M_Comp02(entry: self.entry).body
-                
-            default:
-                Text("Encountered Error M03-1")
-            }
-             */
+        if #available(iOSApplicationExtension 17.0, *) {
+            let ddaySymbolMenu: [DdaySymbol] = DefaultArrForWidget_M03().getDaySymbolMenu(entry: self.entry)
             
-        case .systemLarge:
-            switch entry.configuration.shadow?.stringValue ?? "0" {
-            case "0": // disable shadow
+            switch self.family {
+                /*
+            case .systemMedium:
+                switch entry.configuration.shadow?.stringValue ?? "0" {
+                case "0": // disable shadow
+                    WidgetView_Multi02_M_Comp01(entry: self.entry)
+                 .body
+                 .containerBackground(for: .widget) {}
+                    
+                case "1": // enable shadow
+                    WidgetView_Multi02_M_Comp02(entry: self.entry)
+                 .body
+                 .containerBackground(for: .widget) {}
+                    
+                default:
+                    Text("Encountered Error M03-1")
+                }
+                 */
                 
-                switch UIScreen.main.bounds.size { // Depends on Device
+            case .systemLarge:
+                switch entry.configuration.shadow?.stringValue ?? "0" {
+                case "0": // disable shadow
+                    
+                    switch UIScreen.main.bounds.size { // Depends on Device
 
-                    case CGSize(width: 430, height: 932), CGSize(width: 428, height: 926): // (364x170)
-                        HStack(spacing: 25) {
-                            WidgetView_Multi03_L_Comp01_364x382_(entry: self.entry, ddaySymbolMenu: ddaySymbolMenu).body
-                        }
-                        .frame(width: 400, height: 400)
-                        .background(Color(hex: entry.configuration.ddaySymbol?[safe: 0]?.ddayBgColor ?? "ddayBlack"))
+                        case CGSize(width: 430, height: 932), CGSize(width: 428, height: 926): // (364x170)
+                            HStack(spacing: 25) {
+                                
+                                // Mark : - .containerBackground()는 iOS 17 대응을 위함
+                                WidgetView_Multi03_L_Comp01_364x382_(entry: self.entry, ddaySymbolMenu: ddaySymbolMenu)
+                                    .body
+                                    .containerBackground(for: .widget) {}
+                            }
+                            .frame(width: 400, height: 400)
+                            .background(Color(hex: entry.configuration.ddaySymbol?[safe: 0]?.ddayBgColor ?? "ddayBlack"))
+                            
+                        case CGSize(width: 414, height: 896): // (360x169)
+                            HStack(spacing: 25) {
+                                WidgetView_Multi03_L_Comp01_360x379_(entry: self.entry, ddaySymbolMenu: ddaySymbolMenu)
+                                    .body
+                                    .containerBackground(for: .widget) {}
+                            }
+                            .frame(width: 400, height: 400)
+                            .background(Color(hex: entry.configuration.ddaySymbol?[safe: 0]?.ddayBgColor ?? "ddayBlack"))
                         
-                    case CGSize(width: 414, height: 896): // (360x169)
-                        HStack(spacing: 25) {
-                            WidgetView_Multi03_L_Comp01_360x379_(entry: self.entry, ddaySymbolMenu: ddaySymbolMenu).body
-                        }
-                        .frame(width: 400, height: 400)
-                        .background(Color(hex: entry.configuration.ddaySymbol?[safe: 0]?.ddayBgColor ?? "ddayBlack"))
-                    
-                    case CGSize(width: 414, height: 736), CGSize(width: 393, height: 852), CGSize(width: 390, height: 844): // (348x159, 338x158)
-                        HStack(spacing: 20) {
-                            WidgetView_Multi03_L_Comp01_338x354_(entry: self.entry, ddaySymbolMenu: ddaySymbolMenu).body
-                        }
-                        .frame(width: 400, height: 400)
-                        .background(Color(hex: entry.configuration.ddaySymbol?[safe: 0]?.ddayBgColor ?? "ddayBlack"))
+                        case CGSize(width: 414, height: 736), CGSize(width: 393, height: 852), CGSize(width: 390, height: 844): // (348x159, 338x158)
+                            HStack(spacing: 20) {
+                                WidgetView_Multi03_L_Comp01_338x354_(entry: self.entry, ddaySymbolMenu: ddaySymbolMenu)
+                                    .body
+                                    .containerBackground(for: .widget) {}
+                            }
+                            .frame(width: 400, height: 400)
+                            .background(Color(hex: entry.configuration.ddaySymbol?[safe: 0]?.ddayBgColor ?? "ddayBlack"))
 
-                    case CGSize(width: 375, height: 812): // (329x155)
-                        HStack(spacing: 20) {
-                            WidgetView_Multi03_L_Comp01_329x345_(entry: self.entry, ddaySymbolMenu: ddaySymbolMenu).body
-                        }
-                        .frame(width: 400, height: 400)
-                        .background(Color(hex: entry.configuration.ddaySymbol?[safe: 0]?.ddayBgColor ?? "ddayBlack"))
+                        case CGSize(width: 375, height: 812): // (329x155)
+                            HStack(spacing: 20) {
+                                WidgetView_Multi03_L_Comp01_329x345_(entry: self.entry, ddaySymbolMenu: ddaySymbolMenu)
+                                    .body
+                                    .containerBackground(for: .widget) {}
+                            }
+                            .frame(width: 400, height: 400)
+                            .background(Color(hex: entry.configuration.ddaySymbol?[safe: 0]?.ddayBgColor ?? "ddayBlack"))
 
-                    case CGSize(width: 375, height: 667), CGSize(width: 360, height: 780), CGSize(width: 320, height: 568): // (321x148)
-                        HStack(spacing: 18) {
-                            WidgetView_Multi03_L_Comp01_321x324_(entry: self.entry, ddaySymbolMenu: ddaySymbolMenu).body
+                        case CGSize(width: 375, height: 667), CGSize(width: 360, height: 780), CGSize(width: 320, height: 568): // (321x148)
+                            HStack(spacing: 18) {
+                                WidgetView_Multi03_L_Comp01_321x324_(entry: self.entry, ddaySymbolMenu: ddaySymbolMenu)
+                                    .body
+                                    .containerBackground(for: .widget) {}
+                            }
+                            .frame(width: 400, height: 400)
+                            .background(Color(hex: entry.configuration.ddaySymbol?[safe: 0]?.ddayBgColor ?? "ddayBlack"))
+                            
+                        default:
+                            Text("CGSize default M03-1")
                         }
-                        .frame(width: 400, height: 400)
-                        .background(Color(hex: entry.configuration.ddaySymbol?[safe: 0]?.ddayBgColor ?? "ddayBlack"))
                         
-                    default:
-                        Text("CGSize default M03-1")
-                    }
                     
-                
-                
-            case "1": // enable shadow
-                switch UIScreen.main.bounds.size { // Depends on Device
-                    case CGSize(width: 430, height: 932), CGSize(width: 428, height: 926): // (364x170)
-                        HStack(spacing: 25) {
-                            WidgetView_Multi03_L_Comp02_364x382_(entry: self.entry, ddaySymbolMenu: ddaySymbolMenu).body
-                        }
-                        .frame(width: 400, height: 400)
-                        .background(Color(hex: entry.configuration.ddaySymbol?[safe: 0]?.ddayBgColor ?? "ddayBlack"))
+                    
+                case "1": // enable shadow
+                    switch UIScreen.main.bounds.size { // Depends on Device
+                        case CGSize(width: 430, height: 932), CGSize(width: 428, height: 926): // (364x170)
+                            HStack(spacing: 25) {
+                                WidgetView_Multi03_L_Comp02_364x382_(entry: self.entry, ddaySymbolMenu: ddaySymbolMenu)
+                                    .body
+                                    .containerBackground(for: .widget) {}
+                            }
+                            .frame(width: 400, height: 400)
+                            .background(Color(hex: entry.configuration.ddaySymbol?[safe: 0]?.ddayBgColor ?? "ddayBlack"))
+                            
+                        case CGSize(width: 414, height: 896): // (360x169)
+                            HStack(spacing: 25) {
+                                WidgetView_Multi03_L_Comp02_360x379_(entry: self.entry, ddaySymbolMenu: ddaySymbolMenu)
+                                    .body
+                                    .containerBackground(for: .widget) {}
+                            }
+                            .frame(width: 400, height: 400)
+                            .background(Color(hex: entry.configuration.ddaySymbol?[safe: 0]?.ddayBgColor ?? "ddayBlack"))
                         
-                    case CGSize(width: 414, height: 896): // (360x169)
-                        HStack(spacing: 25) {
-                            WidgetView_Multi03_L_Comp02_360x379_(entry: self.entry, ddaySymbolMenu: ddaySymbolMenu).body
-                        }
-                        .frame(width: 400, height: 400)
-                        .background(Color(hex: entry.configuration.ddaySymbol?[safe: 0]?.ddayBgColor ?? "ddayBlack"))
-                    
-                    case CGSize(width: 414, height: 736), CGSize(width: 393, height: 852), CGSize(width: 390, height: 844): // (348x159, 338x158)
-                        HStack(spacing: 20) {
-                            WidgetView_Multi03_L_Comp02_338x354_(entry: self.entry, ddaySymbolMenu: ddaySymbolMenu).body
-                        }
-                        .frame(width: 400, height: 400)
-                        .background(Color(hex: entry.configuration.ddaySymbol?[safe: 0]?.ddayBgColor ?? "ddayBlack"))
+                        case CGSize(width: 414, height: 736), CGSize(width: 393, height: 852), CGSize(width: 390, height: 844): // (348x159, 338x158)
+                            HStack(spacing: 20) {
+                                WidgetView_Multi03_L_Comp02_338x354_(entry: self.entry, ddaySymbolMenu: ddaySymbolMenu)
+                                    .body
+                                    .containerBackground(for: .widget) {}
+                            }
+                            .frame(width: 400, height: 400)
+                            .background(Color(hex: entry.configuration.ddaySymbol?[safe: 0]?.ddayBgColor ?? "ddayBlack"))
 
-                    case CGSize(width: 375, height: 812): // (329x155)
-                        HStack(spacing: 20) {
-                            WidgetView_Multi03_L_Comp02_329x345_(entry: self.entry, ddaySymbolMenu: ddaySymbolMenu).body
-                        }
-                        .frame(width: 400, height: 400)
-                        .background(Color(hex: entry.configuration.ddaySymbol?[safe: 0]?.ddayBgColor ?? "ddayBlack"))
+                        case CGSize(width: 375, height: 812): // (329x155)
+                            HStack(spacing: 20) {
+                                WidgetView_Multi03_L_Comp02_329x345_(entry: self.entry, ddaySymbolMenu: ddaySymbolMenu)
+                                    .body
+                                    .containerBackground(for: .widget) {}
+                            }
+                            .frame(width: 400, height: 400)
+                            .background(Color(hex: entry.configuration.ddaySymbol?[safe: 0]?.ddayBgColor ?? "ddayBlack"))
 
-                    case CGSize(width: 375, height: 667), CGSize(width: 360, height: 780), CGSize(width: 320, height: 568): // (321x148)
-                        HStack(spacing: 18) {
-                            WidgetView_Multi03_L_Comp02_321x324_(entry: self.entry, ddaySymbolMenu: ddaySymbolMenu).body
+                        case CGSize(width: 375, height: 667), CGSize(width: 360, height: 780), CGSize(width: 320, height: 568): // (321x148)
+                            HStack(spacing: 18) {
+                                WidgetView_Multi03_L_Comp02_321x324_(entry: self.entry, ddaySymbolMenu: ddaySymbolMenu)
+                                    .body
+                                    .containerBackground(for: .widget) {}
+                            }
+                            .frame(width: 400, height: 400)
+                            .background(Color(hex: entry.configuration.ddaySymbol?[safe: 0]?.ddayBgColor ?? "ddayBlack"))
+                        
+                        default:
+                            Text("CGSize default M03-2")
                         }
-                        .frame(width: 400, height: 400)
-                        .background(Color(hex: entry.configuration.ddaySymbol?[safe: 0]?.ddayBgColor ?? "ddayBlack"))
                     
-                    default:
-                        Text("CGSize default M03-2")
-                    }
+                default:
+                    Text("Encountered Error M03-2")
+                }
                 
-            default:
-                Text("Encountered Error M03-2")
+            @unknown default:
+                Text("Sorry, You have encountered Default Error.  M03-3")
             }
-            
-        @unknown default:
-            Text("Sorry, You have encountered Default Error.  M03-3")
         }
     }
 }
@@ -141,6 +169,8 @@ struct WidgetView_Multi03: Widget {
         .configurationDisplayName(LocalizedStringKey("#2 멀티 위젯"))
         .description(LocalizedStringKey("여러 개의 디데이를 표시할 수 있는 위젯입니다."))
         .supportedFamilies([.systemLarge])
+        .contentMarginsDisabled() // Mark : - iOS 17.0 safe area padding 대응
+        .containerBackgroundRemovable(false)
     }
 }
 
