@@ -50,7 +50,7 @@ struct WidgetView_Multi07: Widget {
         IntentConfiguration(kind: kind, intent: ConfigurationIntent.self, provider: Provider()) { entry in
             WidgetView_Multi07EntryView(entry: entry)
         }
-        .configurationDisplayName("iPad 전용 위젯")
+        .configurationDisplayName("Big Size Widget")
         .description("여러 개의 디데이를 표시할 수 있는 위젯입니다.")
         .supportedFamilies([.systemExtraLarge])
         .contentMarginsDisabled() // Mark : - iOS 17.0 safe area padding 대응

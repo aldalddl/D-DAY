@@ -59,35 +59,35 @@ struct WidgetView_Single01_S_Comp01_148x148_: View { // disable shadow
                         Text(ddaySymbolMenu[safe: 0]?.ddayTitle ?? localizedKey.stringValue())
                             .frame(width: 60, height: 50, alignment: .topTrailing)
                             .position(x: metrics.size.width * 0.7, y: metrics.size.height * 0.32)
-                            .font(.custom("Inter-Bold", size: 18.0))
+                            .font(.custom("Inter-Bold", size: 16.0))
                             .multilineTextAlignment(.trailing)
                         
                     case 4:
                         Text(ddaySymbolMenu[safe: 0]?.ddayTitle ?? localizedKey.stringValue())
                             .frame(width: 60, height: 50, alignment: .topTrailing)
                             .position(x: metrics.size.width * 0.71, y: metrics.size.height * 0.32)
-                            .font(.custom("Inter-Bold", size: 16.0))
+                            .font(.custom("Inter-Bold", size: 14.0))
                             .multilineTextAlignment(.trailing)
                         
                     case 5...10:
                         Text(ddaySymbolMenu[safe: 0]?.ddayTitle ?? localizedKey.stringValue())
                             .frame(width: 60, height: 50, alignment: .topTrailing)
-                            .position(x: metrics.size.width * 0.695, y: metrics.size.height * 0.29)
-                            .font(.custom("Inter-Bold", size: 15.0))
+                            .position(x: metrics.size.width * 0.695, y: metrics.size.height * 0.3)
+                            .font(.custom("Inter-Bold", size: 13.0))
                             .multilineTextAlignment(.trailing)
                         
                     case 11...14:
                         Text(ddaySymbolMenu[safe: 0]?.ddayTitle ?? localizedKey.stringValue())
                             .frame(width: 60, height: 50, alignment: .topTrailing)
-                            .position(x: metrics.size.width * 0.7, y: metrics.size.height * 0.29)
-                            .font(.custom("Inter-Bold", size: 12.0))
+                            .position(x: metrics.size.width * 0.7, y: metrics.size.height * 0.31)
+                            .font(.custom("Inter-Bold", size: 11.0))
                             .multilineTextAlignment(.trailing)
                        
                    case 15...:
                        Text(ddaySymbolMenu[safe: 0]?.ddayTitle ?? localizedKey.stringValue())
                            .frame(width: 60, height: 50, alignment: .topTrailing)
                            .position(x: metrics.size.width * 0.7, y: metrics.size.height * 0.29)
-                           .font(.custom("Inter-Bold", size: 11.0))
+                           .font(.custom("Inter-Bold", size: 10.0))
                            .multilineTextAlignment(.trailing)
                         
                     default:

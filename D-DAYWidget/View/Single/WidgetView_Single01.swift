@@ -26,6 +26,8 @@ struct WidgetView_Single01EntryView : View {
                 case "0": // disable shadow
                     
                     switch UIScreen.main.bounds.size { // Depends on Device
+                        
+                    // iPhone
                     case CGSize(width: 430, height: 932), CGSize(width: 428, height: 926): // (170x170)
                         
                         // Mark : - .containerBackground()는 iOS 17 대응을 위함
@@ -53,14 +55,60 @@ struct WidgetView_Single01EntryView : View {
                             .body
                             .containerBackground(for: .widget) {}
                         
+                        
+                        
+                        
+                    // iPad
+                    case CGSize(width: 768, height: 1024), CGSize(width: 744, height: 1133): // (768x1024, 744x1133)
+                        WidgetView_Single01_S_Comp01_pad120x120_(entry: self.entry, ddaySymbolMenu: ddaySymbolMenu)
+                            .body
+                            .containerBackground(for: .widget) {}
+                        
+                    case CGSize(width: 810, height: 1080): // (810x1080)
+                        WidgetView_Single01_S_Comp01_pad124x124_(entry: self.entry, ddaySymbolMenu: ddaySymbolMenu)
+                                .body
+                                .containerBackground(for: .widget) {}
+                        
+                    case CGSize(width: 834, height: 1112): // (834x1112)
+                        WidgetView_Single01_S_Comp01_pad132x132_(entry: self.entry, ddaySymbolMenu: ddaySymbolMenu)
+                                .body
+                                .containerBackground(for: .widget) {}
+                        
+                    case CGSize(width: 820, height: 1180), CGSize(width: 834, height: 1194): // (820x1180, 834x1194)
+                        WidgetView_Single01_S_Comp01_pad136x136_(entry: self.entry, ddaySymbolMenu: ddaySymbolMenu)
+                                .body
+                                .containerBackground(for: .widget) {}
+                        
+                    case CGSize(width: 1024, height: 1366): // (1024x1366)
+                        WidgetView_Single01_S_Comp01_pad160x160_(entry: self.entry, ddaySymbolMenu: ddaySymbolMenu)
+                                .body
+                                .containerBackground(for: .widget) {}
+                      
+                    // 미정
+                    case CGSize(width: 954, height: 1373), CGSize(width: 970, height: 1389): // (954x1373, 970x1389) - When Display Zoom is set to More Space.
+                        WidgetView_Single01_S_Comp01_pad162x162_(entry: self.entry, ddaySymbolMenu: ddaySymbolMenu)
+                                .body
+                                .containerBackground(for: .widget) {}
+                    
+                    // 미정
+                    case CGSize(width: 1192, height: 1590): // (1192x1590) - When Display Zoom is set to More Space.
+                        WidgetView_Single01_S_Comp01_pad188x188_(entry: self.entry, ddaySymbolMenu: ddaySymbolMenu)
+                                .body
+                                .containerBackground(for: .widget) {}
+                        
                     default:
-                        Text("CGSize default S01-1")
+                        // Default widget
+                        WidgetView_Single01_S_Comp01_169x169_(entry: self.entry, ddaySymbolMenu: ddaySymbolMenu)
+                            .body
+                            .containerBackground(for: .widget) {}
                     }
                     
                     
                 case "1": // enable shadow
                     
                     switch UIScreen.main.bounds.size { // Depends on Device
+                        
+                    // iPhone
                     case CGSize(width: 430, height: 932), CGSize(width: 428, height: 926): // (170x170)
                         WidgetView_Single01_S_Comp02_170x170_(entry: self.entry, ddaySymbolMenu: ddaySymbolMenu)
                             .body
@@ -87,7 +135,10 @@ struct WidgetView_Single01EntryView : View {
                             .containerBackground(for: .widget) {}
                         
                     default:
-                        Text("CGSize default S01-2")
+                        // Default widget 2
+                        WidgetView_Single01_S_Comp02_169x169_(entry: self.entry, ddaySymbolMenu: ddaySymbolMenu)
+                            .body
+                            .containerBackground(for: .widget) {}
                     }
                     
                     
@@ -128,9 +179,55 @@ struct WidgetView_Single01EntryView : View {
                             .body
                             .containerBackground(for: .widget) {}
                         
+                        
+                        
+                        
+                        
+                    // iPad
+                    case CGSize(width: 768, height: 1024), CGSize(width: 744, height: 1133): // (768x1024, 744x1133)
+                        WidgetView_Single01_M_Comp01_pad120x120_(entry: self.entry, ddaySymbolMenu: ddaySymbolMenu)
+                            .body
+                            .containerBackground(for: .widget) {}
+                        
+                    case CGSize(width: 810, height: 1080): // (810x1080)
+                        WidgetView_Single01_M_Comp01_pad124x124_(entry: self.entry, ddaySymbolMenu: ddaySymbolMenu)
+                            .body
+                            .containerBackground(for: .widget) {}
+                        
+                    case CGSize(width: 834, height: 1112): // (834x1112)
+                        WidgetView_Single01_M_Comp01_pad132x132_(entry: self.entry, ddaySymbolMenu: ddaySymbolMenu)
+                            .body
+                            .containerBackground(for: .widget) {}
+                        
+                    case CGSize(width: 820, height: 1180), CGSize(width: 834, height: 1194): // (820x1180, 834x1194)
+                        WidgetView_Single01_M_Comp01_pad136x136_(entry: self.entry, ddaySymbolMenu: ddaySymbolMenu)
+                            .body
+                            .containerBackground(for: .widget) {}
+                        
+                    case CGSize(width: 1024, height: 1366): // (1024x1366)
+                        WidgetView_Single01_M_Comp01_pad160x160_(entry: self.entry, ddaySymbolMenu: ddaySymbolMenu)
+                            .body
+                            .containerBackground(for: .widget) {}
+                      
+                    // 미정
+                    case CGSize(width: 954, height: 1373), CGSize(width: 970, height: 1389): // (954x1373, 970x1389) - When Display Zoom is set to More Space.
+                        WidgetView_Single01_M_Comp01_pad160x160_(entry: self.entry, ddaySymbolMenu: ddaySymbolMenu)
+                            .body
+                            .containerBackground(for: .widget) {}
+                    
+                    // 미정
+                    case CGSize(width: 1192, height: 1590): // (1192x1590) - When Display Zoom is set to More Space.
+                        WidgetView_Single01_M_Comp01_pad160x160_(entry: self.entry, ddaySymbolMenu: ddaySymbolMenu)
+                            .body
+                            .containerBackground(for: .widget) {}
+                        
                     default:
-                        Text("CGSize default S02-1")
+                        // Default widget
+                        WidgetView_Single01_M_Comp01_360x169_(entry: self.entry, ddaySymbolMenu: ddaySymbolMenu)
+                            .body
+                            .containerBackground(for: .widget) {}
                     }
+                    
                     
                     
                 case "1": // enable shadow
