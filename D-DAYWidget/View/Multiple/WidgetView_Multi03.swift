@@ -90,10 +90,92 @@ struct WidgetView_Multi03EntryView : View { // hex done
                             .frame(width: 400, height: 400)
                             .background(Color(hex: entry.configuration.ddaySymbol?[safe: 0]?.ddayBgColor ?? "ddayBlack"))
                             
+                        
+                        
+                        
+                        
+                        
+                        // iPad
+                        case CGSize(width: 768, height: 1024), CGSize(width: 744, height: 1133): // (768x1024, 744x1133)
+                            HStack(spacing: 18) {
+                                WidgetView_Multi03_L_Comp01_pad120x120_(entry: self.entry, ddaySymbolMenu: ddaySymbolMenu)
+                                    .body
+                                    .containerBackground(for: .widget) {}
+                            }
+                            .frame(width: 400, height: 400)
+                            .background(Color(hex: entry.configuration.ddaySymbol?[safe: 0]?.ddayBgColor ?? "ddayBlack"))
+                            
+                        case CGSize(width: 810, height: 1080): // (810x1080)
+                            HStack(spacing: 18) {
+                                WidgetView_Multi03_L_Comp01_pad124x124_(entry: self.entry, ddaySymbolMenu: ddaySymbolMenu)
+                                    .body
+                                    .containerBackground(for: .widget) {}
+                            }
+                            .frame(width: 400, height: 400)
+                            .background(Color(hex: entry.configuration.ddaySymbol?[safe: 0]?.ddayBgColor ?? "ddayBlack"))
+                        
+                        case CGSize(width: 834, height: 1112): // (834x1112)
+                            HStack(spacing: 18) {
+                                WidgetView_Multi03_L_Comp01_pad132x132_(entry: self.entry, ddaySymbolMenu: ddaySymbolMenu)
+                                    .body
+                                    .containerBackground(for: .widget) {}
+                            }
+                            .frame(width: 400, height: 400)
+                            .background(Color(hex: entry.configuration.ddaySymbol?[safe: 0]?.ddayBgColor ?? "ddayBlack"))
+                            
+                        case CGSize(width: 820, height: 1180), CGSize(width: 834, height: 1194): // (820x1180, 834x1194)
+                            HStack(spacing: 18) {
+                                WidgetView_Multi03_L_Comp01_pad136x136_(entry: self.entry, ddaySymbolMenu: ddaySymbolMenu)
+                                    .body
+                                    .containerBackground(for: .widget) {}
+                            }
+                            .frame(width: 400, height: 400)
+                            .background(Color(hex: entry.configuration.ddaySymbol?[safe: 0]?.ddayBgColor ?? "ddayBlack"))
+                        
+                        case CGSize(width: 1024, height: 1366): // (1024x1366)
+                            HStack(spacing: 18) {
+                                WidgetView_Multi03_L_Comp01_pad160x160_(entry: self.entry, ddaySymbolMenu: ddaySymbolMenu)
+                                    .body
+                                    .containerBackground(for: .widget) {}
+                            }
+                            .frame(width: 400, height: 400)
+                            .background(Color(hex: entry.configuration.ddaySymbol?[safe: 0]?.ddayBgColor ?? "ddayBlack"))
+                        
+                        // 미정
+                        case CGSize(width: 954, height: 1373), CGSize(width: 970, height: 1389): // (954x1373, 970x1389) - When Display Zoom is set to More Space.
+                            HStack(spacing: 18) {
+                                WidgetView_Multi03_L_Comp01_pad160x160_(entry: self.entry, ddaySymbolMenu: ddaySymbolMenu)
+                                    .body
+                                    .containerBackground(for: .widget) {}
+                            }
+                            .frame(width: 400, height: 400)
+                            .background(Color(hex: entry.configuration.ddaySymbol?[safe: 0]?.ddayBgColor ?? "ddayBlack"))
+                        
+                        // 미정
+                        case CGSize(width: 1192, height: 1590): // (1192x1590) - When Display Zoom is set to More Space.
+                            HStack(spacing: 18) {
+                                WidgetView_Multi03_L_Comp01_pad160x160_(entry: self.entry, ddaySymbolMenu: ddaySymbolMenu)
+                                    .body
+                                    .containerBackground(for: .widget) {}
+                            }
+                            .frame(width: 400, height: 400)
+                            .background(Color(hex: entry.configuration.ddaySymbol?[safe: 0]?.ddayBgColor ?? "ddayBlack"))
+                            
                         default:
-                            Text("CGSize default M03-1")
+                            // Default widget
+                            HStack(spacing: 18) {
+                                WidgetView_Multi03_L_Comp01_pad160x160_(entry: self.entry, ddaySymbolMenu: ddaySymbolMenu)
+                                    .body
+                                    .containerBackground(for: .widget) {}
+                            }
+                            .frame(width: 400, height: 400)
+                            .background(Color(hex: entry.configuration.ddaySymbol?[safe: 0]?.ddayBgColor ?? "ddayBlack"))
                         }
                         
+                    
+                    
+                    
+                    
                     
                     
                 case "1": // enable shadow

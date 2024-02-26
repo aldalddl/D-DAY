@@ -320,3 +320,4 @@ struct WidgetView_Multi04_L_Comp01_pad120x120_: View { // disable shadow
         .background(Color(hex: ddaySymbolMenu[safe: 0]?.ddayBgColor ?? "ddayBlack"))
     }
 }
+
