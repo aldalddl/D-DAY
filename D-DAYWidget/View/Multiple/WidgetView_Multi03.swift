@@ -97,7 +97,7 @@ struct WidgetView_Multi03EntryView : View { // hex done
                         
                         // iPad
                         case CGSize(width: 768, height: 1024), CGSize(width: 744, height: 1133): // (768x1024, 744x1133)
-                            HStack(spacing: 18) {
+                            HStack(spacing: 19) {
                                 WidgetView_Multi03_L_Comp01_pad120x120_(entry: self.entry, ddaySymbolMenu: ddaySymbolMenu)
                                     .body
                                     .containerBackground(for: .widget) {}
@@ -133,7 +133,7 @@ struct WidgetView_Multi03EntryView : View { // hex done
                             .background(Color(hex: entry.configuration.ddaySymbol?[safe: 0]?.ddayBgColor ?? "ddayBlack"))
                         
                         case CGSize(width: 1024, height: 1366): // (1024x1366)
-                            HStack(spacing: 18) {
+                            HStack(spacing: 22) {
                                 WidgetView_Multi03_L_Comp01_pad160x160_(entry: self.entry, ddaySymbolMenu: ddaySymbolMenu)
                                     .body
                                     .containerBackground(for: .widget) {}

@@ -349,9 +349,9 @@ struct DefaultArrForWidget_M03 {
         
         let defaultStringArr: [[String]] = [
             // format: [ddayTitle, ddayDate, ddayBgColor, ddayTxtColor, ddayIsCountdown]
-            [localizedKey.stringValue(), "2022.01.04", "ddayBlack", "ddayWhite", "false"],
-            [localizedKey.stringValue(), "2022.02.04", "ddayBlack", "ddayWhite", "false"],
-            [localizedKey.stringValue(), "2022.10.04", "ddayBlack", "ddayWhite", "false"],
+            [localizedKey.stringValue(), "2026.12.25", "ddayBlack", "ddayWhite", "false"],
+            [localizedKey.stringValue(), "2026.04.05", "ddayBlack", "ddayWhite", "false"],
+            [localizedKey.stringValue(), "2026.05.24", "ddayBlack", "ddayWhite", "false"],
         ]
         
         let defaultDdaySymbolMenu: [DdaySymbol] = defaultStringArr.map { sArray in

@@ -17,6 +17,7 @@ struct WidgetView_Multi03_L_Comp01_pad132x132_: View { // disable shadow
         let localizedKey = LocalizedStringKey("길게 눌러서 디데이 추가하기")
         
         
+        
         // 1
         
         let isTodayCounted: String = ddaySymbolMenu[safe: 0]?.ddayIsCountdown ?? "false"
@@ -38,53 +39,54 @@ struct WidgetView_Multi03_L_Comp01_pad132x132_: View { // disable shadow
         ZStack {
             // title 1
             switch (ddaySymbolMenu[safe: 0]?.ddayTitle ?? localizedKey.stringValue()).count {
+//                switch 14 {
                 
             case 0...2:
                 Text(ddaySymbolMenu[safe: 0]?.ddayTitle ?? localizedKey.stringValue())
-                    .font(.custom("Inter-Bold", size: 18.0))
+                    .font(.custom("Inter-Bold", size: 16.0))
                     .frame(width: 70, height: 55, alignment: .topTrailing)
                     .multilineTextAlignment(.trailing)
-                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 220, trailing: 3))
+                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 194, trailing: 15))
                     .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayBgColor ?? "ddayBlack"))
                 
             case 3...4:
                 Text(ddaySymbolMenu[safe: 0]?.ddayTitle ?? localizedKey.stringValue())
-                    .font(.custom("Inter-Bold", size: 18.0))
+                    .font(.custom("Inter-Bold", size: 15.0))
                     .frame(width: 70, height: 55, alignment: .topTrailing)
                     .multilineTextAlignment(.trailing)
-                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 220, trailing: 3))
+                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 194, trailing: 13))
                     .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayBgColor ?? "ddayBlack"))
                 
             case 5:
                 Text(ddaySymbolMenu[safe: 0]?.ddayTitle ?? localizedKey.stringValue())
-                    .font(.custom("Inter-Bold", size: 15.0))
-                    .frame(width: 70, height: 55, alignment: .topTrailing)
+                    .font(.custom("Inter-Bold", size: 14.0))
+                    .frame(width: 60, height: 55, alignment: .topTrailing)
                     .multilineTextAlignment(.trailing)
-                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 220, trailing: 3))
+                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 194, trailing: 4))
                     .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayBgColor ?? "ddayBlack"))
                 
             case 6...10:
                 Text(ddaySymbolMenu[safe: 0]?.ddayTitle ?? localizedKey.stringValue())
-                    .font(.custom("Inter-Bold", size: 14.0))
-                    .frame(width: 70, height: 55, alignment: .topTrailing)
+                    .font(.custom("Inter-Bold", size: 13.0))
+                    .frame(width: 60, height: 55, alignment: .topTrailing)
                     .multilineTextAlignment(.trailing)
-                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 220, trailing: 3))
+                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 194, trailing: 2))
                     .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayBgColor ?? "ddayBlack"))
                 
             case 11...14:
                 Text(ddaySymbolMenu[safe: 0]?.ddayTitle ?? localizedKey.stringValue())
                     .font(.custom("Inter-Bold", size: 12.0))
-                    .frame(width: 70, height: 55, alignment: .topTrailing)
+                    .frame(width: 65, height: 55, alignment: .topTrailing)
                     .multilineTextAlignment(.trailing)
-                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 220, trailing: 3))
+                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 194, trailing: 9))
                     .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayBgColor ?? "ddayBlack"))
                 
             case 15...:
                 Text(ddaySymbolMenu[safe: 0]?.ddayTitle ?? localizedKey.stringValue())
                     .font(.custom("Inter-Bold", size: 11.0))
-                    .frame(width: 70, height: 55, alignment: .topTrailing)
+                    .frame(width: 65, height: 55, alignment: .topTrailing)
                     .multilineTextAlignment(.trailing)
-                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 220, trailing: 3))
+                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 194, trailing: 4))
                     .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayBgColor ?? "ddayBlack"))
                 
             default:
@@ -93,72 +95,77 @@ struct WidgetView_Multi03_L_Comp01_pad132x132_: View { // disable shadow
             }
             
             // date 1
-            Text(ddaySymbolMenu[safe: 0]?.ddayDate ?? "2019.03.30")
+            Text(ddaySymbolMenu[safe: 0]?.ddayDate ?? "0000.00.00")
                 .font(.custom("Inter-Bold", size: 10.0))
                 .rotationEffect(.degrees(-90))
                 .frame(width: 70, height: 50, alignment: .topLeading)
-                .padding(EdgeInsets(top: 270, leading: 0, bottom: 0, trailing: 33))
+                .padding(EdgeInsets(top: 240, leading: 0, bottom: 0, trailing: 37))
                 .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayBgColor ?? "ddayBlack"))
             
             // day number 1
-            switch txtStringArr.count {
+//            switch txtStringArr.count {
+                switch 30 {
             case 0...3:
-                    switch _formattedDateInt {
+//                    switch _formattedDateInt {
+                        switch "01" {
                     case "0":
                         Text("D")
-                            .font(.custom("Inter-Bold", size: 85.0))
+                            .font(.custom("Inter-Bold", size: 83.0))
                             .frame(width: 55, height: 20, alignment: .top)
-                            .position(x: 67, y: 117)
+                            .position(x: 67, y: 120)
                             .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayBgColor ?? "ddayBlack"))
                         
                         Text("d")
-                            .font(.custom("Inter-Bold", size: 85.0))
+                            .font(.custom("Inter-Bold", size: 86.0))
                             .frame(width: 55, height: 20, alignment: .top)
-                            .position(x: 67, y: 179)
+                            .position(x: 68, y: 178)
                             .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayBgColor ?? "ddayBlack"))
                         
                         Text("a")
-                            .font(.custom("Inter-Bold", size: 85.0))
+                            .font(.custom("Inter-Bold", size: 86.0))
                             .frame(width: 55, height: 20, alignment: .top)
-                            .position(x: 67, y: 227)
+                            .position(x: 68, y: 226)
                             .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayBgColor ?? "ddayBlack"))
                         
                         Text("y")
-                            .font(.custom("Inter-Bold", size: 85.0))
+                            .font(.custom("Inter-Bold", size: 86.0))
                             .frame(width: 55, height: 20, alignment: .top)
-                            .position(x: 67, y: 275)
+                            .position(x: 68, y: 273)
                             .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayBgColor ?? "ddayBlack"))
                         
                     default:
                         Text("D")
-                            .font(.custom("Inter-Bold", size: 85.0))
+                            .font(.custom("Inter-Bold", size: 83.0))
                             .frame(width: 55, height: 20, alignment: .top)
-                            .position(x: 67, y: 117)
+                            .position(x: 67, y: 120)
                             .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayBgColor ?? "ddayBlack"))
                         
                         Text("\(ddayDorPlus)")
-                            .font(.custom("Inter-ExtraBold", size: 50.0))
+                            .font(.custom("Inter-ExtraBold", size: 53.0))
                             .frame(width: 75, height: 20, alignment: .top)
-                            .position(x: 35, y: 178)
+                            .position(x: 33, y: 178)
                             .kerning(-6)
                             .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayBgColor ?? "ddayBlack"))
                         
-                        Text("\(txtStringArr[safe: 0] ?? "")")
-                            .font(.custom("Inter-Bold", size: 85.0))
+//                        Text("\(txtStringArr[safe: 0] ?? "")")
+                            Text("3")
+                            .font(.custom("Inter-Bold", size: 83.0))
                             .frame(width: 55, height: 20, alignment: .top)
-                            .position(x: 67, y: 178)
+                            .position(x: 67, y: 180)
                             .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayBgColor ?? "ddayBlack"))
                         
-                        Text("\(txtStringArr[safe: 1] ?? "")")
-                            .font(.custom("Inter-Bold", size: 85.0))
+//                        Text("\(txtStringArr[safe: 1] ?? "")")
+                            Text("4")
+                            .font(.custom("Inter-Bold", size: 83.0))
                             .frame(width: 55, height: 20, alignment: .top)
-                            .position(x: 67, y: 235)
+                            .position(x: 67, y: 236)
                             .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayBgColor ?? "ddayBlack"))
                         
-                        Text("\(txtStringArr[safe: 2] ?? "")")
-                            .font(.custom("Inter-Bold", size: 85.0))
+//                        Text("\(txtStringArr[safe: 2] ?? "")")
+                            Text("4")
+                            .font(.custom("Inter-Bold", size: 83.0))
                             .frame(width: 55, height: 20, alignment: .top)
-                            .position(x: 67, y: 292)
+                            .position(x: 67, y: 294)
                             .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayBgColor ?? "ddayBlack"))
                         
                     }
@@ -167,42 +174,46 @@ struct WidgetView_Multi03_L_Comp01_pad132x132_: View { // disable shadow
                 Text("D")
                     .font(.custom("Inter-Bold", size: 70.0))
                     .frame(width: 55, height: 20, alignment: .top)
-                    .position(x: 71, y: 110)
+                    .position(x: 71, y: 122)
                     .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayBgColor ?? "ddayBlack"))
                 
                 Text("\(ddayDorPlus)")
-                    .font(.custom("Inter-ExtraBold", size: 40.0))
+                    .font(.custom("Inter-ExtraBold", size: 48.0))
                     .frame(width: 75, height: 20, alignment: .top)
-                    .position(x: 45, y: 162)
+                    .position(x: 42, y: 165)
                     .kerning(-6)
                     .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayBgColor ?? "ddayBlack"))
                 
-                Text("\(txtStringArr[safe: 0] ?? "9")")
+//                Text("\(txtStringArr[safe: 0] ?? "9")")
+                    Text("3")
                     .font(.custom("Inter-Bold", size: 70.0))
                     .frame(width: 55, height: 20, alignment: .top)
-                    .position(x: 71, y: 159)
+                    .position(x: 71, y: 170)
                     .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayBgColor ?? "ddayBlack"))
                 
-                Text("\(txtStringArr[safe: 1] ?? "9")")
+//                Text("\(txtStringArr[safe: 1] ?? "9")")
+                    Text("7")
                     .font(.custom("Inter-Bold", size: 70.0))
                     .frame(width: 55, height: 20, alignment: .top)
-                    .position(x: 71, y: 208)
+                    .position(x: 71, y: 216)
                     .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayBgColor ?? "ddayBlack"))
                 
-                Text("\(txtStringArr[safe: 2] ?? "9")")
+//                Text("\(txtStringArr[safe: 2] ?? "9")")
+                    Text("1")
                     .font(.custom("Inter-Bold", size: 70.0))
                     .frame(width: 55, height: 20, alignment: .top)
-                    .position(x: 71, y: 257)
+                    .position(x: 71, y: 261)
                     .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayBgColor ?? "ddayBlack"))
                 
-                Text("\(txtStringArr[safe: 3] ?? "9")")
+//                Text("\(txtStringArr[safe: 3] ?? "9")")
+                    Text("4")
                     .font(.custom("Inter-Bold", size: 70.0))
                     .frame(width: 55, height: 20, alignment: .top)
-                    .position(x: 71, y: 306)
+                    .position(x: 71, y: 308)
                     .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayBgColor ?? "ddayBlack"))
             }
         }
-        .frame(width: 77, height: 400)
+        .frame(width: 75, height: 400)
         .background(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
         .clipped()
         
@@ -231,50 +242,50 @@ struct WidgetView_Multi03_L_Comp01_pad132x132_: View { // disable shadow
                 
             case 0...2:
                 Text(ddaySymbolMenu[safe: 1]?.ddayTitle ?? localizedKey.stringValue())
-                    .font(.custom("Inter-Bold", size: 18.0))
+                    .font(.custom("Inter-Bold", size: 16.0))
                     .frame(width: 70, height: 55, alignment: .topTrailing)
                     .multilineTextAlignment(.trailing)
-                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 220, trailing: 3))
+                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 194, trailing: 15))
                     .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
                 
             case 3...4:
                 Text(ddaySymbolMenu[safe: 1]?.ddayTitle ?? localizedKey.stringValue())
-                    .font(.custom("Inter-Bold", size: 18.0))
+                    .font(.custom("Inter-Bold", size: 15.0))
                     .frame(width: 70, height: 55, alignment: .topTrailing)
                     .multilineTextAlignment(.trailing)
-                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 220, trailing: 3))
+                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 194, trailing: 13))
                     .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
                 
             case 5:
                 Text(ddaySymbolMenu[safe: 1]?.ddayTitle ?? localizedKey.stringValue())
-                    .font(.custom("Inter-Bold", size: 15.0))
-                    .frame(width: 70, height: 55, alignment: .topTrailing)
+                    .font(.custom("Inter-Bold", size: 14.0))
+                    .frame(width: 60, height: 55, alignment: .topTrailing)
                     .multilineTextAlignment(.trailing)
-                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 220, trailing: 3))
+                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 194, trailing: 4))
                     .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
                 
             case 6...10:
                 Text(ddaySymbolMenu[safe: 1]?.ddayTitle ?? localizedKey.stringValue())
-                    .font(.custom("Inter-Bold", size: 14.0))
-                    .frame(width: 70, height: 55, alignment: .topTrailing)
+                    .font(.custom("Inter-Bold", size: 13.0))
+                    .frame(width: 60, height: 55, alignment: .topTrailing)
                     .multilineTextAlignment(.trailing)
-                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 220, trailing: 3))
+                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 194, trailing: 2))
                     .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
                 
             case 11...14:
                 Text(ddaySymbolMenu[safe: 1]?.ddayTitle ?? localizedKey.stringValue())
                     .font(.custom("Inter-Bold", size: 12.0))
-                    .frame(width: 70, height: 55, alignment: .topTrailing)
+                    .frame(width: 65, height: 55, alignment: .topTrailing)
                     .multilineTextAlignment(.trailing)
-                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 220, trailing: 3))
+                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 194, trailing: 9))
                     .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
                 
             case 15...:
                 Text(ddaySymbolMenu[safe: 1]?.ddayTitle ?? localizedKey.stringValue())
                     .font(.custom("Inter-Bold", size: 11.0))
-                    .frame(width: 70, height: 55, alignment: .topTrailing)
+                    .frame(width: 65, height: 55, alignment: .topTrailing)
                     .multilineTextAlignment(.trailing)
-                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 220, trailing: 3))
+                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 194, trailing: 4))
                     .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
                 
             default:
@@ -283,72 +294,77 @@ struct WidgetView_Multi03_L_Comp01_pad132x132_: View { // disable shadow
             }
             
             // date 2
-            Text(ddaySymbolMenu[safe: 1]?.ddayDate ?? "2019.03.30")
+            Text(ddaySymbolMenu[safe: 1]?.ddayDate ?? "0000.00.00")
                 .font(.custom("Inter-Bold", size: 10.0))
                 .rotationEffect(.degrees(-90))
                 .frame(width: 70, height: 50, alignment: .topLeading)
-                .padding(EdgeInsets(top: 270, leading: 0, bottom: 0, trailing: 33))
+                .padding(EdgeInsets(top: 240, leading: 0, bottom: 0, trailing: 37))
                 .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
             
             // day number 2
-            switch txtStringArr2.count {
+//            switch txtStringArr2.count {
+                switch 3 {
             case 0...3:
-                    switch _formattedDateInt2 {
+//                    switch _formattedDateInt2 {
+                        switch "0" {
                     case "0":
                         Text("D")
-                            .font(.custom("Inter-Bold", size: 85.0))
+                            .font(.custom("Inter-Bold", size: 83.0))
                             .frame(width: 55, height: 20, alignment: .top)
-                            .position(x: 67, y: 117)
+                            .position(x: 67, y: 120)
                             .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
                         
                         Text("d")
-                            .font(.custom("Inter-Bold", size: 85.0))
+                            .font(.custom("Inter-Bold", size: 86.0))
                             .frame(width: 55, height: 20, alignment: .top)
-                            .position(x: 67, y: 179)
+                            .position(x: 68, y: 178)
                             .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
                         
                         Text("a")
-                            .font(.custom("Inter-Bold", size: 85.0))
+                            .font(.custom("Inter-Bold", size: 86.0))
                             .frame(width: 55, height: 20, alignment: .top)
-                            .position(x: 67, y: 227)
+                            .position(x: 68, y: 226)
                             .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
                         
                         Text("y")
-                            .font(.custom("Inter-Bold", size: 85.0))
+                            .font(.custom("Inter-Bold", size: 86.0))
                             .frame(width: 55, height: 20, alignment: .top)
-                            .position(x: 67, y: 275)
+                            .position(x: 68, y: 273)
                             .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
                         
                     default:
                         Text("D")
-                            .font(.custom("Inter-Bold", size: 85.0))
+                            .font(.custom("Inter-Bold", size: 83.0))
                             .frame(width: 55, height: 20, alignment: .top)
-                            .position(x: 67, y: 117)
+                            .position(x: 67, y: 120)
                             .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
                         
                         Text("\(ddayDorPlus2)")
-                            .font(.custom("Inter-ExtraBold", size: 50.0))
+                            .font(.custom("Inter-ExtraBold", size: 53.0))
                             .frame(width: 75, height: 20, alignment: .top)
-                            .position(x: 35, y: 178)
+                            .position(x: 33, y: 178)
                             .kerning(-6)
                             .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
                         
-                        Text("\(txtStringArr2[safe: 0] ?? "")")
-                            .font(.custom("Inter-Bold", size: 85.0))
+//                        Text("\(txtStringArr2[safe: 0] ?? "")")
+                            Text("3")
+                            .font(.custom("Inter-Bold", size: 83.0))
                             .frame(width: 55, height: 20, alignment: .top)
-                            .position(x: 67, y: 178)
+                            .position(x: 67, y: 180)
                             .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
                         
-                        Text("\(txtStringArr2[safe: 1] ?? "")")
-                            .font(.custom("Inter-Bold", size: 85.0))
+//                        Text("\(txtStringArr2[safe: 1] ?? "")")
+                            Text("4")
+                            .font(.custom("Inter-Bold", size: 83.0))
                             .frame(width: 55, height: 20, alignment: .top)
-                            .position(x: 67, y: 235)
+                            .position(x: 67, y: 236)
                             .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
                         
-                        Text("\(txtStringArr2[safe: 2] ?? "")")
-                            .font(.custom("Inter-Bold", size: 85.0))
+//                        Text("\(txtStringArr2[safe: 2] ?? "")")
+                            Text("4")
+                            .font(.custom("Inter-Bold", size: 83.0))
                             .frame(width: 55, height: 20, alignment: .top)
-                            .position(x: 67, y: 292)
+                            .position(x: 67, y: 294)
                             .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
                         
                     }
@@ -357,42 +373,46 @@ struct WidgetView_Multi03_L_Comp01_pad132x132_: View { // disable shadow
                 Text("D")
                     .font(.custom("Inter-Bold", size: 70.0))
                     .frame(width: 55, height: 20, alignment: .top)
-                    .position(x: 71, y: 110)
+                    .position(x: 71, y: 122)
                     .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
                 
                 Text("\(ddayDorPlus2)")
-                    .font(.custom("Inter-ExtraBold", size: 40.0))
+                    .font(.custom("Inter-ExtraBold", size: 48.0))
                     .frame(width: 75, height: 20, alignment: .top)
-                    .position(x: 45, y: 162)
+                    .position(x: 42, y: 165)
                     .kerning(-6)
                     .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
                 
-                Text("\(txtStringArr2[safe: 0] ?? "9")")
+//                Text("\(txtStringArr2[safe: 0] ?? "9")")
+                    Text("3")
                     .font(.custom("Inter-Bold", size: 70.0))
                     .frame(width: 55, height: 20, alignment: .top)
-                    .position(x: 71, y: 159)
+                    .position(x: 71, y: 170)
                     .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
                 
-                Text("\(txtStringArr2[safe: 1] ?? "9")")
+//                Text("\(txtStringArr2[safe: 1] ?? "9")")
+                    Text("4")
                     .font(.custom("Inter-Bold", size: 70.0))
                     .frame(width: 55, height: 20, alignment: .top)
-                    .position(x: 71, y: 208)
+                    .position(x: 71, y: 216)
                     .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
                 
-                Text("\(txtStringArr2[safe: 2] ?? "9")")
+//                Text("\(txtStringArr2[safe: 2] ?? "9")")
+                    Text("4")
                     .font(.custom("Inter-Bold", size: 70.0))
                     .frame(width: 55, height: 20, alignment: .top)
-                    .position(x: 71, y: 257)
+                    .position(x: 71, y: 261)
                     .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
                 
-                Text("\(txtStringArr2[safe: 3] ?? "9")")
+//                Text("\(txtStringArr2[safe: 3] ?? "9")")
+                    Text("4")
                     .font(.custom("Inter-Bold", size: 70.0))
                     .frame(width: 55, height: 20, alignment: .top)
-                    .position(x: 71, y: 306)
+                    .position(x: 71, y: 308)
                     .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
             }
         }
-        .frame(width: 77, height: 400)
+        .frame(width: 75, height: 400)
         .background(Color(hex: ddaySymbolMenu[safe: 0]?.ddayBgColor ?? "ddayBlack"))
         .clipped()
         
@@ -421,50 +441,50 @@ struct WidgetView_Multi03_L_Comp01_pad132x132_: View { // disable shadow
                 
             case 0...2:
                 Text(ddaySymbolMenu[safe: 2]?.ddayTitle ?? localizedKey.stringValue())
-                    .font(.custom("Inter-Bold", size: 18.0))
+                    .font(.custom("Inter-Bold", size: 16.0))
                     .frame(width: 70, height: 55, alignment: .topTrailing)
                     .multilineTextAlignment(.trailing)
-                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 220, trailing: 3))
+                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 194, trailing: 15))
                     .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayBgColor ?? "ddayBlack"))
                 
             case 3...4:
                 Text(ddaySymbolMenu[safe: 2]?.ddayTitle ?? localizedKey.stringValue())
-                    .font(.custom("Inter-Bold", size: 18.0))
+                    .font(.custom("Inter-Bold", size: 15.0))
                     .frame(width: 70, height: 55, alignment: .topTrailing)
                     .multilineTextAlignment(.trailing)
-                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 220, trailing: 3))
+                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 194, trailing: 13))
                     .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayBgColor ?? "ddayBlack"))
                 
             case 5:
                 Text(ddaySymbolMenu[safe: 2]?.ddayTitle ?? localizedKey.stringValue())
-                    .font(.custom("Inter-Bold", size: 15.0))
-                    .frame(width: 70, height: 55, alignment: .topTrailing)
+                    .font(.custom("Inter-Bold", size: 14.0))
+                    .frame(width: 60, height: 55, alignment: .topTrailing)
                     .multilineTextAlignment(.trailing)
-                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 220, trailing: 3))
+                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 194, trailing: 4))
                     .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayBgColor ?? "ddayBlack"))
                 
             case 6...10:
                 Text(ddaySymbolMenu[safe: 2]?.ddayTitle ?? localizedKey.stringValue())
-                    .font(.custom("Inter-Bold", size: 14.0))
-                    .frame(width: 70, height: 55, alignment: .topTrailing)
+                    .font(.custom("Inter-Bold", size: 13.0))
+                    .frame(width: 60, height: 55, alignment: .topTrailing)
                     .multilineTextAlignment(.trailing)
-                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 220, trailing: 3))
+                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 194, trailing: 2))
                     .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayBgColor ?? "ddayBlack"))
                 
             case 11...14:
                 Text(ddaySymbolMenu[safe: 2]?.ddayTitle ?? localizedKey.stringValue())
                     .font(.custom("Inter-Bold", size: 12.0))
-                    .frame(width: 70, height: 55, alignment: .topTrailing)
+                    .frame(width: 65, height: 55, alignment: .topTrailing)
                     .multilineTextAlignment(.trailing)
-                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 220, trailing: 3))
+                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 194, trailing: 9))
                     .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayBgColor ?? "ddayBlack"))
                 
             case 15...:
                 Text(ddaySymbolMenu[safe: 2]?.ddayTitle ?? localizedKey.stringValue())
                     .font(.custom("Inter-Bold", size: 11.0))
-                    .frame(width: 70, height: 55, alignment: .topTrailing)
+                    .frame(width: 65, height: 55, alignment: .topTrailing)
                     .multilineTextAlignment(.trailing)
-                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 220, trailing: 3))
+                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 194, trailing: 4))
                     .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayBgColor ?? "ddayBlack"))
                 
             default:
@@ -473,71 +493,75 @@ struct WidgetView_Multi03_L_Comp01_pad132x132_: View { // disable shadow
             }
             
             // Date 3
-            Text(ddaySymbolMenu[safe: 2]?.ddayDate ?? "2019.03.30")
+            Text(ddaySymbolMenu[safe: 2]?.ddayDate ?? "0000.00.00")
                 .font(.custom("Inter-Bold", size: 10.0))
                 .rotationEffect(.degrees(-90))
                 .frame(width: 70, height: 50, alignment: .topLeading)
-                .padding(EdgeInsets(top: 270, leading: 0, bottom: 0, trailing: 33))
+                .padding(EdgeInsets(top: 240, leading: 0, bottom: 0, trailing: 37))
                 .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayBgColor ?? "ddayBlack"))
             
-            switch txtStringArr3.count {
+//            switch txtStringArr3.count {
+                switch 3 {
             case 0...3:
-                switch _formattedDateInt3 {
+                switch "20" {
                 case "0":
                     Text("D")
-                        .font(.custom("Inter-Bold", size: 85.0))
+                        .font(.custom("Inter-Bold", size: 83.0))
                         .frame(width: 55, height: 20, alignment: .top)
-                        .position(x: 67, y: 117)
+                        .position(x: 67, y: 120)
                         .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayBgColor ?? "ddayBlack"))
                     
                     Text("d")
-                        .font(.custom("Inter-Bold", size: 85.0))
+                        .font(.custom("Inter-Bold", size: 86.0))
                         .frame(width: 55, height: 20, alignment: .top)
-                        .position(x: 67, y: 179)
+                        .position(x: 68, y: 178)
                         .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayBgColor ?? "ddayBlack"))
                     
                     Text("a")
-                        .font(.custom("Inter-Bold", size: 85.0))
+                        .font(.custom("Inter-Bold", size: 86.0))
                         .frame(width: 55, height: 20, alignment: .top)
-                        .position(x: 67, y: 227)
+                        .position(x: 68, y: 226)
                         .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayBgColor ?? "ddayBlack"))
                     
                     Text("y")
-                        .font(.custom("Inter-Bold", size: 85.0))
+                        .font(.custom("Inter-Bold", size: 86.0))
                         .frame(width: 55, height: 20, alignment: .top)
-                        .position(x: 67, y: 275)
+                        .position(x: 68, y: 273)
                         .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayBgColor ?? "ddayBlack"))
                     
                 default:
                     Text("D")
-                        .font(.custom("Inter-Bold", size: 85.0))
+                        .font(.custom("Inter-Bold", size: 83.0))
                         .frame(width: 55, height: 20, alignment: .top)
-                        .position(x: 67, y: 117)
+                        .position(x: 67, y: 120)
                         .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayBgColor ?? "ddayBlack"))
                     
                     Text("\(ddayDorPlus3)")
-                        .font(.custom("Inter-ExtraBold", size: 50.0))
+                        .font(.custom("Inter-ExtraBold", size: 53.0))
                         .frame(width: 75, height: 20, alignment: .top)
-                        .position(x: 35, y: 178)
+                        .position(x: 33, y: 178)
                         .kerning(-6)
                         .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayBgColor ?? "ddayBlack"))
                     
-                    Text("\(txtStringArr3[safe: 0] ?? "")")
-                        .font(.custom("Inter-Bold", size: 85.0))
+//                    Text("\(txtStringArr3[safe: 0] ?? "")")
+                    Text("3")
+                        .font(.custom("Inter-Bold", size: 83.0))
                         .frame(width: 55, height: 20, alignment: .top)
-                        .position(x: 67, y: 178)
+                        .position(x: 67, y: 180)
                         .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayBgColor ?? "ddayBlack"))
                     
-                    Text("\(txtStringArr3[safe: 1] ?? "")")
-                        .font(.custom("Inter-Bold", size: 85.0))
+//                    Text("\(txtStringArr3[safe: 1] ?? "")")
+                    Text("4")
+                        .font(.custom("Inter-Bold", size: 83.0))
                         .frame(width: 55, height: 20, alignment: .top)
-                        .position(x: 67, y: 235)
+                        .position(x: 67, y: 236)
                         .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayBgColor ?? "ddayBlack"))
                     
-                    Text("\(txtStringArr3[safe: 2] ?? "")")
-                        .font(.custom("Inter-Bold", size: 85.0))
+//                    Text("\(txtStringArr3[safe: 2] ?? "")")
+                    Text("4")
+                        .font(.custom("Inter-Bold", size: 83.0))
                         .frame(width: 55, height: 20, alignment: .top)
-                        .position(x: 67, y: 292)
+                        .position(x: 67, y: 294)
                         .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayBgColor ?? "ddayBlack"))
                     
                 }
@@ -546,42 +570,46 @@ struct WidgetView_Multi03_L_Comp01_pad132x132_: View { // disable shadow
                 Text("D")
                     .font(.custom("Inter-Bold", size: 70.0))
                     .frame(width: 55, height: 20, alignment: .top)
-                    .position(x: 71, y: 110)
+                    .position(x: 71, y: 122)
                     .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayBgColor ?? "ddayBlack"))
                 
                 Text("\(ddayDorPlus3)")
-                    .font(.custom("Inter-ExtraBold", size: 40.0))
+                    .font(.custom("Inter-ExtraBold", size: 48.0))
                     .frame(width: 75, height: 20, alignment: .top)
-                    .position(x: 45, y: 162)
+                    .position(x: 42, y: 165)
                     .kerning(-6)
                     .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayBgColor ?? "ddayBlack"))
                 
-                Text("\(txtStringArr3[safe: 0] ?? "9")")
+//                Text("\(txtStringArr3[safe: 0] ?? "9")")
+                    Text("3")
                     .font(.custom("Inter-Bold", size: 70.0))
                     .frame(width: 55, height: 20, alignment: .top)
-                    .position(x: 71, y: 159)
+                    .position(x: 71, y: 170)
                     .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayBgColor ?? "ddayBlack"))
                 
-                Text("\(txtStringArr3[safe: 1] ?? "9")")
+//                Text("\(txtStringArr3[safe: 1] ?? "9")")
+                    Text("4")
                     .font(.custom("Inter-Bold", size: 70.0))
                     .frame(width: 55, height: 20, alignment: .top)
-                    .position(x: 71, y: 208)
+                    .position(x: 71, y: 216)
                     .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayBgColor ?? "ddayBlack"))
                 
-                Text("\(txtStringArr3[safe: 2] ?? "9")")
+//                Text("\(txtStringArr3[safe: 2] ?? "9")")
+                    Text("4")
                     .font(.custom("Inter-Bold", size: 70.0))
                     .frame(width: 55, height: 20, alignment: .top)
-                    .position(x: 71, y: 257)
+                    .position(x: 71, y: 261)
                     .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayBgColor ?? "ddayBlack"))
                 
-                Text("\(txtStringArr3[safe: 3] ?? "9")")
+//                Text("\(txtStringArr3[safe: 3] ?? "9")")
+                    Text("4")
                     .font(.custom("Inter-Bold", size: 70.0))
                     .frame(width: 55, height: 20, alignment: .top)
-                    .position(x: 71, y: 306)
+                    .position(x: 71, y: 308)
                     .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayBgColor ?? "ddayBlack"))
             }
         }
-        .frame(width: 77, height: 400)
+        .frame(width: 75, height: 400)
         
         .background(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
         .clipped()
