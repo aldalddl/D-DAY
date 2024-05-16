@@ -187,8 +187,7 @@ struct WidgetView_Single01_S_Comp01_pad120x120_: View { // disable shadow
                     }
                     
                 case 3...8 :
-//                    switch Int(dateNumber)! {
-                    switch 8844 {
+                    switch Int(dateNumber)! {
                         
                     case 304, 334, 344, 354, 364, 384, 394, 404, 434, 444, 454, 464, 484, 494, 504, 604, 804:
                         Text("\(dateNumber)")

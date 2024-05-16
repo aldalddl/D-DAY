@@ -1,13 +1,13 @@
 //
-//  WidgetView_Single01_S_Comp01(pad124x124).swift
+//  WidgetView_Single01_S_Comp02(pad160x160).swift
 //  D-DAYWidgetExtension
 //
-//  Created by Hakyung Sohn on 12/28/23.
+//  Created by Hakyung Sohn on 5/16/24.
 //
 
 import SwiftUI
 
-struct WidgetView_Single01_S_Comp01_pad124x124_: View { // disable shadow
+struct WidgetView_Single01_S_Comp02_pad160x160_: View { // able shadow
     
     var entry: Provider.Entry
     
@@ -27,17 +27,19 @@ struct WidgetView_Single01_S_Comp01_pad124x124_: View { // disable shadow
                 switch ddayDorPlus {
                 case "D":
                     Text("D")
-                        .position(x: 15, y: -25)
+                        .position(x: 10, y: -31)
                         .frame(width: 85, height: 36, alignment: .leading)
-                        .font(.custom("Inter-Bold", size: 96))
+                        .shadow(color: Color("ddayBlack").opacity(0.3), radius: 2.2, x: 0.6, y: 4)
+                        .font(.custom("Inter-Bold", size: 110))
                         .rotationEffect(.degrees(-13))
                         .multilineTextAlignment(.leading)
                     
                 case "+":
                     Text("+")
-                        .position(x: 14, y: -33)
-                        .frame(width: 85, height: 36, alignment: .leading)
-                        .font(.custom("Inter-Bold", size: 132))
+                        .position(x: 10, y: -43)
+                        .frame(width: 95, height: 36, alignment: .leading)
+                        .shadow(color: Color("ddayBlack").opacity(0.3), radius: 2.2, x: 0.6, y: 4)
+                        .font(.custom("Inter-Bold", size: 146))
                         .rotationEffect(.degrees(-13))
                         .multilineTextAlignment(.leading)
                     
@@ -57,37 +59,37 @@ struct WidgetView_Single01_S_Comp01_pad124x124_: View { // disable shadow
                         
                     case ...3:
                         Text(ddaySymbolMenu[safe: 0]?.ddayTitle ?? localizedKey.stringValue())
-                            .frame(width: 60, height: 50, alignment: .topTrailing)
-                            .position(x: metrics.size.width * 0.68, y: metrics.size.height * 0.33)
-                            .font(.custom("Inter-Bold", size: 16.0))
+                            .frame(width: 70, height: 50, alignment: .topTrailing)
+                            .position(x: metrics.size.width * 0.685, y: metrics.size.height * 0.3)
+                            .font(.custom("Inter-Bold", size: 17.0))
                             .multilineTextAlignment(.trailing)
                         
                     case 4:
                         Text(ddaySymbolMenu[safe: 0]?.ddayTitle ?? localizedKey.stringValue())
-                            .frame(width: 60, height: 50, alignment: .topTrailing)
-                            .position(x: metrics.size.width * 0.7, y: metrics.size.height * 0.33)
-                            .font(.custom("Inter-Bold", size: 14.0))
+                            .frame(width: 70, height: 50, alignment: .topTrailing)
+                            .position(x: metrics.size.width * 0.72, y: metrics.size.height * 0.305)
+                            .font(.custom("Inter-Bold", size: 15.0))
                             .multilineTextAlignment(.trailing)
                         
                     case 5...10:
                         Text(ddaySymbolMenu[safe: 0]?.ddayTitle ?? localizedKey.stringValue())
-                            .frame(width: 55, height: 50, alignment: .topTrailing)
-                            .position(x: metrics.size.width * 0.71, y: metrics.size.height * 0.31)
+                            .frame(width: 65, height: 80, alignment: .topTrailing)
+                            .position(x: metrics.size.width * 0.718, y: metrics.size.height * 0.385)
                             .font(.custom("Inter-Bold", size: 13.0))
                             .multilineTextAlignment(.trailing)
-                        
+                    
                     case 11...14:
                         Text(ddaySymbolMenu[safe: 0]?.ddayTitle ?? localizedKey.stringValue())
-                            .frame(width: 58, height: 50, alignment: .topTrailing)
-                            .position(x: metrics.size.width * 0.7, y: metrics.size.height * 0.3)
-                            .font(.custom("Inter-Bold", size: 11.0))
+                            .frame(width: 70, height: 50, alignment: .topTrailing)
+                            .position(x: metrics.size.width * 0.695, y: metrics.size.height * 0.28)
+                            .font(.custom("Inter-Bold", size: 12.0))
                             .multilineTextAlignment(.trailing)
                        
                    case 15...:
                        Text(ddaySymbolMenu[safe: 0]?.ddayTitle ?? localizedKey.stringValue())
                            .frame(width: 60, height: 50, alignment: .topTrailing)
-                           .position(x: metrics.size.width * 0.7, y: metrics.size.height * 0.3)
-                           .font(.custom("Inter-Bold", size: 10.0))
+                           .position(x: metrics.size.width * 0.718, y: metrics.size.height * 0.273)
+                           .font(.custom("Inter-Bold", size: 11.0))
                            .multilineTextAlignment(.trailing)
                         
                     default:
@@ -103,86 +105,96 @@ struct WidgetView_Single01_S_Comp01_pad124x124_: View { // disable shadow
             let dateNumber = CustomFunctions().dateIntSign(dateIntParam: dateInt)
             
             switch dateNumber.count {
+
                 
             // 2자리수
             case 2:
                 Text("\(dateNumber)")
                     .frame(width: 180, alignment: .leading)
-                    .font(.custom("Inter-Bold", size: 103.0))
+                    .font(.custom("Inter-Bold", size: 115.0))
+                    .shadow(color: Color("ddayBlack").opacity(0.3), radius: 2.2, x: 0.6, y: 4)
                     .multilineTextAlignment(.leading)
-                    .kerning(-10)
+                    .kerning(-11)
                     .rotationEffect(.degrees(-10))
-                    .position(x: 84, y: 101)
+                    .position(x: 83, y: 120)
                     .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
                 
             // 3자리수
             case 3:
                 switch Int(dateNumber)! / 100 {
+                        
                 case 1:
                     switch Int(dateNumber)! {
+                            
                     case 104, 144:
                         Text("\(dateNumber)")
                             .frame(width: 230, alignment: .leading)
-                            .font(.custom("Inter-Bold", size: 94.0))
+                            .font(.custom("Inter-Bold", size: 98.0))
+                            .shadow(color: Color("ddayBlack").opacity(0.3), radius: 2.2, x: 0.6, y: 4)
                             .multilineTextAlignment(.leading)
-                            .kerning(-9)
+                            .kerning(-10)
                             .rotationEffect(.degrees(-10))
-                            .position(x: 109, y: 99)
+                            .position(x: 110, y: 118)
                             .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
                         
                     case 154, 164, 184, 194:
                         Text("\(dateNumber)")
                             .frame(width: 230, alignment: .leading)
-                            .font(.custom("Inter-Bold", size: 95.0))
+                            .font(.custom("Inter-Bold", size: 99.0))
+                            .shadow(color: Color("ddayBlack").opacity(0.3), radius: 2.2, x: 0.6, y: 4)
                             .multilineTextAlignment(.leading)
-                            .kerning(-9)
+                            .kerning(-10)
                             .rotationEffect(.degrees(-10))
-                            .position(x: 109, y: 99)
+                            .position(x: 111, y: 118)
                             .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
                         
                         
                     default:
-                        Text("\(dateNumber)") // 100
+                        Text("\(dateNumber)")
                             .frame(width: 230, alignment: .leading)
-                            .font(.custom("Inter-Bold", size: 94.0))
+                            .font(.custom("Inter-Bold", size: 101.0))
+                            .shadow(color: Color("ddayBlack").opacity(0.3), radius: 2.2, x: 0.6, y: 4)
                             .multilineTextAlignment(.leading)
-                            .kerning(-9)
+                            .kerning(-10)
                             .rotationEffect(.degrees(-10))
-                            .position(x: 109, y: 98)
+                            .position(x: 109, y: 119)
                             .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
                     }
                     
-                    
                 case 2:
                     switch Int(dateNumber)! {
+                            
                     case 204, 244:
                         Text("\(dateNumber)")
                             .frame(width: 230, alignment: .leading)
-                            .font(.custom("Inter-Bold", size: 86.0))
+                            .font(.custom("Inter-Bold", size: 90.0))
+                            .shadow(color: Color("ddayBlack").opacity(0.3), radius: 2.2, x: 0.6, y: 4)
                             .multilineTextAlignment(.leading)
                             .kerning(-9)
                             .rotationEffect(.degrees(-10))
-                            .position(x: 110, y: 97)
+                            .position(x: 110, y: 118)
                             .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
                         
                     case 234, 254, 264, 284, 294:
                         Text("\(dateNumber)")
                             .frame(width: 230, alignment: .leading)
-                            .font(.custom("Inter-Bold", size: 87.0))
+                            .font(.custom("Inter-Bold", size: 91.0))
+                            .shadow(color: Color("ddayBlack").opacity(0.3), radius: 2.2, x: 0.6, y: 4)
                             .multilineTextAlignment(.leading)
                             .kerning(-9)
                             .rotationEffect(.degrees(-10))
-                            .position(x: 111, y: 97)
+                            .position(x: 111, y: 117)
                             .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
                         
                     default:
-                        Text("\(dateNumber)") // 200
+                        Text("\(dateNumber)")
                             .frame(width: 230, alignment: .leading)
-                            .font(.custom("Inter-Bold", size: 88.0))
+                            .font(.custom("Inter-Bold", size: 92.0))
+                            .shadow(color: Color("ddayBlack").opacity(0.3), radius: 2.2, x: 0.6, y: 4)
                             .multilineTextAlignment(.leading)
                             .kerning(-9)
                             .rotationEffect(.degrees(-10))
-                            .position(x: 112, y: 97)
+                            .position(x: 112, y: 117)
                             .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
                     }
                     
@@ -192,42 +204,46 @@ struct WidgetView_Single01_S_Comp01_pad124x124_: View { // disable shadow
                     case 304, 334, 344, 354, 364, 384, 394, 404, 434, 444, 454, 464, 484, 494, 504, 604, 804:
                         Text("\(dateNumber)")
                             .frame(width: 230, alignment: .leading)
-                            .font(.custom("Inter-Bold", size: 86.0))
+                            .font(.custom("Inter-Bold", size: 92.0))
+                            .shadow(color: Color("ddayBlack").opacity(0.3), radius: 2.2, x: 0.6, y: 4)
                             .multilineTextAlignment(.leading)
-                            .kerning(-9)
+                            .kerning(-10)
                             .rotationEffect(.degrees(-10))
-                            .position(x: 107, y: 98)
+                            .position(x: 107, y: 117)
                             .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
                         
                     case 544, 564, 584, 594, 624, 644, 664, 684, 694, 844, 854, 864, 884, 894:
                         Text("\(dateNumber)")
                             .frame(width: 230, alignment: .leading)
-                            .font(.custom("Inter-Bold", size: 86.0))
+                            .font(.custom("Inter-Bold", size: 93.0))
+                            .shadow(color: Color("ddayBlack").opacity(0.3), radius: 2.2, x: 0.6, y: 4)
                             .multilineTextAlignment(.leading)
-                            .kerning(-8)
+                            .kerning(-9)
                             .rotationEffect(.degrees(-10))
-                            .position(x: 108, y: 98)
+                            .position(x: 107, y: 118)
                             .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
                         
                     default:
                         Text("\(dateNumber)")
                             .frame(width: 230, alignment: .leading)
-                            .font(.custom("Inter-Bold", size: 91.0))
+                            .font(.custom("Inter-Bold", size: 93.0))
+                            .shadow(color: Color("ddayBlack").opacity(0.3), radius: 2.2, x: 0.6, y: 4)
                             .multilineTextAlignment(.leading)
-                            .kerning(-9)
+                            .kerning(-10)
                             .rotationEffect(.degrees(-10))
-                            .position(x: 109, y: 98)
+                            .position(x: 107, y: 117)
                             .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
                     }
                     
                 case 9:
                     Text("\(dateNumber)")
                         .frame(width: 230, alignment: .leading)
-                        .font(.custom("Inter-Bold", size: 85.0))
+                        .font(.custom("Inter-Bold", size: 91.0))
+                        .shadow(color: Color("ddayBlack").opacity(0.3), radius: 2.2, x: 0.6, y: 4)
                         .multilineTextAlignment(.leading)
-                        .kerning(-8)
+                        .kerning(-9)
                         .rotationEffect(.degrees(-10))
-                        .position(x: 109, y: 97)
+                        .position(x: 108, y: 117)
                         .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
                     
                 default:
@@ -239,140 +255,154 @@ struct WidgetView_Single01_S_Comp01_pad124x124_: View { // disable shadow
             case 4:
                 
                 switch (dateNumber.components(separatedBy: "0").count - 1) { // 0의 갯수
-                    
+                        
                 case 0: // 0갯수 = 0개
                     
                     switch (dateNumber.components(separatedBy: "1").count - 1) { // 1의 갯수
-                        
+                            
                     case 1: // 1갯수 1개 (ex. 1994)
                         Text("\(dateNumber)")
                             .frame(width: 270, alignment: .leading)
-                            .font(.custom("Inter-Bold", size: 70.0))
+                            .font(.custom("Inter-Bold", size: 73.0))
+                            .shadow(color: Color("ddayBlack").opacity(0.3), radius: 2.2, x: 0.6, y: 4)
                             .multilineTextAlignment(.leading)
                             .kerning(-7)
                             .rotationEffect(.degrees(-10))
-                            .position(x: 131, y: 94)
+                            .position(x: 130, y: 116)
                             .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
                         
                     case 2: // 1갯수 2개 (ex. 1914)
                         Text("\(dateNumber)")
                             .frame(width: 270, alignment: .leading)
-                            .font(.custom("Inter-Bold", size: 75.0))
+                            .font(.custom("Inter-Bold", size: 79.0))
+                            .shadow(color: Color("ddayBlack").opacity(0.3), radius: 2.2, x: 0.6, y: 4)
                             .multilineTextAlignment(.leading)
                             .kerning(-7)
                             .rotationEffect(.degrees(-10))
-                            .position(x: 131, y: 94)
+                            .position(x: 131, y: 115)
                             .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
                         
                     case 3: // 1갯수 3개 (ex. 1114)
                         Text("\(dateNumber)")
                             .frame(width: 270, alignment: .leading)
-                            .font(.custom("Inter-Bold", size: 81.0))
+                            .font(.custom("Inter-Bold", size: 85.0))
+                            .shadow(color: Color("ddayBlack").opacity(0.3), radius: 2.2, x: 0.6, y: 4)
                             .multilineTextAlignment(.leading)
                             .kerning(-7)
                             .rotationEffect(.degrees(-10))
-                            .position(x: 131, y: 95)
+                            .position(x: 131, y: 118)
                             .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
                         
                     case 4: // 1갯수 4개 (ex. 1111)
                         Text("\(dateNumber)")
                             .frame(width: 270, alignment: .leading)
-                            .font(.custom("Inter-Bold", size: 90.0))
+                            .font(.custom("Inter-Bold", size: 94.0))
+                            .shadow(color: Color("ddayBlack").opacity(0.3), radius: 2.2, x: 0.6, y: 4)
                             .multilineTextAlignment(.leading)
                             .kerning(-7)
                             .rotationEffect(.degrees(-10))
-                            .position(x: 131, y: 95)
+                            .position(x: 131, y: 117)
                             .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
                         
                     default: // 그 이외의, 1000~9999까지 0갯수 0개 & 1갯수 0개인 수 (ex. 9994)
                         Text("\(dateNumber)")
                             .frame(width: 270, alignment: .leading)
-                            .font(.custom("Inter-Bold", size: 65.0))
+                            .font(.custom("Inter-Bold", size: 69.0))
+                            .shadow(color: Color("ddayBlack").opacity(0.3), radius: 2.2, x: 0.6, y: 4)
                             .multilineTextAlignment(.leading)
-                            .kerning(-6)
+                            .kerning(-7)
                             .rotationEffect(.degrees(-10))
-                            .position(x: 130, y: 95)
+                            .position(x: 130, y: 117)
                             .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
                     }
                     
                     
                 case 1: // 0갯수 = 1개
-                    switch (dateNumber.components(separatedBy: "1").count - 1) { // 1의 갯수
                         
+                    switch (dateNumber.components(separatedBy: "1").count - 1) { // 1의 갯수
+                            
                     case 1: // 1갯수 1개 (ex. 1094)
                         Text("\(dateNumber)")
                             .frame(width: 270, alignment: .leading)
-                            .font(.custom("Inter-Bold", size: 69.0))
+                            .font(.custom("Inter-Bold", size: 72.0))
+                            .shadow(color: Color("ddayBlack").opacity(0.3), radius: 2.2, x: 0.6, y: 4)
                             .multilineTextAlignment(.leading)
                             .kerning(-7)
                             .rotationEffect(.degrees(-10))
-                            .position(x: 131, y: 95)
+                            .position(x: 131, y: 117)
                             .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
                         
                         
                     case 2: // 1갯수 2개 (ex. 1014)
                         Text("\(dateNumber)")
                             .frame(width: 270, alignment: .leading)
-                            .font(.custom("Inter-Bold", size: 74.0))
+                            .font(.custom("Inter-Bold", size: 78.0))
+                            .shadow(color: Color("ddayBlack").opacity(0.3), radius: 2.2, x: 0.6, y: 4)
                             .multilineTextAlignment(.leading)
                             .kerning(-7)
                             .rotationEffect(.degrees(-10))
-                            .position(x: 131, y: 94)
+                            .position(x: 131, y: 116)
                             .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
                         
                     case 3: // 1갯수 3개 (ex. 1011)
                         Text("\(dateNumber)")
                             .frame(width: 270, alignment: .leading)
-                            .font(.custom("Inter-Bold", size: 83.0))
+                            .font(.custom("Inter-Bold", size: 86.0))
+                            .shadow(color: Color("ddayBlack").opacity(0.3), radius: 2.2, x: 0.6, y: 4)
                             .multilineTextAlignment(.leading)
                             .kerning(-7)
                             .rotationEffect(.degrees(-10))
-                            .position(x: 131, y: 94)
+                            .position(x: 131, y: 118)
                             .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
                         
                     default: // 1갯수 0개 (ex. 9094)
                         Text("\(dateNumber)")
                             .frame(width: 270, alignment: .leading)
-                            .font(.custom("Inter-Bold", size: 65.0))
+                            .font(.custom("Inter-Bold", size: 69.0))
+                            .shadow(color: Color("ddayBlack").opacity(0.3), radius: 2.2, x: 0.6, y: 4)
                             .multilineTextAlignment(.leading)
                             .kerning(-7)
                             .rotationEffect(.degrees(-10))
-                            .position(x: 131, y: 95)
+                            .position(x: 130, y: 116)
                             .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
                     }
                     
                 case 2: // 0갯수 = 2개
-                    switch (dateNumber.components(separatedBy: "1").count - 1) { // 1의 갯수
                         
+                    switch (dateNumber.components(separatedBy: "1").count - 1) { // 1의 갯수
+                            
                     case 1: // 1갯수 1개 (ex. 1004)
                         Text("\(dateNumber)")
                             .frame(width: 270, alignment: .leading)
-                            .font(.custom("Inter-Bold", size: 68.0))
+                            .font(.custom("Inter-Bold", size: 72.0))
+                            .shadow(color: Color("ddayBlack").opacity(0.3), radius: 2.2, x: 0.6, y: 4)
                             .multilineTextAlignment(.leading)
                             .kerning(-7)
                             .rotationEffect(.degrees(-10))
-                            .position(x: 131, y: 94)
+                            .position(x: 130, y: 117)
                             .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
                         
                         
                     case 2: // 1갯수 2개 (ex. 1001)
                         Text("\(dateNumber)")
                             .frame(width: 270, alignment: .leading)
-                            .font(.custom("Inter-Bold", size: 75.0))
+                            .font(.custom("Inter-Bold", size: 79.0))
+                            .shadow(color: Color("ddayBlack").opacity(0.3), radius: 2.2, x: 0.6, y: 4)
                             .multilineTextAlignment(.leading)
                             .kerning(-7)
                             .rotationEffect(.degrees(-10))
-                            .position(x: 131, y: 94)
+                            .position(x: 131, y: 116)
                             .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
                         
                     default: // 1갯수 0개 (ex. 9004)
                         Text("\(dateNumber)")
                             .frame(width: 270, alignment: .leading)
-                            .font(.custom("Inter-Bold", size: 64.0))
+                            .font(.custom("Inter-Bold", size: 67.0))
+                            .shadow(color: Color("ddayBlack").opacity(0.3), radius: 2.2, x: 0.6, y: 4)
                             .multilineTextAlignment(.leading)
                             .kerning(-7)
                             .rotationEffect(.degrees(-10))
-                            .position(x: 131, y: 94)
+                            .position(x: 130, y: 117)
                             .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
                     }
                     
@@ -382,21 +412,23 @@ struct WidgetView_Single01_S_Comp01_pad124x124_: View { // disable shadow
                     case 1: // 1갯수 1개 (ex. 1000)
                         Text("\(dateNumber)")
                             .frame(width: 270, alignment: .leading)
-                            .font(.custom("Inter-Bold", size: 69.0))
+                            .font(.custom("Inter-Bold", size: 73.0))
+                            .shadow(color: Color("ddayBlack").opacity(0.3), radius: 2.2, x: 0.6, y: 4)
                             .multilineTextAlignment(.leading)
                             .kerning(-7)
                             .rotationEffect(.degrees(-10))
-                            .position(x: 131, y: 93)
+                            .position(x: 131, y: 118)
                             .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
                         
                     default: // 1갯수 0개 (ex. 9000)
                         Text("\(dateNumber)")
                             .frame(width: 270, alignment: .leading)
-                            .font(.custom("Inter-Bold", size: 64.0))
+                            .font(.custom("Inter-Bold", size: 69.0))
+                            .shadow(color: Color("ddayBlack").opacity(0.3), radius: 2.2, x: 0.6, y: 4)
                             .multilineTextAlignment(.leading)
-                            .kerning(-6)
+                            .kerning(-7)
                             .rotationEffect(.degrees(-10))
-                            .position(x: 131, y: 93)
+                            .position(x: 129, y: 116)
                             .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
                     }
                     
@@ -404,15 +436,18 @@ struct WidgetView_Single01_S_Comp01_pad124x124_: View { // disable shadow
                     Text("Encountered Error S02-2-5")
                 }
                 
-                // 5자리수~
+                
+                
+            // 5자리수~
             case 5...:
                 Text("\(dateNumber)")
                     .frame(width: 270, alignment: .leading)
-                    .font(.custom("Inter-Bold", size: 53.0))
+                    .font(.custom("Inter-Bold", size: 59.0))
+                    .shadow(color: Color("ddayBlack").opacity(0.3), radius: 2.2, x: 0.6, y: 4)
                     .multilineTextAlignment(.leading)
-                    .kerning(-5)
+                    .kerning(-7)
                     .rotationEffect(.degrees(-10))
-                    .position(x: 131, y: 96)
+                    .position(x: 131, y: 118)
                     .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
                 
             default:
@@ -420,5 +455,6 @@ struct WidgetView_Single01_S_Comp01_pad124x124_: View { // disable shadow
             }
         }
         .background(Color(hex: ddaySymbolMenu[safe: 0]?.ddayBgColor ?? "ddayBlack"))
+        
     }
 }

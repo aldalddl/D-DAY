@@ -102,14 +102,12 @@ struct WidgetView_Single01_S_Comp01_pad160x160_: View { // disable shadow
             // DayNumber
             let dateNumber = CustomFunctions().dateIntSign(dateIntParam: dateInt)
             
-//            switch dateNumber.count {
-                switch 5 {
+            switch dateNumber.count {
 
                 
             // 2자리수
             case 2:
-//                Text("\(dateNumber)")
-                Text("14")
+                Text("\(dateNumber)")
                     .frame(width: 180, alignment: .leading)
                     .font(.custom("Inter-Bold", size: 115.0))
                     .multilineTextAlignment(.leading)
@@ -120,16 +118,13 @@ struct WidgetView_Single01_S_Comp01_pad160x160_: View { // disable shadow
                 
             // 3자리수
             case 3:
-//                switch Int(dateNumber)! / 100 {
-                    switch 9 {
+                switch Int(dateNumber)! / 100 {
                         
                 case 1:
-//                    switch Int(dateNumber)! {
-                        switch 1843 {
+                    switch Int(dateNumber)! {
                             
                     case 104, 144:
-//                        Text("\(dateNumber)")
-                        Text("144")
+                        Text("\(dateNumber)")
                             .frame(width: 230, alignment: .leading)
                             .font(.custom("Inter-Bold", size: 98.0))
                             .multilineTextAlignment(.leading)
@@ -139,8 +134,7 @@ struct WidgetView_Single01_S_Comp01_pad160x160_: View { // disable shadow
                             .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
                         
                     case 154, 164, 184, 194:
-//                        Text("\(dateNumber)")
-                            Text("154")
+                        Text("\(dateNumber)")
                             .frame(width: 230, alignment: .leading)
                             .font(.custom("Inter-Bold", size: 99.0))
                             .multilineTextAlignment(.leading)
@@ -151,8 +145,7 @@ struct WidgetView_Single01_S_Comp01_pad160x160_: View { // disable shadow
                         
                         
                     default:
-//                        Text("\(dateNumber)")
-                            Text("100")
+                        Text("\(dateNumber)")
                             .frame(width: 230, alignment: .leading)
                             .font(.custom("Inter-Bold", size: 101.0))
                             .multilineTextAlignment(.leading)
@@ -163,12 +156,10 @@ struct WidgetView_Single01_S_Comp01_pad160x160_: View { // disable shadow
                     }
                     
                 case 2:
-//                    switch Int(dateNumber)! {
-                        switch 2843 {
+                    switch Int(dateNumber)! {
                             
                     case 204, 244:
-//                        Text("\(dateNumber)")
-                        Text("204")
+                        Text("\(dateNumber)")
                             .frame(width: 230, alignment: .leading)
                             .font(.custom("Inter-Bold", size: 90.0))
                             .multilineTextAlignment(.leading)
@@ -178,8 +169,7 @@ struct WidgetView_Single01_S_Comp01_pad160x160_: View { // disable shadow
                             .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
                         
                     case 234, 254, 264, 284, 294:
-//                        Text("\(dateNumber)")
-                            Text("284")
+                        Text("\(dateNumber)")
                             .frame(width: 230, alignment: .leading)
                             .font(.custom("Inter-Bold", size: 91.0))
                             .multilineTextAlignment(.leading)
@@ -189,8 +179,7 @@ struct WidgetView_Single01_S_Comp01_pad160x160_: View { // disable shadow
                             .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
                         
                     default:
-//                        Text("\(dateNumber)")
-                            Text("211")
+                        Text("\(dateNumber)")
                             .frame(width: 230, alignment: .leading)
                             .font(.custom("Inter-Bold", size: 92.0))
                             .multilineTextAlignment(.leading)
@@ -201,12 +190,10 @@ struct WidgetView_Single01_S_Comp01_pad160x160_: View { // disable shadow
                     }
                     
                 case 3...8 :
-//                    switch Int(dateNumber)! {
-                        switch 8044 {
+                    switch Int(dateNumber)! {
                         
                     case 304, 334, 344, 354, 364, 384, 394, 404, 434, 444, 454, 464, 484, 494, 504, 604, 804:
-//                        Text("\(dateNumber)")
-                        Text("804")
+                        Text("\(dateNumber)")
                             .frame(width: 230, alignment: .leading)
                             .font(.custom("Inter-Bold", size: 92.0))
                             .multilineTextAlignment(.leading)
@@ -216,8 +203,7 @@ struct WidgetView_Single01_S_Comp01_pad160x160_: View { // disable shadow
                             .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
                         
                     case 544, 564, 584, 594, 624, 644, 664, 684, 694, 844, 854, 864, 884, 894:
-//                        Text("\(dateNumber)")
-                            Text("584")
+                        Text("\(dateNumber)")
                             .frame(width: 230, alignment: .leading)
                             .font(.custom("Inter-Bold", size: 93.0))
                             .multilineTextAlignment(.leading)
@@ -227,8 +213,7 @@ struct WidgetView_Single01_S_Comp01_pad160x160_: View { // disable shadow
                             .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
                         
                     default:
-//                        Text("\(dateNumber)")
-                            Text("800")
+                        Text("\(dateNumber)")
                             .frame(width: 230, alignment: .leading)
                             .font(.custom("Inter-Bold", size: 93.0))
                             .multilineTextAlignment(.leading)
@@ -239,8 +224,7 @@ struct WidgetView_Single01_S_Comp01_pad160x160_: View { // disable shadow
                     }
                     
                 case 9:
-//                    Text("\(dateNumber)")
-                        Text("904")
+                    Text("\(dateNumber)")
                         .frame(width: 230, alignment: .leading)
                         .font(.custom("Inter-Bold", size: 91.0))
                         .multilineTextAlignment(.leading)
@@ -257,17 +241,14 @@ struct WidgetView_Single01_S_Comp01_pad160x160_: View { // disable shadow
             // 4자리수
             case 4:
                 
-//                switch (dateNumber.components(separatedBy: "0").count - 1) { // 0의 갯수
-                    switch 3 { // 0의 갯수
+                switch (dateNumber.components(separatedBy: "0").count - 1) { // 0의 갯수
                         
                 case 0: // 0갯수 = 0개
                     
-//                    switch (dateNumber.components(separatedBy: "1").count - 1) { // 1의 갯수
-                        switch 44 { // 1의 갯수
+                    switch (dateNumber.components(separatedBy: "1").count - 1) { // 1의 갯수
                             
                     case 1: // 1갯수 1개 (ex. 1994)
-//                        Text("\(dateNumber)")
-                            Text("1994")
+                        Text("\(dateNumber)")
                             .frame(width: 270, alignment: .leading)
                             .font(.custom("Inter-Bold", size: 73.0))
                             .multilineTextAlignment(.leading)
@@ -277,8 +258,7 @@ struct WidgetView_Single01_S_Comp01_pad160x160_: View { // disable shadow
                             .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
                         
                     case 2: // 1갯수 2개 (ex. 1914)
-//                        Text("\(dateNumber)")
-                            Text("1914")
+                        Text("\(dateNumber)")
                             .frame(width: 270, alignment: .leading)
                             .font(.custom("Inter-Bold", size: 79.0))
                             .multilineTextAlignment(.leading)
@@ -288,8 +268,7 @@ struct WidgetView_Single01_S_Comp01_pad160x160_: View { // disable shadow
                             .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
                         
                     case 3: // 1갯수 3개 (ex. 1114)
-//                        Text("\(dateNumber)")
-                            Text("1114")
+                        Text("\(dateNumber)")
                             .frame(width: 270, alignment: .leading)
                             .font(.custom("Inter-Bold", size: 85.0))
                             .multilineTextAlignment(.leading)
@@ -299,8 +278,7 @@ struct WidgetView_Single01_S_Comp01_pad160x160_: View { // disable shadow
                             .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
                         
                     case 4: // 1갯수 4개 (ex. 1111)
-//                        Text("\(dateNumber)")
-                            Text("1111")
+                        Text("\(dateNumber)")
                             .frame(width: 270, alignment: .leading)
                             .font(.custom("Inter-Bold", size: 94.0))
                             .multilineTextAlignment(.leading)
@@ -310,8 +288,7 @@ struct WidgetView_Single01_S_Comp01_pad160x160_: View { // disable shadow
                             .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
                         
                     default: // 그 이외의, 1000~9999까지 0갯수 0개 & 1갯수 0개인 수 (ex. 9994)
-//                        Text("\(dateNumber)")
-                            Text("9994")
+                        Text("\(dateNumber)")
                             .frame(width: 270, alignment: .leading)
                             .font(.custom("Inter-Bold", size: 69.0))
                             .multilineTextAlignment(.leading)
@@ -324,12 +301,10 @@ struct WidgetView_Single01_S_Comp01_pad160x160_: View { // disable shadow
                     
                 case 1: // 0갯수 = 1개
                         
-//                    switch (dateNumber.components(separatedBy: "1").count - 1) { // 1의 갯수
-                        switch 34 { // 1의 갯수
+                    switch (dateNumber.components(separatedBy: "1").count - 1) { // 1의 갯수
                             
                     case 1: // 1갯수 1개 (ex. 1094)
-//                        Text("\(dateNumber)")
-                            Text("1094")
+                        Text("\(dateNumber)")
                             .frame(width: 270, alignment: .leading)
                             .font(.custom("Inter-Bold", size: 72.0))
                             .multilineTextAlignment(.leading)
@@ -340,8 +315,7 @@ struct WidgetView_Single01_S_Comp01_pad160x160_: View { // disable shadow
                         
                         
                     case 2: // 1갯수 2개 (ex. 1014)
-//                        Text("\(dateNumber)")
-                            Text("1014")
+                        Text("\(dateNumber)")
                             .frame(width: 270, alignment: .leading)
                             .font(.custom("Inter-Bold", size: 78.0))
                             .multilineTextAlignment(.leading)
@@ -351,8 +325,7 @@ struct WidgetView_Single01_S_Comp01_pad160x160_: View { // disable shadow
                             .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
                         
                     case 3: // 1갯수 3개 (ex. 1011)
-//                        Text("\(dateNumber)")
-                            Text("1011")
+                        Text("\(dateNumber)")
                             .frame(width: 270, alignment: .leading)
                             .font(.custom("Inter-Bold", size: 86.0))
                             .multilineTextAlignment(.leading)
@@ -362,8 +335,7 @@ struct WidgetView_Single01_S_Comp01_pad160x160_: View { // disable shadow
                             .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
                         
                     default: // 1갯수 0개 (ex. 9094)
-//                        Text("\(dateNumber)")
-                            Text("9094")
+                        Text("\(dateNumber)")
                             .frame(width: 270, alignment: .leading)
                             .font(.custom("Inter-Bold", size: 69.0))
                             .multilineTextAlignment(.leading)
@@ -375,12 +347,10 @@ struct WidgetView_Single01_S_Comp01_pad160x160_: View { // disable shadow
                     
                 case 2: // 0갯수 = 2개
                         
-//                    switch (dateNumber.components(separatedBy: "1").count - 1) { // 1의 갯수
-                        switch 23 { // 1의 갯수
+                    switch (dateNumber.components(separatedBy: "1").count - 1) { // 1의 갯수
                             
                     case 1: // 1갯수 1개 (ex. 1004)
-//                        Text("\(dateNumber)")
-                        Text("1004")
+                        Text("\(dateNumber)")
                             .frame(width: 270, alignment: .leading)
                             .font(.custom("Inter-Bold", size: 72.0))
                             .multilineTextAlignment(.leading)
@@ -391,8 +361,7 @@ struct WidgetView_Single01_S_Comp01_pad160x160_: View { // disable shadow
                         
                         
                     case 2: // 1갯수 2개 (ex. 1001)
-//                        Text("\(dateNumber)")
-                            Text("1001")
+                        Text("\(dateNumber)")
                             .frame(width: 270, alignment: .leading)
                             .font(.custom("Inter-Bold", size: 79.0))
                             .multilineTextAlignment(.leading)
@@ -402,8 +371,7 @@ struct WidgetView_Single01_S_Comp01_pad160x160_: View { // disable shadow
                             .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
                         
                     default: // 1갯수 0개 (ex. 9004)
-//                        Text("\(dateNumber)")
-                            Text("9004")
+                        Text("\(dateNumber)")
                             .frame(width: 270, alignment: .leading)
                             .font(.custom("Inter-Bold", size: 67.0))
                             .multilineTextAlignment(.leading)
@@ -414,12 +382,10 @@ struct WidgetView_Single01_S_Comp01_pad160x160_: View { // disable shadow
                     }
                     
                 case 3: // 0갯수 = 3개
-//                    switch (dateNumber.components(separatedBy: "1").count - 1) { // 1의 갯수
-                        switch 2 { // 1의 갯수
+                    switch (dateNumber.components(separatedBy: "1").count - 1) { // 1의 갯수
                         
                     case 1: // 1갯수 1개 (ex. 1000)
-//                        Text("\(dateNumber)")
-                            Text("1000")
+                        Text("\(dateNumber)")
                             .frame(width: 270, alignment: .leading)
                             .font(.custom("Inter-Bold", size: 73.0))
                             .multilineTextAlignment(.leading)
@@ -429,8 +395,7 @@ struct WidgetView_Single01_S_Comp01_pad160x160_: View { // disable shadow
                             .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
                         
                     default: // 1갯수 0개 (ex. 9000)
-//                        Text("\(dateNumber)")
-                            Text("9000")
+                        Text("\(dateNumber)")
                             .frame(width: 270, alignment: .leading)
                             .font(.custom("Inter-Bold", size: 69.0))
                             .multilineTextAlignment(.leading)
@@ -448,8 +413,7 @@ struct WidgetView_Single01_S_Comp01_pad160x160_: View { // disable shadow
                 
             // 5자리수~
             case 5...:
-//                Text("\(dateNumber)")
-                    Text("10004")
+                Text("\(dateNumber)")
                     .frame(width: 270, alignment: .leading)
                     .font(.custom("Inter-Bold", size: 59.0))
                     .multilineTextAlignment(.leading)

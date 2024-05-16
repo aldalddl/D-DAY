@@ -11,31 +11,11 @@ struct WidgetView_Multi07_XL_Comp01: View { // disable shadow
     
     var entry: Provider.Entry
     
+    var ddaySymbolMenu: [DdaySymbol]
+    
     var body: some View {
-
         let localizedKey = LocalizedStringKey("길게 눌러서 디데이 추가하기")
-        
-        let defaultStringArr: [[String]] = [
-            // format: [ddayTitle, ddayDate, ddayBgColor, ddayTxtColor, ddayIsCountdown]
-            [localizedKey.stringValue(), "2023.10.04", "ddayNeonYellow", "ddayBlack", "false"],
-            [localizedKey.stringValue(), "2023.05.04", "ddayNeonYellow", "ddayBlack", "false"],
-            [localizedKey.stringValue(), "2023.03.04", "ddayNeonYellow", "ddayBlack", "false"],
-            [localizedKey.stringValue(), "2021.02.04", "ddayNeonYellow", "ddayBlack", "false"],
-        ]
-        
-        let defaultDdaySymbolMenu: [DdaySymbol] = defaultStringArr.map { sArray in
-            let symbolDdayItem = DdaySymbol (identifier: "identifier", display: "diaplay")
-            symbolDdayItem.ddayTitle = sArray[0]
-            symbolDdayItem.ddayDate = sArray[1]
-            symbolDdayItem.ddayBgColor = sArray[2]
-            symbolDdayItem.ddayTxtColor = sArray[3]
-            symbolDdayItem.ddayIsCountdown = sArray[4]
-            
-            return symbolDdayItem
-        }
-        
-        let ddaySymbolMenu: [DdaySymbol] = entry.configuration.ddaySymbol ?? defaultDdaySymbolMenu
-        
+
         ZStack {
             // top stack 1
             ZStack {
