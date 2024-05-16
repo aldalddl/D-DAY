@@ -299,11 +299,6 @@ struct WidgetView_Single01EntryView : View {
                             .containerBackground(for: .widget) {}
                         
                         
-                        /*
-                        
-                        
-                        
-                         
                     /// ** iPad UI **
                     case CGSize(width: 768, height: 1024), CGSize(width: 744, height: 1133): // (768x1024, 744x1133)
                         WidgetView_Single01_M_Comp02_pad120x120_(entry: self.entry, ddaySymbolMenu: ddaySymbolMenu)
@@ -341,15 +336,13 @@ struct WidgetView_Single01EntryView : View {
                         WidgetView_Single01_M_Comp02_pad160x160_(entry: self.entry, ddaySymbolMenu: ddaySymbolMenu)
                             .body
                             .containerBackground(for: .widget) {}
-                        */
+                        
                     default:
                         // Default widget
                         WidgetView_Single01_M_Comp02_360x169_(entry: self.entry, ddaySymbolMenu: ddaySymbolMenu)
                             .body
                             .containerBackground(for: .widget) {}
                     }
-                    
-                    
                     
                 default:
                     Text("Encountered Error S02-2")

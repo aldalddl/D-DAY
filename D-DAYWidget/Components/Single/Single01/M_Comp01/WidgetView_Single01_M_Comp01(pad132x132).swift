@@ -70,17 +70,14 @@ struct WidgetView_Single01_M_Comp01_pad132x132_: View { // disable shadow
                 let ddayNumber = CustomFunctions().dateIntSign00(dateIntParam: dateInt)
                 
                 // DayNumber
-//                switch dateInt <= 0 {
-                    switch false {
+                switch dateInt <= 0 {
                         
                 case true :
-//                    switch ddayNumber.count {
-                        switch 5 {
+                    switch ddayNumber.count {
                             
                     case 1:
                             
-//                        switch ddayNumber {
-                            switch "02" {
+                        switch ddayNumber {
                                 
                         case "0":
                             Text("D-DAY")
@@ -93,8 +90,7 @@ struct WidgetView_Single01_M_Comp01_pad132x132_: View { // disable shadow
                                 .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayBlack"))
                             
                         default:
-//                            Text("D-00\(ddayNumber)")
-                                Text("D-001")
+                            Text("D-00\(ddayNumber)")
                                 .font(.custom("Inter-Bold", size: 115.0))
                                 .frame(width: 500, height: 100, alignment: .leading)
                                 .position(x: 246, y: 108)
@@ -106,8 +102,7 @@ struct WidgetView_Single01_M_Comp01_pad132x132_: View { // disable shadow
                         }
                             
                     case 2:
-//                        Text("D-0\(ddayNumber)")
-                            Text("D-011")
+                        Text("D-0\(ddayNumber)")
                             .font(.custom("Inter-Bold", size: 116.0))
                             .frame(width: 500, height: 100, alignment: .leading)
                             .position(x: 245, y: 110)
@@ -117,8 +112,7 @@ struct WidgetView_Single01_M_Comp01_pad132x132_: View { // disable shadow
                             .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayBlack"))
                             
                     case 3:
-//                        Text("D-\(ddayNumber)")
-                            Text("D-111")
+                        Text("D-\(ddayNumber)")
                             .font(.custom("Inter-Bold", size: 116.0))
                             .frame(width: 500, height: 100, alignment: .leading)
                             .position(x: 248, y: 109)
@@ -129,16 +123,13 @@ struct WidgetView_Single01_M_Comp01_pad132x132_: View { // disable shadow
                         
                     case 4:
                             
-//                        switch (ddayNumber.components(separatedBy: "0").count - 1) { // 0의 갯수
-                            switch 3 { // 0의 갯수
+                        switch (ddayNumber.components(separatedBy: "0").count - 1) { // 0의 갯수
                                 
                         case 0: // 0갯수 = 0개
                                 
-//                            switch (ddayNumber.components(separatedBy: "1").count - 1) { // 1의 갯수
-                                switch 41 { // 1의 갯수
+                            switch (ddayNumber.components(separatedBy: "1").count - 1) { // 1의 갯수
                             case 1: // 1갯수 1개 (ex. 1994)
-//                                Text("D-\(ddayNumber)")
-                                    Text("D-1994")
+                                Text("D-\(ddayNumber)")
                                     .font(.custom("Inter-Bold", size: 104.0))
                                     .frame(width: 500, height: 100, alignment: .leading)
                                     .position(x: 244, y: 109)
@@ -149,8 +140,7 @@ struct WidgetView_Single01_M_Comp01_pad132x132_: View { // disable shadow
                                 
                                 
                             case 2: // 1갯수 2개 (ex. 1914)
-//                                Text("D-\(ddayNumber)")
-                                    Text("D-1914")
+                                Text("D-\(ddayNumber)")
                                     .font(.custom("Inter-Bold", size: 109.0))
                                     .frame(width: 500, height: 100, alignment: .leading)
                                     .position(x: 245, y: 109)
@@ -160,8 +150,7 @@ struct WidgetView_Single01_M_Comp01_pad132x132_: View { // disable shadow
                                     .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayBlack"))
                                 
                             case 3: // 1갯수 3개 (ex. 1114)
-//                                Text("D-\(ddayNumber)")
-                                    Text("D-1114")
+                                Text("D-\(ddayNumber)")
                                     .font(.custom("Inter-Bold", size: 114.0))
                                     .frame(width: 500, height: 100, alignment: .leading)
                                     .position(x: 245, y: 109)
@@ -171,8 +160,7 @@ struct WidgetView_Single01_M_Comp01_pad132x132_: View { // disable shadow
                                     .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayBlack"))
                                 
                             case 4: // 1갯수 4개 (ex. 1111)
-//                                Text("D-\(ddayNumber)")
-                                    Text("D-1111")
+                                Text("D-\(ddayNumber)")
                                     .font(.custom("Inter-Bold", size: 121.0))
                                     .frame(width: 500, height: 100, alignment: .leading)
                                     .position(x: 245, y: 109)
@@ -182,8 +170,7 @@ struct WidgetView_Single01_M_Comp01_pad132x132_: View { // disable shadow
                                     .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayBlack"))
                                 
                             default: // 그 이외의, 1000~9999까지 0갯수 0개 & 1갯수 0개인 수 (ex. 9994)
-//                                Text("D-\(ddayNumber)")
-                                    Text("D-9994")
+                                Text("D-\(ddayNumber)")
                                     .font(.custom("Inter-Bold", size: 99.0))
                                     .frame(width: 500, height: 100, alignment: .leading)
                                     .position(x: 244, y: 108)
@@ -195,12 +182,10 @@ struct WidgetView_Single01_M_Comp01_pad132x132_: View { // disable shadow
                             
                             
                         case 1: // 0갯수 = 1개
-//                            switch (ddayNumber.components(separatedBy: "1").count - 1) { // 1의 갯수
-                                switch 4 { // 1의 갯수
+                            switch (ddayNumber.components(separatedBy: "1").count - 1) { // 1의 갯수
                                     
                             case 1: // 1갯수 1개 (ex. 1094)
-//                                Text("D-\(ddayNumber)")
-                                    Text("D-1094")
+                                Text("D-\(ddayNumber)")
                                     .font(.custom("Inter-Bold", size: 103.0))
                                     .frame(width: 500, height: 100, alignment: .leading)
                                     .position(x: 244, y: 109)
@@ -211,8 +196,7 @@ struct WidgetView_Single01_M_Comp01_pad132x132_: View { // disable shadow
                                 
                                 
                             case 2: // 1갯수 2개 (ex. 1014)
-//                                Text("D-\(ddayNumber)")
-                                    Text("D-1014")
+                                Text("D-\(ddayNumber)")
                                     .font(.custom("Inter-Bold", size: 108.0))
                                     .frame(width: 500, height: 100, alignment: .leading)
                                     .position(x: 243, y: 109)
@@ -222,8 +206,7 @@ struct WidgetView_Single01_M_Comp01_pad132x132_: View { // disable shadow
                                     .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayBlack"))
                                 
                             case 3: // 1갯수 3개 (ex. 1011)
-//                                Text("D-\(ddayNumber)")
-                                    Text("D-1011")
+                                Text("D-\(ddayNumber)")
                                     .font(.custom("Inter-Bold", size: 115.0))
                                     .frame(width: 500, height: 100, alignment: .leading)
                                     .position(x: 244, y: 109)
@@ -233,8 +216,7 @@ struct WidgetView_Single01_M_Comp01_pad132x132_: View { // disable shadow
                                     .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayBlack"))
                                 
                             default: // 1갯수 0개 (ex. 9094)
-//                                Text("D-\(ddayNumber)")
-                                    Text("D-9094")
+                                Text("D-\(ddayNumber)")
                                     .font(.custom("Inter-Bold", size: 99.0))
                                     .frame(width: 500, height: 100, alignment: .leading)
                                     .position(x: 243, y: 108)
@@ -246,11 +228,9 @@ struct WidgetView_Single01_M_Comp01_pad132x132_: View { // disable shadow
                             
                         case 2: // 0갯수 = 2개
                                 
-//                            switch (ddayNumber.components(separatedBy: "1").count - 1) { // 1의 갯수
-                                switch 3 { // 1의 갯수
+                            switch (ddayNumber.components(separatedBy: "1").count - 1) { // 1의 갯수
                             case 1: // 1갯수 1개 (ex. 1004)
-//                                Text("D-\(ddayNumber)")
-                                    Text("D-1004")
+                                Text("D-\(ddayNumber)")
                                     .font(.custom("Inter-Bold", size: 102.0))
                                     .frame(width: 500, height: 100, alignment: .leading)
                                     .position(x: 244, y: 109)
@@ -261,8 +241,7 @@ struct WidgetView_Single01_M_Comp01_pad132x132_: View { // disable shadow
                                 
                                 
                             case 2: // 1갯수 2개 (ex. 1001)
-//                                Text("D-\(ddayNumber)")
-                                    Text("D-1001")
+                                Text("D-\(ddayNumber)")
                                     .font(.custom("Inter-Bold", size: 108.0))
                                     .frame(width: 500, height: 100, alignment: .leading)
                                     .position(x: 244, y: 109)
@@ -272,8 +251,7 @@ struct WidgetView_Single01_M_Comp01_pad132x132_: View { // disable shadow
                                     .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayBlack"))
                                 
                             default: // 1갯수 0개 (ex. 9004)
-//                                Text("D-\(ddayNumber)")
-                                    Text("D-9004")
+                                Text("D-\(ddayNumber)")
                                     .font(.custom("Inter-Bold", size: 98.0))
                                     .frame(width: 500, height: 100, alignment: .leading)
                                     .position(x: 243, y: 109)
@@ -285,12 +263,10 @@ struct WidgetView_Single01_M_Comp01_pad132x132_: View { // disable shadow
                             
                         case 3: // 0갯수 = 3개
                                 
-//                            switch (ddayNumber.components(separatedBy: "1").count - 1) { // 1의 갯수
-                                switch 2 { // 1의 갯수
+                            switch (ddayNumber.components(separatedBy: "1").count - 1) { // 1의 갯수
                                     
                             case 1: // 1갯수 1개 (ex. 1000)
-//                                Text("D-\(ddayNumber)")
-                                    Text("D-1000")
+                                Text("D-\(ddayNumber)")
                                     .font(.custom("Inter-Bold", size: 103.0))
                                     .frame(width: 500, height: 100, alignment: .leading)
                                     .position(x: 244, y: 109)
@@ -300,8 +276,7 @@ struct WidgetView_Single01_M_Comp01_pad132x132_: View { // disable shadow
                                     .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayBlack"))
                                 
                             default: // 1갯수 0개 (ex. 9000)
-//                                Text("D-\(ddayNumber)")
-                                    Text("D-9000")
+                                Text("D-\(ddayNumber)")
                                     .font(.custom("Inter-Bold", size: 99.0))
                                     .frame(width: 500, height: 100, alignment: .leading)
                                     .position(x: 244, y: 109)
@@ -316,8 +291,7 @@ struct WidgetView_Single01_M_Comp01_pad132x132_: View { // disable shadow
                         }
                         
                     case 5...:
-//                        Text("D-\(ddayNumber)")
-                            Text("D-20000")
+                        Text("D-\(ddayNumber)")
                             .font(.custom("Inter-Bold", size: 86.0))
                             .frame(width: 500, height: 100, alignment: .leading)
                             .position(x: 243, y: 108)
@@ -331,11 +305,9 @@ struct WidgetView_Single01_M_Comp01_pad132x132_: View { // disable shadow
                     }
                     
                 case false :
-//                    switch ddayNumber.count {
-                        switch 5 {
+                    switch ddayNumber.count {
                     case 1:
-//                            switch ddayNumber {
-                                switch "01" {
+                            switch ddayNumber {
                             case "0":
                                 Text("D-DAY")
                                         .font(.custom("Inter-Bold", size: 114.0))
@@ -356,8 +328,7 @@ struct WidgetView_Single01_M_Comp01_pad132x132_: View { // disable shadow
                                     .rotationEffect(.degrees(-10))
                                     .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayBlack"))
                                     
-//                                    Text("00\(ddayNumber)")
-                                    Text("004")
+                                Text("00\(ddayNumber)")
                                     .font(.custom("Inter-Bold", size: 109.0))
                                     .frame(width: 500, height: 100, alignment: .leading)
                                     .position(x: 376, y: 109)
@@ -378,8 +349,7 @@ struct WidgetView_Single01_M_Comp01_pad132x132_: View { // disable shadow
                             .rotationEffect(.degrees(-10))
                             .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayBlack"))
                         
-//                        Text("0\(ddayNumber)")
-                            Text("011")
+                        Text("0\(ddayNumber)")
                             .font(.custom("Inter-Bold", size: 112.0))
                             .frame(width: 500, height: 100, alignment: .leading)
                             .position(x: 375, y: 109)
@@ -390,8 +360,7 @@ struct WidgetView_Single01_M_Comp01_pad132x132_: View { // disable shadow
                         
                     case 3:
                         
-//                        switch Int(ddayNumber)! / 100 {
-                            switch 2 {
+                        switch Int(ddayNumber)! / 100 {
                         case 1:
                             Text("D+")
                                 .font(.custom("Inter-Bold", size: 118.0))
@@ -402,8 +371,7 @@ struct WidgetView_Single01_M_Comp01_pad132x132_: View { // disable shadow
                                 .rotationEffect(.degrees(-10))
                                 .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayBlack"))
                             
-//                            Text("\(ddayNumber)")
-                            Text("104")
+                            Text("\(ddayNumber)")
                                 .font(.custom("Inter-Bold", size: 118.0))
                                 .frame(width: 500, height: 100, alignment: .leading)
                                 .position(x: 382, y: 109)
@@ -422,8 +390,7 @@ struct WidgetView_Single01_M_Comp01_pad132x132_: View { // disable shadow
                                 .rotationEffect(.degrees(-10))
                                 .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayBlack"))
                             
-//                            Text("\(ddayNumber)")
-                                Text("994")
+                            Text("\(ddayNumber)")
                                 .font(.custom("Inter-Bold", size: 113.0))
                                 .frame(width: 500, height: 100, alignment: .leading)
                                 .position(x: 377, y: 109)
@@ -438,12 +405,10 @@ struct WidgetView_Single01_M_Comp01_pad132x132_: View { // disable shadow
                         
                             
                     case 4:
-//                            switch (ddayNumber.components(separatedBy: "0").count - 1) { // 0의 갯수
-                                switch 3 { // 0의 갯수
+                            switch (ddayNumber.components(separatedBy: "0").count - 1) { // 0의 갯수
                             case 0: // 0갯수 = 0개
                                 
-//                                switch (ddayNumber.components(separatedBy: "1").count - 1) { // 1의 갯수
-                                    switch 41 { // 1의 갯수
+                                switch (ddayNumber.components(separatedBy: "1").count - 1) { // 1의 갯수
                                 case 1: // 1갯수 1개 (ex. 1994)
                                     Text("D")
                                         .font(.custom("Inter-Bold", size: 100.0))
@@ -461,8 +426,7 @@ struct WidgetView_Single01_M_Comp01_pad132x132_: View { // disable shadow
                                         .rotationEffect(.degrees(-10))
                                         .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayBlack"))
                                     
-//                                    Text("\(ddayNumber)")
-                                        Text("1994")
+                                    Text("\(ddayNumber)")
                                         .font(.custom("Inter-Bold", size: 100.0))
                                         .frame(width: 500, height: 100, alignment: .leading)
                                         .position(x: 356, y: 108)
@@ -489,8 +453,7 @@ struct WidgetView_Single01_M_Comp01_pad132x132_: View { // disable shadow
                                             .rotationEffect(.degrees(-10))
                                             .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayBlack"))
                                         
-//                                        Text("\(ddayNumber)")
-                                        Text("1914")
+                                        Text("\(ddayNumber)")
                                             .font(.custom("Inter-Bold", size: 106.0))
                                             .frame(width: 500, height: 100, alignment: .leading)
                                             .position(x: 362, y: 108)
@@ -516,8 +479,7 @@ struct WidgetView_Single01_M_Comp01_pad132x132_: View { // disable shadow
                                             .rotationEffect(.degrees(-10))
                                             .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayBlack"))
                                         
-//                                        Text("\(ddayNumber)")
-                                        Text("1114")
+                                        Text("\(ddayNumber)")
                                             .font(.custom("Inter-Bold", size: 112.0))
                                             .frame(width: 500, height: 100, alignment: .leading)
                                             .position(x: 370, y: 109)
@@ -543,8 +505,7 @@ struct WidgetView_Single01_M_Comp01_pad132x132_: View { // disable shadow
                                             .rotationEffect(.degrees(-10))
                                             .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayBlack"))
                                         
-//                                        Text("\(ddayNumber)")
-                                        Text("1111")
+                                        Text("\(ddayNumber)")
                                             .font(.custom("Inter-Bold", size: 118.0))
                                             .frame(width: 500, height: 100, alignment: .leading)
                                             .position(x: 384, y: 109)
@@ -570,8 +531,7 @@ struct WidgetView_Single01_M_Comp01_pad132x132_: View { // disable shadow
                                             .rotationEffect(.degrees(-10))
                                             .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayBlack"))
                                         
-//                                        Text("\(ddayNumber)")
-                                        Text("9994")
+                                        Text("\(ddayNumber)")
                                             .font(.custom("Inter-Bold", size: 95.0))
                                             .frame(width: 500, height: 100, alignment: .leading)
                                             .position(x: 356, y: 108)
@@ -582,8 +542,7 @@ struct WidgetView_Single01_M_Comp01_pad132x132_: View { // disable shadow
                                 }
                                 
                             case 1: // 0갯수 = 1개
-//                                switch (ddayNumber.components(separatedBy: "1").count - 1) { // 1의 갯수
-                                    switch 33 { // 1의 갯수
+                                switch (ddayNumber.components(separatedBy: "1").count - 1) { // 1의 갯수
                                 case 1: // 1갯수 1개 (ex. 1094)
                                     Text("D")
                                         .font(.custom("Inter-Bold", size: 99.0))
@@ -601,8 +560,7 @@ struct WidgetView_Single01_M_Comp01_pad132x132_: View { // disable shadow
                                         .rotationEffect(.degrees(-10))
                                         .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayBlack"))
                                     
-//                                    Text("\(ddayNumber)")
-                                        Text("1094")
+                                    Text("\(ddayNumber)")
                                         .font(.custom("Inter-Bold", size: 99.0))
                                         .frame(width: 500, height: 100, alignment: .leading)
                                         .position(x: 358, y: 109)
@@ -629,8 +587,7 @@ struct WidgetView_Single01_M_Comp01_pad132x132_: View { // disable shadow
                                             .rotationEffect(.degrees(-10))
                                             .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayBlack"))
                                         
-//                                        Text("\(ddayNumber)")
-                                        Text("1014")
+                                        Text("\(ddayNumber)")
                                             .font(.custom("Inter-Bold", size: 105.0))
                                             .frame(width: 500, height: 100, alignment: .leading)
                                             .position(x: 366, y: 109)
@@ -656,8 +613,7 @@ struct WidgetView_Single01_M_Comp01_pad132x132_: View { // disable shadow
                                             .rotationEffect(.degrees(-10))
                                             .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayBlack"))
                                         
-//                                        Text("\(ddayNumber)")
-                                        Text("1011")
+                                        Text("\(ddayNumber)")
                                             .font(.custom("Inter-Bold", size: 111.0))
                                             .frame(width: 500, height: 100, alignment: .leading)
                                             .position(x: 374, y: 109)
@@ -683,8 +639,7 @@ struct WidgetView_Single01_M_Comp01_pad132x132_: View { // disable shadow
                                             .rotationEffect(.degrees(-10))
                                             .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayBlack"))
                                         
-//                                        Text("\(ddayNumber)")
-                                        Text("9094")
+                                        Text("\(ddayNumber)")
                                             .font(.custom("Inter-Bold", size: 94.0))
                                             .frame(width: 500, height: 100, alignment: .leading)
                                             .position(x: 356, y: 108)
@@ -696,8 +651,7 @@ struct WidgetView_Single01_M_Comp01_pad132x132_: View { // disable shadow
                                 
                             case 2: // 0갯수 = 2개
                                     
-//                                switch (ddayNumber.components(separatedBy: "1").count - 1) { // 1의 갯수
-                                    switch 23 { // 1의 갯수
+                                switch (ddayNumber.components(separatedBy: "1").count - 1) { // 1의 갯수
                                         
                                 case 1: // 1갯수 1개 (ex. 1004)
                                         Text("D")
@@ -716,8 +670,7 @@ struct WidgetView_Single01_M_Comp01_pad132x132_: View { // disable shadow
                                             .rotationEffect(.degrees(-10))
                                             .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayBlack"))
                                         
-//                                        Text("\(ddayNumber)")
-                                        Text("1004")
+                                        Text("\(ddayNumber)")
                                             .font(.custom("Inter-Bold", size: 99.0))
                                             .frame(width: 500, height: 100, alignment: .leading)
                                             .position(x: 357, y: 109)
@@ -744,8 +697,7 @@ struct WidgetView_Single01_M_Comp01_pad132x132_: View { // disable shadow
                                             .rotationEffect(.degrees(-10))
                                             .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayBlack"))
                                         
-//                                        Text("\(ddayNumber)")
-                                        Text("1001")
+                                        Text("\(ddayNumber)")
                                             .font(.custom("Inter-Bold", size: 104.0))
                                             .frame(width: 500, height: 100, alignment: .leading)
                                             .position(x: 364, y: 108)
@@ -771,8 +723,7 @@ struct WidgetView_Single01_M_Comp01_pad132x132_: View { // disable shadow
                                             .rotationEffect(.degrees(-10))
                                             .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayBlack"))
                                         
-//                                        Text("\(ddayNumber)")
-                                        Text("9004")
+                                        Text("\(ddayNumber)")
                                             .font(.custom("Inter-Bold", size: 94.0))
                                             .frame(width: 500, height: 100, alignment: .leading)
                                             .position(x: 352, y: 108)
@@ -783,8 +734,7 @@ struct WidgetView_Single01_M_Comp01_pad132x132_: View { // disable shadow
                                 }
                                 
                             case 3: // 0갯수 = 3개
-//                                switch (ddayNumber.components(separatedBy: "1").count - 1) { // 1의 갯수
-                                    switch 2 { // 1의 갯수
+                                switch (ddayNumber.components(separatedBy: "1").count - 1) { // 1의 갯수
                                 case 1: // 1갯수 1개 (ex. 1000)
                                     Text("D")
                                         .font(.custom("Inter-Bold", size: 100.0))
@@ -802,8 +752,7 @@ struct WidgetView_Single01_M_Comp01_pad132x132_: View { // disable shadow
                                         .rotationEffect(.degrees(-10))
                                         .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayBlack"))
                                     
-//                                    Text("\(ddayNumber)")
-                                        Text("1000")
+                                    Text("\(ddayNumber)")
                                         .font(.custom("Inter-Bold", size: 100.0))
                                         .frame(width: 500, height: 100, alignment: .leading)
                                         .position(x: 356, y: 108)
@@ -829,8 +778,7 @@ struct WidgetView_Single01_M_Comp01_pad132x132_: View { // disable shadow
                                             .rotationEffect(.degrees(-10))
                                             .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayBlack"))
                                         
-//                                        Text("\(ddayNumber)")
-                                        Text("9000")
+                                        Text("\(ddayNumber)")
                                             .font(.custom("Inter-Bold", size: 95.0))
                                             .frame(width: 500, height: 100, alignment: .leading)
                                             .position(x: 353, y: 108)
@@ -862,8 +810,7 @@ struct WidgetView_Single01_M_Comp01_pad132x132_: View { // disable shadow
                             .rotationEffect(.degrees(-10))
                             .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayBlack"))
                         
-//                        Text("\(ddayNumber)")
-                            Text("10000")
+                        Text("\(ddayNumber)")
                             .font(.custom("Inter-Bold", size: 87.0))
                             .frame(width: 500, height: 100, alignment: .leading)
                             .position(x: 338, y: 108)
