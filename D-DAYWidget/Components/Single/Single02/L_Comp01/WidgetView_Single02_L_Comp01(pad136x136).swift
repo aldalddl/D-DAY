@@ -84,7 +84,7 @@ struct WidgetView_Single02_L_Comp01_pad136x136_: View { // disable shadow
                         .lineLimit(3)
                         .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayBlack"))
                     
-                case 9...12:
+                case 9...11:
                     Text(ddaySymbolMenu[safe: 0]?.ddayTitle ?? localizedKey.stringValue())
                         .font(.custom("Inter-Bold", size: 21.0))
                         .frame(width: 120, height: 100, alignment: .topTrailing)
@@ -94,7 +94,7 @@ struct WidgetView_Single02_L_Comp01_pad136x136_: View { // disable shadow
                         .lineLimit(3)
                         .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayBlack"))
                     
-                case 13...14:
+                case 12...14:
                     Text(ddaySymbolMenu[safe: 0]?.ddayTitle ?? localizedKey.stringValue())
                         .font(.custom("Inter-Bold", size: 20.0))
                         .frame(width: 130, height: 100, alignment: .topTrailing)
@@ -124,20 +124,18 @@ struct WidgetView_Single02_L_Comp01_pad136x136_: View { // disable shadow
                 Text(ddaySymbolMenu[safe: 0]?.ddayDate ?? "2024.12.25")
                     .font(.custom("Inter-Bold", size: 14))
                     .frame(width: 110, height: 50, alignment: .topTrailing)
-                    .padding(EdgeInsets(top: 0, leading: 159, bottom: 65, trailing: 0))
+                    .padding(EdgeInsets(top: 0, leading: 159, bottom: 68, trailing: 0))
                     .multilineTextAlignment(.trailing)
                     .lineSpacing(2)
                     .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayBlack"))
 
                 
                 // DayNumber
-//                switch unsignedDateInt.count {
-                    switch 5 {
+                switch unsignedDateInt.count {
                 
                 // 0...2자리
                 case 0...2:
-//                    Text("\(unsignedDateInt)")
-                        Text("24")
+                    Text("\(unsignedDateInt)")
                         .font(.custom("Inter-Bold", size: 234.0))
                         .frame(width: 450, alignment: .leading)
                         .position(x: 198, y: 268)
@@ -149,15 +147,12 @@ struct WidgetView_Single02_L_Comp01_pad136x136_: View { // disable shadow
                 // 3자리
                 case 3:
                         
-//                        switch Int(unsignedDateInt)! / 100 {
-                            switch 9 {
+                        switch Int(unsignedDateInt)! / 100 {
                         case 1:
                             
-//                            switch Int(unsignedDateInt)! {
-                                switch 1843 {
+                            switch Int(unsignedDateInt)! {
                             case 104, 144:
-//                                Text("\(unsignedDateInt)")
-                                    Text("104")
+                                Text("\(unsignedDateInt)")
                                     .font(.custom("Inter-Bold", size: 213.0))
                                     .frame(width: 450, alignment: .leading)
                                     .position(x: 203, y: 274)
@@ -165,10 +160,9 @@ struct WidgetView_Single02_L_Comp01_pad136x136_: View { // disable shadow
                                     .kerning(-17)
                                     .rotationEffect(.degrees(-10))
                                     .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayBlack"))
-                                
-                            case 154, 164, 184, 194:
-//                                Text("\(unsignedDateInt)")
-                                    Text("184")
+                                    
+                            case 134, 154, 164, 184, 194:
+                                Text("\(unsignedDateInt)")
                                     .font(.custom("Inter-Bold", size: 215.0))
                                     .frame(width: 450, alignment: .leading)
                                     .position(x: 204, y: 274)
@@ -179,8 +173,7 @@ struct WidgetView_Single02_L_Comp01_pad136x136_: View { // disable shadow
                                 
                                 
                             default:
-//                                Text("\(unsignedDateInt)")
-                                    Text("166")
+                                Text("\(unsignedDateInt)")
                                     .font(.custom("Inter-Bold", size: 220.0))
                                     .frame(width: 450, alignment: .leading)
                                     .position(x: 204, y: 274)
@@ -191,12 +184,10 @@ struct WidgetView_Single02_L_Comp01_pad136x136_: View { // disable shadow
                             }
                         
                         case 2:
-//                            switch Int(unsignedDateInt)! {
-                                switch 2843 {
+                            switch Int(unsignedDateInt)! {
                                     
                             case 204, 244:
-//                                Text("\(unsignedDateInt)")
-                                Text("204")
+                                Text("\(unsignedDateInt)")
                                     .font(.custom("Inter-Bold", size: 197.0))
                                     .frame(width: 450, alignment: .leading)
                                     .position(x: 202, y: 274)
@@ -206,8 +197,7 @@ struct WidgetView_Single02_L_Comp01_pad136x136_: View { // disable shadow
                                     .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayBlack"))
                                     
                             case 234, 254, 264, 284, 294:
-//                                Text("\(unsignedDateInt)")
-                                    Text("284")
+                                Text("\(unsignedDateInt)")
                                     .font(.custom("Inter-Bold", size: 200.0))
                                     .frame(width: 450, alignment: .leading)
                                     .position(x: 202, y: 274)
@@ -217,8 +207,7 @@ struct WidgetView_Single02_L_Comp01_pad136x136_: View { // disable shadow
                                     .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayBlack"))
                                 
                             default:
-//                                Text("\(unsignedDateInt)")
-                                    Text("266")
+                                Text("\(unsignedDateInt)")
                                     .font(.custom("Inter-Bold", size: 205.0))
                                     .frame(width: 450, alignment: .leading)
                                     .position(x: 203, y: 275)
@@ -229,12 +218,10 @@ struct WidgetView_Single02_L_Comp01_pad136x136_: View { // disable shadow
                             }
                             
                         case 3...8 :
-//                            switch Int(unsignedDateInt)! {
-                                switch 8284 {
+                            switch Int(unsignedDateInt)! {
                                     
                             case 304, 334, 344, 354, 364, 384, 394, 404, 434, 444, 454, 464, 484, 494, 504, 604, 804:
-//                                Text("\(unsignedDateInt)")
-                                    Text("804")
+                                Text("\(unsignedDateInt)")
                                     .font(.custom("Inter-Bold", size: 197.0))
                                     .frame(width: 450, alignment: .leading)
                                     .position(x: 196, y: 274)
@@ -244,8 +231,7 @@ struct WidgetView_Single02_L_Comp01_pad136x136_: View { // disable shadow
                                     .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayBlack"))
                                 
                             case 544, 564, 584, 594, 624, 644, 664, 684, 694, 844, 854, 864, 884, 894:
-//                                Text("\(unsignedDateInt)")
-                                    Text("884")
+                                Text("\(unsignedDateInt)")
                                     .font(.custom("Inter-Bold", size: 199.0))
                                     .frame(width: 450, alignment: .leading)
                                     .position(x: 196, y: 274)
@@ -255,8 +241,7 @@ struct WidgetView_Single02_L_Comp01_pad136x136_: View { // disable shadow
                                     .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayBlack"))
                                 
                             default:
-//                                Text("\(unsignedDateInt)")
-                                    Text("466")
+                                Text("\(unsignedDateInt)")
                                     .font(.custom("Inter-Bold", size: 205.0))
                                     .frame(width: 450, alignment: .leading)
                                     .position(x: 195, y: 278)
@@ -267,8 +252,7 @@ struct WidgetView_Single02_L_Comp01_pad136x136_: View { // disable shadow
                             }
                             
                         case 9:
-//                            Text("\(unsignedDateInt)")
-                                Text("904")
+                            Text("\(unsignedDateInt)")
                                 .font(.custom("Inter-Bold", size: 195.0))
                                 .frame(width: 450, alignment: .leading)
                                 .position(x: 199, y: 276)
@@ -283,15 +267,12 @@ struct WidgetView_Single02_L_Comp01_pad136x136_: View { // disable shadow
                         }
                         
                     case 4:
-//                        switch (unsignedDateInt.components(separatedBy: "0").count - 1) { // 0의 갯수
-                            switch 3 { // 0의 갯수
+                        switch (unsignedDateInt.components(separatedBy: "0").count - 1) { // 0의 갯수
                         case 0: // 0갯수 = 0개
                             
-//                            switch (unsignedDateInt.components(separatedBy: "1").count - 1) { // 1의 갯수
-                                switch 44 { // 1의 갯수
+                            switch (unsignedDateInt.components(separatedBy: "1").count - 1) { // 1의 갯수
                             case 1: // 1갯수 1개 (ex. 1994)
-//                                Text("\(unsignedDateInt)")
-                                    Text("1994")
+                                Text("\(unsignedDateInt)")
                                     .font(.custom("Inter-Bold", size: 161.0))
                                     .frame(width: 500, alignment: .leading)
                                     .position(x: 227, y: 274)
@@ -301,8 +282,7 @@ struct WidgetView_Single02_L_Comp01_pad136x136_: View { // disable shadow
                                     .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayBlack"))
                                 
                             case 2: // 1갯수 2개 (ex. 1914)
-//                                Text("\(unsignedDateInt)")
-                                    Text("1914")
+                                Text("\(unsignedDateInt)")
                                     .font(.custom("Inter-Bold", size: 172.0))
                                     .frame(width: 500, alignment: .leading)
                                     .position(x: 228, y: 274)
@@ -312,8 +292,7 @@ struct WidgetView_Single02_L_Comp01_pad136x136_: View { // disable shadow
                                     .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayBlack"))
                                 
                             case 3: // 1갯수 3개 (ex. 1114)
-//                                Text("\(unsignedDateInt)")
-                                    Text("1114")
+                                Text("\(unsignedDateInt)")
                                     .font(.custom("Inter-Bold", size: 186.0))
                                     .frame(width: 500, alignment: .leading)
                                     .position(x: 228, y: 274)
@@ -323,8 +302,7 @@ struct WidgetView_Single02_L_Comp01_pad136x136_: View { // disable shadow
                                     .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayBlack"))
                                 
                             case 4: // 1갯수 4개 (ex. 1111)
-//                                Text("\(unsignedDateInt)")
-                                    Text("1111")
+                                Text("\(unsignedDateInt)")
                                     .font(.custom("Inter-Bold", size: 203.0))
                                     .frame(width: 500, alignment: .leading)
                                     .position(x: 231, y: 276)
@@ -334,8 +312,7 @@ struct WidgetView_Single02_L_Comp01_pad136x136_: View { // disable shadow
                                     .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayBlack"))
                                 
                             default: // 그 이외의, 1000~9999까지 0갯수 0개 & 1갯수 0개인 수 (ex. 9994)
-//                                Text("\(unsignedDateInt)")
-                                    Text("9994")
+                                Text("\(unsignedDateInt)")
                                     .font(.custom("Inter-Bold", size: 150.0))
                                     .frame(width: 500, alignment: .leading)
                                     .position(x: 228, y: 275)
@@ -347,11 +324,9 @@ struct WidgetView_Single02_L_Comp01_pad136x136_: View { // disable shadow
                             
                             
                         case 1: // 0갯수 = 1개
-//                            switch (unsignedDateInt.components(separatedBy: "1").count - 1) { // 1의 갯수
-                                switch 34 { // 1의 갯수
+                            switch (unsignedDateInt.components(separatedBy: "1").count - 1) { // 1의 갯수
                             case 1: // 1갯수 1개 (ex. 1094)
-//                                Text("\(unsignedDateInt)")
-                                    Text("1094")
+                                Text("\(unsignedDateInt)")
                                     .font(.custom("Inter-Bold", size: 158.0))
                                     .frame(width: 500, alignment: .leading)
                                     .position(x: 228, y: 274)
@@ -362,8 +337,7 @@ struct WidgetView_Single02_L_Comp01_pad136x136_: View { // disable shadow
                                 
                                 
                             case 2: // 1갯수 2개 (ex. 1014)
-//                                Text("\(unsignedDateInt)")
-                                    Text("1014")
+                                Text("\(unsignedDateInt)")
                                     .font(.custom("Inter-Bold", size: 170.0))
                                     .frame(width: 500, alignment: .leading)
                                     .position(x: 229, y: 273)
@@ -373,8 +347,7 @@ struct WidgetView_Single02_L_Comp01_pad136x136_: View { // disable shadow
                                     .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayBlack"))
                                 
                             case 3: // 1갯수 3개 (ex. 1011)
-//                                Text("\(unsignedDateInt)")
-                                    Text("1011")
+                                Text("\(unsignedDateInt)")
                                     .font(.custom("Inter-Bold", size: 187.0))
                                     .frame(width: 500, alignment: .leading)
                                     .position(x: 230, y: 275)
@@ -384,8 +357,7 @@ struct WidgetView_Single02_L_Comp01_pad136x136_: View { // disable shadow
                                     .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayBlack"))
                                 
                             default: // 1갯수 0개 (ex. 9094)
-//                                Text("\(unsignedDateInt)")
-                                    Text("9094")
+                                Text("\(unsignedDateInt)")
                                     .font(.custom("Inter-Bold", size: 148.0))
                                     .frame(width: 500, alignment: .leading)
                                     .position(x: 228, y: 273)
@@ -396,11 +368,9 @@ struct WidgetView_Single02_L_Comp01_pad136x136_: View { // disable shadow
                             }
                             
                         case 2: // 0갯수 = 2개
-//                            switch (unsignedDateInt.components(separatedBy: "1").count - 1) { // 1의 갯수
-                                switch 23 { // 1의 갯수
+                            switch (unsignedDateInt.components(separatedBy: "1").count - 1) { // 1의 갯수
                             case 1: // 1갯수 1개 (ex. 1004)
-//                                Text("\(unsignedDateInt)")
-                                    Text("1004")
+                                Text("\(unsignedDateInt)")
                                     .font(.custom("Inter-Bold", size: 155.0))
                                     .frame(width: 500, alignment: .leading)
                                     .position(x: 228, y: 274)
@@ -411,8 +381,7 @@ struct WidgetView_Single02_L_Comp01_pad136x136_: View { // disable shadow
                                 
                                 
                             case 2: // 1갯수 2개 (ex. 1001)
-//                                Text("\(unsignedDateInt)")
-                                    Text("1001")
+                                Text("\(unsignedDateInt)")
                                     .font(.custom("Inter-Bold", size: 169.0))
                                     .frame(width: 500, alignment: .leading)
                                     .position(x: 228, y: 272)
@@ -422,8 +391,7 @@ struct WidgetView_Single02_L_Comp01_pad136x136_: View { // disable shadow
                                     .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayBlack"))
                                 
                             default: // 1갯수 0개 (ex. 9004)
-//                                Text("\(unsignedDateInt)")
-                                    Text("9004")
+                                Text("\(unsignedDateInt)")
                                     .font(.custom("Inter-Bold", size: 146.0))
                                     .frame(width: 500, alignment: .leading)
                                     .position(x: 227, y: 273)
@@ -434,11 +402,9 @@ struct WidgetView_Single02_L_Comp01_pad136x136_: View { // disable shadow
                             }
                             
                         case 3: // 0갯수 = 3개
-//                            switch (unsignedDateInt.components(separatedBy: "1").count - 1) { // 1의 갯수
-                                switch 13 { // 1의 갯수
+                            switch (unsignedDateInt.components(separatedBy: "1").count - 1) { // 1의 갯수
                             case 1: // 1갯수 1개 (ex. 1000)
-//                                Text("\(unsignedDateInt)")
-                                    Text("1000")
+                                Text("\(unsignedDateInt)")
                                     .font(.custom("Inter-Bold", size: 158.0))
                                     .frame(width: 500, alignment: .leading)
                                     .position(x: 227, y: 274)
@@ -448,8 +414,7 @@ struct WidgetView_Single02_L_Comp01_pad136x136_: View { // disable shadow
                                     .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayBlack"))
                                 
                             default: // 1갯수 0개 (ex. 9000)
-//                                Text("\(unsignedDateInt)")
-                                    Text("9000")
+                                Text("\(unsignedDateInt)")
                                     .font(.custom("Inter-Bold", size: 149.0))
                                     .frame(width: 500, alignment: .leading)
                                     .position(x: 226, y: 273)
@@ -464,8 +429,7 @@ struct WidgetView_Single02_L_Comp01_pad136x136_: View { // disable shadow
                         }
                         
                     case 5...:
-//                        Text("\(unsignedDateInt)")
-                        Text("10004")
+                        Text("\(unsignedDateInt)")
                             .font(.custom("Inter-Bold", size: 122.0))
                             .frame(width: 450, alignment: .leading)
                             .position(x: 204, y: 275)

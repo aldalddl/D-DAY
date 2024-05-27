@@ -17,6 +17,8 @@ struct WidgetView_Multi01EntryView : View { // hex done
         
         if #available(iOSApplicationExtension 17.0, *) {
             switch self.family {
+                
+            /// Multiple - Medium Size Widget 01
             case .systemMedium:
                 
                 let ddaySymbolMenu: [DdaySymbol] = DefaultArrForWidget_MM01().getDaySymbolMenu(entry: self.entry)
@@ -27,8 +29,9 @@ struct WidgetView_Multi01EntryView : View { // hex done
                 case "0": // disable shadow
                     
                     switch UIScreen.main.bounds.size { // Depends on Device
-                    case CGSize(width: 430, height: 932), CGSize(width: 428, height: 926): // (364x170)
                         
+                    /// ** iPhone UI **
+                    case CGSize(width: 430, height: 932), CGSize(width: 428, height: 926): // (364x170)
                         // Mark : - .containerBackground()는 iOS 17 대응을 위함
                         WidgetView_Multi01_M_Comp01_364x170_(entry: self.entry, ddaySymbolMenu: ddaySymbolMenu, defaultStringArr: defaultStringArr)
                             .body
@@ -55,9 +58,7 @@ struct WidgetView_Multi01EntryView : View { // hex done
                             .containerBackground(for: .widget) {}
                         
                         
-                        
-                        
-                    // iPad
+                    /// ** iPad UI **
                     case CGSize(width: 768, height: 1024), CGSize(width: 744, height: 1133): // (768x1024, 744x1133)
                         WidgetView_Multi01_M_Comp01_pad120x120_(entry: self.entry, ddaySymbolMenu: ddaySymbolMenu, defaultStringArr: defaultStringArr)
                             .body
@@ -103,12 +104,11 @@ struct WidgetView_Multi01EntryView : View { // hex done
                     }
                     
                     
-                    
-                    
-                    
                 case "1": // enable shadow
                     
                     switch UIScreen.main.bounds.size { // Depends on Device
+                    
+                    /// ** iPhone UI **
                     case CGSize(width: 430, height: 932), CGSize(width: 428, height: 926): // (364x170)
                         WidgetView_Multi01_M_Comp02_364x170_(entry: self.entry, ddaySymbolMenu: ddaySymbolMenu, defaultStringArr: defaultStringArr)
                             .body
@@ -134,9 +134,53 @@ struct WidgetView_Multi01EntryView : View { // hex done
                             .body
                             .containerBackground(for: .widget) {}
                         
+                    
+                    
+                    /// ** iPad UI **
+                    case CGSize(width: 768, height: 1024), CGSize(width: 744, height: 1133): // (768x1024, 744x1133)
+                        WidgetView_Multi01_M_Comp02_pad120x120_(entry: self.entry, ddaySymbolMenu: ddaySymbolMenu, defaultStringArr: defaultStringArr)
+                            .body
+                            .containerBackground(for: .widget) {}
+                        
+                    case CGSize(width: 810, height: 1080): // (810x1080)
+                        WidgetView_Multi01_M_Comp02_pad124x124_(entry: self.entry, ddaySymbolMenu: ddaySymbolMenu, defaultStringArr: defaultStringArr)
+                            .body
+                            .containerBackground(for: .widget) {}
+                        
+                    case CGSize(width: 834, height: 1112): // (834x1112)
+                        WidgetView_Multi01_M_Comp02_pad132x132_(entry: self.entry, ddaySymbolMenu: ddaySymbolMenu, defaultStringArr: defaultStringArr)
+                            .body
+                            .containerBackground(for: .widget) {}
+                        
+                    case CGSize(width: 820, height: 1180), CGSize(width: 834, height: 1194): // (820x1180, 834x1194)
+                        WidgetView_Multi01_M_Comp02_pad136x136_(entry: self.entry, ddaySymbolMenu: ddaySymbolMenu, defaultStringArr: defaultStringArr)
+                            .body
+                            .containerBackground(for: .widget) {}
+                        
+                    case CGSize(width: 1024, height: 1366): // (1024x1366)
+                        WidgetView_Multi01_M_Comp02_pad160x160_(entry: self.entry, ddaySymbolMenu: ddaySymbolMenu, defaultStringArr: defaultStringArr)
+                            .body
+                            .containerBackground(for: .widget) {}
+                      
+                    // 미정
+                    case CGSize(width: 954, height: 1373), CGSize(width: 970, height: 1389): // (954x1373, 970x1389) - When Display Zoom is set to More Space.
+                        WidgetView_Multi01_M_Comp02_pad160x160_(entry: self.entry, ddaySymbolMenu: ddaySymbolMenu, defaultStringArr: defaultStringArr)
+                            .body
+                            .containerBackground(for: .widget) {}
+                    
+                    // 미정
+                    case CGSize(width: 1192, height: 1590): // (1192x1590) - When Display Zoom is set to More Space.
+                        WidgetView_Multi01_M_Comp02_pad160x160_(entry: self.entry, ddaySymbolMenu: ddaySymbolMenu, defaultStringArr: defaultStringArr)
+                            .body
+                            .containerBackground(for: .widget) {}
+                        
                     default:
-                        Text("CGSize default M01-2")
+                        // Default widget
+                        WidgetView_Multi01_M_Comp02_pad160x160_(entry: self.entry, ddaySymbolMenu: ddaySymbolMenu, defaultStringArr: defaultStringArr)
+                            .body
+                            .containerBackground(for: .widget) {}
                     }
+                
                     
                 default:
                     Text("Encountered Error M01-1")

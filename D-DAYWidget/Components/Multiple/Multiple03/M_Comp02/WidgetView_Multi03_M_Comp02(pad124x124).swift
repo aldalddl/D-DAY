@@ -1,13 +1,13 @@
 //
-//  WidgetView_Multi03_M_Comp01(pad120x120).swift
+//  WidgetView_Multi03_M_Comp02(pad124x124).swift
 //  D-DAYWidgetExtension
 //
-//  Created by Hakyung Sohn on 1/27/24.
+//  Created by Hakyung Sohn on 5/19/24.
 //
 
 import SwiftUI
 
-struct WidgetView_Multi03_M_Comp01_pad120x120_: View { // disable shadow
+struct WidgetView_Multi03_M_Comp02_pad124x124_: View { // disable shadow
     
     var entry: Provider.Entry
     
@@ -24,7 +24,7 @@ struct WidgetView_Multi03_M_Comp01_pad120x120_: View { // disable shadow
                 Text(ddaySymbolMenu[safe: 0]?.ddayDate ?? "2000.00.00")
                     .font(.custom("Inter-Bold", size: 8.0))
                     .frame(width: 60, height: 50, alignment: .topLeading)
-                    .position(x: 47, y: 33)
+                    .position(x: 49, y: 33)
                     .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayBgColor ?? "ddayWhite"))
                 
                 
@@ -75,15 +75,16 @@ struct WidgetView_Multi03_M_Comp01_pad120x120_: View { // disable shadow
                 }
                 
                 
-                Text("\(CustomFunctions().makeSignedDateNumber(dateIntParam: CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu[safe: 0]?.ddayDate ??  "2023.12.16"), isTodayCounted: ddaySymbolMenu[safe: 0]?.ddayIsCountdown ?? "false")))") 
+                Text("\(CustomFunctions().makeSignedDateNumber(dateIntParam: CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu[safe: 0]?.ddayDate ??  "2023.12.16"), isTodayCounted: ddaySymbolMenu[safe: 0]?.ddayIsCountdown ?? "false")))")
                         .font(.custom("Inter-Bold", size: 39.0))
                         .frame(width: 200, height: 50, alignment: .topLeading)
-                        .position(x: 111, y: 45)
+                        .shadow(color: Color("ddayBlack").opacity(0.3), radius: 2.2, x: 0.6, y: 4)
+                        .position(x: 108, y: 47)
                         .kerning(-3)
                         .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayBgColor ?? "ddayWhite"))
                         .clipped()
             }
-            .frame(width: 156, height: 57)
+            .frame(width: 156, height: 59)
             .background(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayBlack"))
             .position(x: 66, y: 72)
             
@@ -113,7 +114,7 @@ struct WidgetView_Multi03_M_Comp01_pad120x120_: View { // disable shadow
                         .font(.custom("Inter-Bold", size: 11.0))
                         .frame(width: 80, height: 50, alignment: .topLeading)
                         .multilineTextAlignment(.leading)
-                        .position(x: 49, y: 32)
+                        .position(x: 49, y: 33)
                         .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayBlack"))
                     
                 case 11...14:
@@ -121,7 +122,7 @@ struct WidgetView_Multi03_M_Comp01_pad120x120_: View { // disable shadow
                         .font(.custom("Inter-Bold", size: 10.0))
                         .frame(width: 85, height: 50, alignment: .topLeading)
                         .multilineTextAlignment(.leading)
-                        .position(x: 51, y: 32)
+                        .position(x: 51, y: 33)
                         .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayBlack"))
                     
                 case 15...:
@@ -139,20 +140,21 @@ struct WidgetView_Multi03_M_Comp01_pad120x120_: View { // disable shadow
                 Text(ddaySymbolMenu[safe: 1]?.ddayDate ?? "2000.00.00")
                     .font(.custom("Inter-Bold", size: 8.0))
                     .frame(width: 60, height: 50, alignment: .topTrailing)
-                    .position(x: 112, y: 33)
+                    .position(x: 124, y: 33)
                     .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayBlack"))
                 
                 Text("\(CustomFunctions().makeSignedDateNumber(dateIntParam: CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu[safe: 1]?.ddayDate ??  "2023.12.16"), isTodayCounted: ddaySymbolMenu[safe: 1]?.ddayIsCountdown ?? "false")))")
                     .font(.custom("Inter-Bold", size: 34.0))
                     .frame(width: 200, height: 51, alignment: .topTrailing)
-                    .position(x: 47, y: 42)
+                    .shadow(color: Color("ddayBlack").opacity(0.3), radius: 2.2, x: 0.6, y: 4)
+                    .position(x: 63, y: 43)
                     .kerning(-2)
                     .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayBlack"))
                     .clipped()
             }
-            .frame(width: 185, height: 53)
+            .frame(width: 185, height: 54)
             .border(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayBlack"), width: 4)
-            .position(x: 251, y: 73)
+            .position(x: 251, y: 72)
             
             
             // bottom stack 1
@@ -160,7 +162,7 @@ struct WidgetView_Multi03_M_Comp01_pad120x120_: View { // disable shadow
                 Text(ddaySymbolMenu[safe: 2]?.ddayDate ?? "2000.00.00")
                     .font(.custom("Inter-Bold", size: 8.0))
                     .frame(width: 60, height: 50, alignment: .topLeading)
-                    .position(x: 53, y: 34)
+                    .position(x: 54, y: 34)
                     .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayBlack"))
                     
                 
@@ -205,14 +207,15 @@ struct WidgetView_Multi03_M_Comp01_pad120x120_: View { // disable shadow
                 Text("\(CustomFunctions().makeSignedDateNumber(dateIntParam: CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu[safe: 2]?.ddayDate ??  "2023.12.16"), isTodayCounted: ddaySymbolMenu[safe: 2]?.ddayIsCountdown ?? "false")))")
                     .font(.custom("Inter-Bold", size: 32.0))
                     .frame(width: 200, height: 52, alignment: .topLeading)
-                    .position(x: 115, y: 41)
+                    .shadow(color: Color("ddayBlack").opacity(0.3), radius: 2.2, x: 0.6, y: 4)
+                    .position(x: 114, y: 42)
                     .kerning(-2)
                     .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayBlack"))
                     .clipped()
             }
-            .frame(width: 172, height: 49)
+            .frame(width: 172, height: 50)
             .border(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayBlack"), width: 4)
-            .position(x: 68, y: 135)
+            .position(x: 69, y: 135)
             
             
             // bottom stack 2
@@ -224,7 +227,7 @@ struct WidgetView_Multi03_M_Comp01_pad120x120_: View { // disable shadow
                             .font(.custom("Inter-Bold", size: 12.0))
                             .frame(width: 90, height: 50, alignment: .topLeading)
                             .multilineTextAlignment(.leading)
-                            .position(x: 53, y: 30)
+                            .position(x: 53, y: 31)
                             .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayBgColor ?? "ddayWhite"))
                     
                 case 6...10:
@@ -232,7 +235,7 @@ struct WidgetView_Multi03_M_Comp01_pad120x120_: View { // disable shadow
                             .font(.custom("Inter-Bold", size: 11.0))
                             .frame(width: 70, height: 50, alignment: .topLeading)
                             .multilineTextAlignment(.leading)
-                            .position(x: 42, y: 30)
+                            .position(x: 42, y: 31)
                             .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayBgColor ?? "ddayWhite"))
                     
                 case 11...14:
@@ -240,7 +243,7 @@ struct WidgetView_Multi03_M_Comp01_pad120x120_: View { // disable shadow
                             .font(.custom("Inter-Bold", size: 10.0))
                             .frame(width: 80, height: 50, alignment: .topLeading)
                             .multilineTextAlignment(.leading)
-                            .position(x: 47, y: 30)
+                            .position(x: 47, y: 31)
                             .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayBgColor ?? "ddayWhite"))
                     
                 case 15...:
@@ -258,21 +261,22 @@ struct WidgetView_Multi03_M_Comp01_pad120x120_: View { // disable shadow
                 Text(ddaySymbolMenu[safe: 3]?.ddayDate ?? "2000.00.00")
                     .font(.custom("Inter-Bold", size: 8.0))
                     .frame(width: 60, height: 50, alignment: .topTrailing)
-                    .position(x: 101, y: 31)
+                    .position(x: 114, y: 31)
                     .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayBgColor ?? "ddayWhite"))
                 
                 Text("\(CustomFunctions().makeSignedDateNumber(dateIntParam: CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu[safe: 3]?.ddayDate ??  "2023.12.16"), isTodayCounted: ddaySymbolMenu[safe: 3]?.ddayIsCountdown ?? "false")))")
-                    .font(.custom("Inter-Bold", size: 33.0))
+                    .font(.custom("Inter-Bold", size: 36.0))
                     .frame(width: 200, height: 47, alignment: .topTrailing)
-                    .position(x: 37, y: 42)
+                    .shadow(color: Color("ddayBlack").opacity(0.3), radius: 2.2, x: 0.6, y: 4)
+                    .position(x: 51, y: 41)
                     .kerning(-2)
                     .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayBgColor ?? "ddayWhite"))
                     .clipped()
                 
             }
-            .frame(width: 187, height: 50)
+            .frame(width: 187, height: 52)
             .background(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayBlack"))
-            .position(x: 262, y: 134)
+            .position(x: 263, y: 134)
             
         }
         .frame(height: 200)

@@ -37,6 +37,7 @@ struct WidgetView_Multi03EntryView : View { // hex done
                 }
                  */
                 
+            /// Multiple - Large Size Widget 01
             case .systemLarge:
                 switch entry.configuration.shadow?.stringValue ?? "0" {
                 case "0": // disable shadow

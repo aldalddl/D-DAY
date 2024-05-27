@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct WidgetView_Single01_S_Comp02_pad160x160_: View { // able shadow
+struct WidgetView_Single01_S_Comp02_pad160x160_: View { // enable shadow
     
     var entry: Provider.Entry
     

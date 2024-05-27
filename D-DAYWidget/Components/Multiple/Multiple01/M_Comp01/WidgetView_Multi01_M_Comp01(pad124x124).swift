@@ -28,37 +28,37 @@ struct WidgetView_Multi01_M_Comp01_pad124x124_: View { // disable shadow
                     switch (ddaySymbolMenu[safe: 0]?.ddayTitle ?? localizedKey.stringValue()).count {
                     case 0...4:
                         Text(ddaySymbolMenu[safe: 0]?.ddayTitle ?? localizedKey.stringValue())
-                            .font(.custom("Inter-Bold", size: 16.0))
+                            .font(.custom("Inter-Bold", size: 15.0))
                             .frame(width: 200, height: 50, alignment: .topLeading)
-                            .position(x: 130, y: 82)
+                            .position(x: 134, y: 82)  //130 134
                             .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
                         
                     case 5...7:
                         Text(ddaySymbolMenu[safe: 0]?.ddayTitle ?? localizedKey.stringValue())
-                            .font(.custom("Inter-Bold", size: 15.0))
+                            .font(.custom("Inter-Bold", size: 14.0))
                             .frame(width: 200, height: 50, alignment: .topLeading)
-                            .position(x: 129, y: 82)
+                            .position(x: 132, y: 83) //129 132 /82 83
                             .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
                         
                     case 8...11:
                         Text(ddaySymbolMenu[safe: 0]?.ddayTitle ?? localizedKey.stringValue())
-                            .font(.custom("Inter-Bold", size: 14.0))
+                            .font(.custom("Inter-Bold", size: 13.0))
                             .frame(width: 200, height: 50, alignment: .topLeading)
-                            .position(x: 130, y: 83)
+                            .position(x: 131, y: 84) //130 131 /83 84
                             .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
                         
                     case 12...14:
                         Text(ddaySymbolMenu[safe: 0]?.ddayTitle ?? localizedKey.stringValue())
-                            .font(.custom("Inter-Bold", size: 13.0))
+                            .font(.custom("Inter-Bold", size: 12.0))
                             .frame(width: 200, height: 50, alignment: .topLeading)
-                            .position(x: 130, y: 84)
+                            .position(x: 129, y: 84) // 130 129
                             .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
                         
                     case 15...:
                         Text(ddaySymbolMenu[safe: 0]?.ddayTitle ?? localizedKey.stringValue())
                             .font(.custom("Inter-Bold", size: 11.0))
                             .frame(width: 200, height: 50, alignment: .topLeading)
-                            .position(x: 127, y: 85)
+                            .position(x: 126, y: 85) // 127 126
                             .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
                         
                     default:
@@ -67,53 +67,49 @@ struct WidgetView_Multi01_M_Comp01_pad124x124_: View { // disable shadow
                     
                     // date 1
                     Text(ddaySymbolMenu[safe: 0]?.ddayDate ?? "0000.00.00")
-                        .font(.custom("Inter-Bold", size: 9.0))
+                        .font(.custom("Inter-Bold", size: 8.0))
                         .multilineTextAlignment(.leading)
-                        .frame(width: 28, height: 50, alignment: .topLeading)
+                        .frame(width: 25, height: 50, alignment: .topLeading)
                         .position(x: 34, y: 115)
                         .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
                     
                     // day number 1
                     ZStack {
                         
-//                   switch CustomFunctions().makeSignedDateNumber(dateIntParam: CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu[safe: 0]?.ddayDate ??  defaultStringArr[0][1]), isTodayCounted: ddaySymbolMenu[safe: 0]?.ddayIsCountdown ?? "false")).count {
-                       switch 6 {
+                   switch CustomFunctions().makeSignedDateNumber(dateIntParam: CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu[safe: 0]?.ddayDate ??  defaultStringArr[0][1]), isTodayCounted: ddaySymbolMenu[safe: 0]?.ddayIsCountdown ?? "false")).count { 
                             
                         case ...4:
-//                            Text("\(CustomFunctions().makeSignedDateNumber(dateIntParam: CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu[safe: 0]?.ddayDate ??  defaultStringArr[0][1]), isTodayCounted: ddaySymbolMenu[safe: 0]?.ddayIsCountdown ?? "false")))")
-                           Text("+84")
-                                .font(.custom("Inter-ExtraBold", size: 46.0))
+                            Text("\(CustomFunctions().makeSignedDateNumber(dateIntParam: CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu[safe: 0]?.ddayDate ??  defaultStringArr[0][1]), isTodayCounted: ddaySymbolMenu[safe: 0]?.ddayIsCountdown ?? "false")))")
+                               .font(.custom("Inter-ExtraBold", size: 45.0))
                                 .frame(width: 200, height: 49, alignment: .topTrailing)
-                                .position(x: 14, y: 23.5)
-                                .kerning(-5)
+                                .position(x: 15, y: 22)
+                                .kerning(-3)
                                 .clipped()
                                 .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayBgColor ?? "ddayBlack"))
                            
                            
                        case 5:
-//                           Text("\(CustomFunctions().makeSignedDateNumber(dateIntParam: CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu[safe: 0]?.ddayDate ??  defaultStringArr[0][1]), isTodayCounted: ddaySymbolMenu[safe: 0]?.ddayIsCountdown ?? "false")))")
-                           Text("+8000")
-                               .font(.custom("Inter-ExtraBold", size: 40.0))
+                           Text("\(CustomFunctions().makeSignedDateNumber(dateIntParam: CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu[safe: 0]?.ddayDate ??  defaultStringArr[0][1]), isTodayCounted: ddaySymbolMenu[safe: 0]?.ddayIsCountdown ?? "false")))")
+                               .font(.custom("Inter-ExtraBold", size: 38.0))
                                .frame(width: 200, height: 49, alignment: .topTrailing)
                                .position(x: 15, y: 29)
-                               .kerning(-4)
+                               .kerning(-3)
                                .clipped()
                                .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayBgColor ?? "ddayBlack"))
                             
                         case 6...:
-//                        Text("\(CustomFunctions().makeSignedDateNumber(dateIntParam: CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu[safe: 0]?.ddayDate ??  defaultStringArr[0][1]), isTodayCounted: ddaySymbolMenu[safe: 0]?.ddayIsCountdown ?? "false")))")
-                           Text("+20004")
-                                .font(.custom("Inter-ExtraBold", size: 34.0))
+                        Text("\(CustomFunctions().makeSignedDateNumber(dateIntParam: CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu[safe: 0]?.ddayDate ??  defaultStringArr[0][1]), isTodayCounted: ddaySymbolMenu[safe: 0]?.ddayIsCountdown ?? "false")))")
+                                .font(.custom("Inter-ExtraBold", size: 31.0))
                                 .frame(width: 200, height: 49, alignment: .topTrailing)
-                                .position(x: 15, y: 35)
-                                .kerning(-4)
+                                .position(x: 15, y: 36) // 35>36
+                                .kerning(-2)
                                 .clipped()
                                 .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayBgColor ?? "ddayBlack"))
                         default:
                             Text("M1 DN Error 01")
                         }
                     }
-                    .frame(width: 130, height: 52, alignment: .bottomTrailing)
+                    .frame(width: 126, height: 50, alignment: .bottomTrailing)
                     .background(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
                     
                 }
@@ -129,37 +125,37 @@ struct WidgetView_Multi01_M_Comp01_pad124x124_: View { // disable shadow
                     switch (ddaySymbolMenu[safe: 1]?.ddayTitle ?? localizedKey.stringValue()).count {
                     case 0...4:
                         Text(ddaySymbolMenu[safe: 1]?.ddayTitle ?? localizedKey.stringValue())
-                            .font(.custom("Inter-Bold", size: 16.0))
+                            .font(.custom("Inter-Bold", size: 15.0))
                             .frame(width: 200, height: 50, alignment: .topTrailing)
-                            .position(x: 100, y: 82)
+                            .position(x: 96, y: 82)
                             .foregroundColor(Color(hex: ddaySymbolMenu[safe: 1]?.ddayTxtColor ?? "ddayBlack"))
                         
                     case 5...7:
                         Text(ddaySymbolMenu[safe: 1]?.ddayTitle ?? localizedKey.stringValue())
-                            .font(.custom("Inter-Bold", size: 15.0))
+                            .font(.custom("Inter-Bold", size: 14.0))
                             .frame(width: 200, height: 50, alignment: .topTrailing)
-                            .position(x: 99, y: 82)
+                            .position(x: 96, y: 83)
                             .foregroundColor(Color(hex: ddaySymbolMenu[safe: 1]?.ddayTxtColor ?? "ddayBlack"))
                         
                     case 8...11:
                         Text(ddaySymbolMenu[safe: 1]?.ddayTitle ?? localizedKey.stringValue())
-                            .font(.custom("Inter-Bold", size: 14.0))
+                            .font(.custom("Inter-Bold", size: 13.0))
                             .frame(width: 200, height: 50, alignment: .topTrailing)
-                            .position(x: 100, y: 83)
+                            .position(x: 99, y: 84)
                             .foregroundColor(Color(hex: ddaySymbolMenu[safe: 1]?.ddayTxtColor ?? "ddayBlack"))
                         
                     case 12...14:
                         Text(ddaySymbolMenu[safe: 1]?.ddayTitle ?? localizedKey.stringValue())
-                            .font(.custom("Inter-Bold", size: 13.0))
+                            .font(.custom("Inter-Bold", size: 12.0))
                             .frame(width: 200, height: 50, alignment: .topTrailing)
-                            .position(x: 100, y: 84)
+                            .position(x: 101, y: 84)
                             .foregroundColor(Color(hex: ddaySymbolMenu[safe: 1]?.ddayTxtColor ?? "ddayBlack"))
                         
                     case 15...:
                         Text(ddaySymbolMenu[safe: 1]?.ddayTitle ?? localizedKey.stringValue())
                             .font(.custom("Inter-Bold", size: 11.0))
                             .frame(width: 200, height: 50, alignment: .topTrailing)
-                            .position(x: 103, y: 85)
+                            .position(x: 104, y: 85)
                             .foregroundColor(Color(hex: ddaySymbolMenu[safe: 1]?.ddayTxtColor ?? "ddayBlack"))
                         
                     default:
@@ -169,50 +165,47 @@ struct WidgetView_Multi01_M_Comp01_pad124x124_: View { // disable shadow
                     
                     // date 2
                     Text(ddaySymbolMenu[safe: 1]?.ddayDate ?? "0000.00.00")
-                        .font(.custom("Inter-Bold", size: 9.0))
+                        .font(.custom("Inter-Bold", size: 8.0))
                         .multilineTextAlignment(.leading)
-                        .frame(width: 28, height: 50, alignment: .topTrailing)
+                        .frame(width: 25, height: 50, alignment: .topTrailing)
                         .position(x: 197, y: 115)
                         .foregroundColor(Color(hex: ddaySymbolMenu[safe: 1]?.ddayTxtColor ?? "ddayBlack"))
                     
                     // day number 2
                     ZStack {
-//                        switch CustomFunctions().makeSignedDateNumber(dateIntParam: CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu[safe: 1]?.ddayDate ??  defaultStringArr[1][1]), isTodayCounted: ddaySymbolMenu[safe: 1]?.ddayIsCountdown ?? "false")).count {
-                            switch 3 {
+                        switch CustomFunctions().makeSignedDateNumber(dateIntParam: CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu[safe: 1]?.ddayDate ??  defaultStringArr[1][1]), isTodayCounted: ddaySymbolMenu[safe: 1]?.ddayIsCountdown ?? "false")).count {
                             
                         case ...4:
                             Text("\(CustomFunctions().makeSignedDateNumber(dateIntParam: CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu[safe: 1]?.ddayDate ??  defaultStringArr[1][1]), isTodayCounted: ddaySymbolMenu[safe: 1]?.ddayIsCountdown ?? "false")))")
-                                .font(.custom("Inter-ExtraBold", size: 46.0))
+                                .font(.custom("Inter-ExtraBold", size: 45.0))
                                 .frame(width: 200, height: 49, alignment: .topLeading)
-                                .position(x: 108, y: 23)
-                                .kerning(-5)
+                                .position(x: 106, y: 22)
+                                .kerning(-3)
                                 .clipped()
                                 .foregroundColor(Color(hex: ddaySymbolMenu[safe: 1]?.ddayBgColor ?? "ddayWhite"))
                             
                         case 5:
-//                            Text("\(CustomFunctions().makeSignedDateNumber(dateIntParam: CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu[safe: 1]?.ddayDate ??  defaultStringArr[1][1]), isTodayCounted: ddaySymbolMenu[safe: 1]?.ddayIsCountdown ?? "false")))")
-                            Text("-4444")
-                                .font(.custom("Inter-ExtraBold", size: 40.0))
+                            Text("\(CustomFunctions().makeSignedDateNumber(dateIntParam: CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu[safe: 1]?.ddayDate ??  defaultStringArr[1][1]), isTodayCounted: ddaySymbolMenu[safe: 1]?.ddayIsCountdown ?? "false")))")
+                                .font(.custom("Inter-ExtraBold", size: 38.0))
                                 .frame(width: 200, height: 49, alignment: .topLeading)
-                                .position(x: 109, y: 29)
-                                .kerning(-4)
+                                .position(x: 106, y: 29)
+                                .kerning(-3)
                                 .clipped()
                                 .foregroundColor(Color(hex: ddaySymbolMenu[safe: 1]?.ddayBgColor ?? "ddayWhite"))
                             
                         case 6...:
-//                            Text("\(CustomFunctions().makeSignedDateNumber(dateIntParam: CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu[safe: 1]?.ddayDate ??  defaultStringArr[1][1]), isTodayCounted: ddaySymbolMenu[safe: 1]?.ddayIsCountdown ?? "false")))")
-                                Text("-20004")
-                                .font(.custom("Inter-ExtraBold", size: 34.0))
+                            Text("\(CustomFunctions().makeSignedDateNumber(dateIntParam: CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu[safe: 1]?.ddayDate ??  defaultStringArr[1][1]), isTodayCounted: ddaySymbolMenu[safe: 1]?.ddayIsCountdown ?? "false")))")
+                                .font(.custom("Inter-ExtraBold", size: 31.0))
                                 .frame(width: 200, height: 49, alignment: .topLeading)
-                                .position(x: 109, y: 35)
-                                .kerning(-4)
+                                .position(x: 107, y: 36)
+                                .kerning(-2)
                                 .clipped()
                                 .foregroundColor(Color(hex: ddaySymbolMenu[safe: 1]?.ddayBgColor ?? "ddayWhite"))
                         default:
                             Text("M1 DN Error 02")
                         }
                     }
-                    .frame(width: 130, height: 52, alignment: .bottomLeading)
+                    .frame(width: 126, height: 50, alignment: .bottomLeading)
                     .background(Color(hex: ddaySymbolMenu[safe: 1]?.ddayTxtColor ?? "ddayBlack"))
                 }
                 .position(x: 53, y: 74)
@@ -229,37 +222,37 @@ struct WidgetView_Multi01_M_Comp01_pad124x124_: View { // disable shadow
                     switch (ddaySymbolMenu[safe: 2]?.ddayTitle ?? localizedKey.stringValue()).count {
                     case 0...4:
                         Text(ddaySymbolMenu[safe: 2]?.ddayTitle ?? localizedKey.stringValue())
-                            .font(.custom("Inter-Bold", size: 16.0))
+                            .font(.custom("Inter-Bold", size: 15.0))
                             .frame(width: 200, height: 50, alignment: .topLeading)
-                            .position(x: 130, y: 80)
+                            .position(x: 134, y: 80)
                             .foregroundColor(Color(hex: ddaySymbolMenu[safe: 1]?.ddayTxtColor ?? "ddayBlack"))
                         
                     case 5...7:
                         Text(ddaySymbolMenu[safe: 2]?.ddayTitle ?? localizedKey.stringValue())
-                            .font(.custom("Inter-Bold", size: 15.0))
+                            .font(.custom("Inter-Bold", size: 14.0))
                             .frame(width: 200, height: 50, alignment: .topLeading)
-                            .position(x: 129, y: 80)
+                            .position(x: 132, y: 80)
                             .foregroundColor(Color(hex: ddaySymbolMenu[safe: 1]?.ddayTxtColor ?? "ddayBlack"))
                         
                     case 8...11:
                         Text(ddaySymbolMenu[safe: 2]?.ddayTitle ?? localizedKey.stringValue())
-                            .font(.custom("Inter-Bold", size: 14.0))
+                            .font(.custom("Inter-Bold", size: 13.0))
                             .frame(width: 200, height: 50, alignment: .topLeading)
-                            .position(x: 130, y: 81)
+                            .position(x: 131, y: 81)
                             .foregroundColor(Color(hex: ddaySymbolMenu[safe: 1]?.ddayTxtColor ?? "ddayBlack"))
                         
                     case 12...14:
                         Text(ddaySymbolMenu[safe: 2]?.ddayTitle ?? localizedKey.stringValue())
-                            .font(.custom("Inter-Bold", size: 13.0))
+                            .font(.custom("Inter-Bold", size: 12.0))
                             .frame(width: 200, height: 50, alignment: .topLeading)
-                            .position(x: 130, y: 82)
+                            .position(x: 129, y: 81)
                             .foregroundColor(Color(hex: ddaySymbolMenu[safe: 1]?.ddayTxtColor ?? "ddayBlack"))
                         
                     case 15...:
                         Text(ddaySymbolMenu[safe: 2]?.ddayTitle ?? localizedKey.stringValue())
                             .font(.custom("Inter-Bold", size: 11.0))
                             .frame(width: 200, height: 50, alignment: .topLeading)
-                            .position(x: 127, y: 83)
+                            .position(x: 126, y: 83)
                             .foregroundColor(Color(hex: ddaySymbolMenu[safe: 1]?.ddayTxtColor ?? "ddayBlack"))
                         
                     default:
@@ -269,51 +262,47 @@ struct WidgetView_Multi01_M_Comp01_pad124x124_: View { // disable shadow
                     
                     // date 3
                     Text(ddaySymbolMenu[safe: 2]?.ddayDate ?? "0000.00.00")
-                        .font(.custom("Inter-Bold", size: 9.0))
+                        .font(.custom("Inter-Bold", size: 8.0))
                         .multilineTextAlignment(.leading)
-                        .frame(width: 28, height: 50, alignment: .topLeading)
+                        .frame(width: 25, height: 50, alignment: .topLeading)
                         .position(x: 34, y: 42)
                         .foregroundColor(Color(hex: ddaySymbolMenu[safe: 1]?.ddayTxtColor ?? "ddayBlack"))
                     
                     // day number 3
                     ZStack {
-//                        switch CustomFunctions().makeSignedDateNumber(dateIntParam: CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu[safe: 2]?.ddayDate ??  defaultStringArr[2][1]), isTodayCounted: ddaySymbolMenu[safe: 2]?.ddayIsCountdown ?? "false")).count {
-                        switch 4 {
+                        switch CustomFunctions().makeSignedDateNumber(dateIntParam: CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu[safe: 2]?.ddayDate ??  defaultStringArr[2][1]), isTodayCounted: ddaySymbolMenu[safe: 2]?.ddayIsCountdown ?? "false")).count {
                             
                         case ...4:
                             Text("\(CustomFunctions().makeSignedDateNumber(dateIntParam: CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu[safe: 2]?.ddayDate ??  defaultStringArr[2][1]), isTodayCounted: ddaySymbolMenu[safe: 2]?.ddayIsCountdown ?? "false")))")
-//                            Text("+44")
-                                .font(.custom("Inter-ExtraBold", size: 46.0))
+                                .font(.custom("Inter-ExtraBold", size: 45.0))
                                 .frame(width: 200, height: 49, alignment: .topLeading)
-                                .position(x: 95, y: 33)
-                                .kerning(-5)
+                                .position(x: 96, y: 32)
+                                .kerning(-3)
                                 .clipped()
                                 .foregroundColor(Color(hex: ddaySymbolMenu[safe: 1]?.ddayBgColor ?? "ddayWhite"))
                             
                         case 5:
-//                            Text("\(CustomFunctions().makeSignedDateNumber(dateIntParam: CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu[safe: 2]?.ddayDate ??  defaultStringArr[2][1]), isTodayCounted: ddaySymbolMenu[safe: 2]?.ddayIsCountdown ?? "false")))")
-                            Text("+2004")
-                                .font(.custom("Inter-ExtraBold", size: 40.0))
+                            Text("\(CustomFunctions().makeSignedDateNumber(dateIntParam: CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu[safe: 2]?.ddayDate ??  defaultStringArr[2][1]), isTodayCounted: ddaySymbolMenu[safe: 2]?.ddayIsCountdown ?? "false")))")
+                                .font(.custom("Inter-ExtraBold", size: 38.0))
                                 .frame(width: 200, height: 49, alignment: .topLeading)
-                                .position(x: 96, y: 39)
-                                .kerning(-4)
+                                .position(x: 96, y: 38)
+                                .kerning(-3)
                                 .clipped()
                                 .foregroundColor(Color(hex: ddaySymbolMenu[safe: 1]?.ddayBgColor ?? "ddayWhite"))
                             
                         case 6...:
-//                            Text("\(CustomFunctions().makeSignedDateNumber(dateIntParam: CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu[safe: 2]?.ddayDate ??  defaultStringArr[2][1]), isTodayCounted: ddaySymbolMenu[safe: 2]?.ddayIsCountdown ?? "false")))")
-                            Text("+20004")
-                                .font(.custom("Inter-ExtraBold", size: 34.0))
+                            Text("\(CustomFunctions().makeSignedDateNumber(dateIntParam: CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu[safe: 2]?.ddayDate ??  defaultStringArr[2][1]), isTodayCounted: ddaySymbolMenu[safe: 2]?.ddayIsCountdown ?? "false")))")
+                                .font(.custom("Inter-ExtraBold", size: 31.0))
                                 .frame(width: 200, height: 49, alignment: .topLeading)
-                                .position(x: 96, y: 45)
-                                .kerning(-4)
+                                .position(x: 97, y: 45)
+                                .kerning(-2)
                                 .clipped()
                                 .foregroundColor(Color(hex: ddaySymbolMenu[safe: 1]?.ddayBgColor ?? "ddayWhite"))
                         default:
                             Text("M1 DN Error 03")
                         }
                     }
-                    .frame(width: 130, height: 52, alignment: .bottomLeading)
+                    .frame(width: 126, height: 50, alignment: .bottomLeading)
                     .background(Color(hex: ddaySymbolMenu[safe: 1]?.ddayTxtColor ?? "ddayBlack"))
                 }
                 .position(x: 178, y: 56)
@@ -328,37 +317,37 @@ struct WidgetView_Multi01_M_Comp01_pad124x124_: View { // disable shadow
                     switch (ddaySymbolMenu[safe: 3]?.ddayTitle ?? localizedKey.stringValue()).count {
                     case 0...4:
                         Text(ddaySymbolMenu[safe: 3]?.ddayTitle ?? localizedKey.stringValue())
-                            .font(.custom("Inter-Bold", size: 16.0))
+                            .font(.custom("Inter-Bold", size: 15.0))
                             .frame(width: 200, height: 50, alignment: .topTrailing)
-                            .position(x: 100, y: 80)
+                            .position(x: 96, y: 80)
                             .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayBlack"))
                         
                     case 5...7:
                         Text(ddaySymbolMenu[safe: 3]?.ddayTitle ?? localizedKey.stringValue())
-                            .font(.custom("Inter-Bold", size: 15.0))
+                            .font(.custom("Inter-Bold", size: 14.0))
                             .frame(width: 200, height: 50, alignment: .topTrailing)
-                            .position(x: 99, y: 80)
+                            .position(x: 96, y: 80)
                             .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayBlack"))
                         
                     case 8...11:
                         Text(ddaySymbolMenu[safe: 3]?.ddayTitle ?? localizedKey.stringValue())
-                            .font(.custom("Inter-Bold", size: 14.0))
+                            .font(.custom("Inter-Bold", size: 13.0))
                             .frame(width: 200, height: 50, alignment: .topTrailing)
-                            .position(x: 100, y: 81)
+                            .position(x: 99, y: 81)
                             .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
                         
                     case 12...14:
                         Text(ddaySymbolMenu[safe: 3]?.ddayTitle ?? localizedKey.stringValue())
-                            .font(.custom("Inter-Bold", size: 13.0))
+                            .font(.custom("Inter-Bold", size: 12.0))
                             .frame(width: 200, height: 50, alignment: .topTrailing)
-                            .position(x: 100, y: 82)
+                            .position(x: 101, y: 81)
                             .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
                         
                     case 15...:
                         Text(ddaySymbolMenu[safe: 3]?.ddayTitle ?? localizedKey.stringValue())
                             .font(.custom("Inter-Bold", size: 11.0))
                             .frame(width: 200, height: 50, alignment: .topTrailing)
-                            .position(x: 103, y: 83)
+                            .position(x: 104, y: 83)
                             .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
                         
                     default:
@@ -367,44 +356,40 @@ struct WidgetView_Multi01_M_Comp01_pad124x124_: View { // disable shadow
                     
                     // date 4
                     Text(ddaySymbolMenu[safe: 3]?.ddayDate ?? "0000.00.00")
-                        .font(.custom("Inter-Bold", size: 9.0))
+                        .font(.custom("Inter-Bold", size: 8.0))
                         .multilineTextAlignment(.leading)
-                        .frame(width: 28, height: 50, alignment: .topTrailing)
+                        .frame(width: 25, height: 50, alignment: .topTrailing)
                         .position(x: 197, y: 42)
                         .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
                     
                     // day number 4
                     ZStack {
-//                        switch CustomFunctions().makeSignedDateNumber(dateIntParam: CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu[safe: 3]?.ddayDate ??  defaultStringArr[3][1]), isTodayCounted: ddaySymbolMenu[safe: 3]?.ddayIsCountdown ?? "false")).count {
-                        switch 3 {
+                        switch CustomFunctions().makeSignedDateNumber(dateIntParam: CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu[safe: 3]?.ddayDate ??  defaultStringArr[3][1]), isTodayCounted: ddaySymbolMenu[safe: 3]?.ddayIsCountdown ?? "false")).count {
                                 
                         case ...4:
-//                            Text("\(CustomFunctions().makeSignedDateNumber(dateIntParam: CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu[safe: 3]?.ddayDate ?? defaultStringArr[3][1]), isTodayCounted: ddaySymbolMenu[safe: 3]?.ddayIsCountdown ?? "false")))")
-                            Text("+44")
-                                .font(.custom("Inter-ExtraBold", size: 46.0))
+                            Text("\(CustomFunctions().makeSignedDateNumber(dateIntParam: CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu[safe: 3]?.ddayDate ?? defaultStringArr[3][1]), isTodayCounted: ddaySymbolMenu[safe: 3]?.ddayIsCountdown ?? "false")))")
+                                .font(.custom("Inter-ExtraBold", size: 45.0))
                                 .frame(width: 200, height: 49, alignment: .topTrailing)
-                                .position(x: 28, y: 33)
-                                .kerning(-5)
+                                .position(x: 26, y: 32)
+                                .kerning(-3)
                                 .clipped()
                                 .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayBgColor ?? "ddayBlack"))
                                                  
                         case 5:
-//                            Text("\(CustomFunctions().makeSignedDateNumber(dateIntParam: CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu[safe: 3]?.ddayDate ??  defaultStringArr[3][1]), isTodayCounted: ddaySymbolMenu[safe: 3]?.ddayIsCountdown ?? "false")))")
-                            Text("+4444")
-                                .font(.custom("Inter-ExtraBold", size: 40.0))
+                            Text("\(CustomFunctions().makeSignedDateNumber(dateIntParam: CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu[safe: 3]?.ddayDate ??  defaultStringArr[3][1]), isTodayCounted: ddaySymbolMenu[safe: 3]?.ddayIsCountdown ?? "false")))")
+                                .font(.custom("Inter-ExtraBold", size: 38.0))
                                 .frame(width: 200, height: 49, alignment: .topTrailing)
-                                .position(x: 29, y: 39)
-                                .kerning(-4)
+                                .position(x: 25, y: 38)
+                                .kerning(-3)
                                 .clipped()
                                 .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayBgColor ?? "ddayBlack"))
                             
                         case 6...:
-//                            Text("\(CustomFunctions().makeSignedDateNumber(dateIntParam: CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu[safe: 3]?.ddayDate ??  defaultStringArr[3][1]), isTodayCounted: ddaySymbolMenu[safe: 3]?.ddayIsCountdown ?? "false")))")
-                            Text("+20004")
-                                .font(.custom("Inter-ExtraBold", size: 34.0))
+                            Text("\(CustomFunctions().makeSignedDateNumber(dateIntParam: CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu[safe: 3]?.ddayDate ??  defaultStringArr[3][1]), isTodayCounted: ddaySymbolMenu[safe: 3]?.ddayIsCountdown ?? "false")))")
+                                .font(.custom("Inter-ExtraBold", size: 31.0))
                                 .frame(width: 200, height: 49, alignment: .topTrailing)
-                                .position(x: 29, y: 45)
-                                .kerning(-4)
+                                .position(x: 26, y: 45)
+                                .kerning(-2)
                                 .clipped()
                                 .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayBgColor ?? "ddayBlack"))
                         default:
@@ -412,7 +397,7 @@ struct WidgetView_Multi01_M_Comp01_pad124x124_: View { // disable shadow
                         }
                         
                     }
-                    .frame(width: 130, height: 52, alignment: .bottomTrailing)
+                    .frame(width: 126, height: 50, alignment: .bottomTrailing)
                     .background(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
                 }
                 .position(x: 53, y: 56)

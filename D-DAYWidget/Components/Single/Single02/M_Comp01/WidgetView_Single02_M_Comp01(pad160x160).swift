@@ -25,8 +25,7 @@ struct WidgetView_Single02_M_Comp01_pad160x160_: View { // disable shadow
             ZStack {
                 
                 // Language
-//                switch (ddaySymbolMenu[safe: 0]?.ddayLanguage ?? "English") {
-                    switch "Japanese" {
+                switch (ddaySymbolMenu[safe: 0]?.ddayLanguage ?? "English") {
                 case "English":
                     
                     switch dateInt <= 0 {
@@ -163,12 +162,10 @@ struct WidgetView_Single02_M_Comp01_pad160x160_: View { // disable shadow
                 
                 
                 // DayNumber
-//                switch unsignedDateInt.count {
-                    switch 2 {
+                switch unsignedDateInt.count {
                     
                 case 0...1:
-//                    Text("\(unsignedDateInt)")
-                        Text("1")
+                    Text("\(unsignedDateInt)")
                             .font(.custom("Inter-Bold", size: 126.0))
                             .frame(width: 350, height: 100, alignment: .leading)
                             .position(x: 228, y: 129)
@@ -180,11 +177,9 @@ struct WidgetView_Single02_M_Comp01_pad160x160_: View { // disable shadow
                     
                 case 2...3:
                     
-//                    switch Int(unsignedDateInt)! / 100 {
-                        switch 7 {
+                    switch Int(unsignedDateInt)! / 100 {
                     case 0:
-//                        Text("\(unsignedDateInt)")
-                        Text("44")
+                        Text("\(unsignedDateInt)")
                             .font(.custom("Inter-Bold", size: 126.0))
                             .frame(width: 350, height: 100, alignment: .leading)
                             .position(x: 228, y: 129)
@@ -194,8 +189,7 @@ struct WidgetView_Single02_M_Comp01_pad160x160_: View { // disable shadow
                             .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
                                 
                     case 1:
-//                        Text("\(unsignedDateInt)")
-                            Text("104")
+                        Text("\(unsignedDateInt)")
                             .font(.custom("Inter-Bold", size: 125.0))
                             .frame(width: 350, height: 100, alignment: .leading)
                             .position(x: 212, y: 130)
@@ -205,8 +199,7 @@ struct WidgetView_Single02_M_Comp01_pad160x160_: View { // disable shadow
                             .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
                             
                     case 2:
-//                        Text("\(unsignedDateInt)")
-                            Text("204")
+                        Text("\(unsignedDateInt)")
                             .font(.custom("Inter-Bold", size: 118.0))
                             .frame(width: 350, height: 100, alignment: .leading)
                             .position(x: 211, y: 127)
@@ -217,8 +210,7 @@ struct WidgetView_Single02_M_Comp01_pad160x160_: View { // disable shadow
                                                                         
                         
                     case 3...6, 8, 9:
-//                        Text("\(unsignedDateInt)")
-                            Text("904")
+                        Text("\(unsignedDateInt)")
                             .font(.custom("Inter-Bold", size: 116.0))
                             .frame(width: 350, height: 100, alignment: .leading)
                             .position(x: 213, y: 128)
@@ -228,8 +220,7 @@ struct WidgetView_Single02_M_Comp01_pad160x160_: View { // disable shadow
                             .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
                         
                     case 7:
-//                        Text("\(unsignedDateInt)")
-                            Text("704")
+                        Text("\(unsignedDateInt)")
                             .font(.custom("Inter-Bold", size: 117.0))
                             .frame(width: 350, height: 100, alignment: .leading)
                             .position(x: 213, y: 129)
@@ -243,11 +234,9 @@ struct WidgetView_Single02_M_Comp01_pad160x160_: View { // disable shadow
                     }
                     
                 case 4:
-//                    switch Int(unsignedDateInt)! / 1000 {
-                        switch 3 {
+                    switch Int(unsignedDateInt)! / 1000 {
                     case 1:
-//                        Text("\(unsignedDateInt)")
-                            Text("1004")
+                        Text("\(unsignedDateInt)")
                             .font(.custom("Inter-Bold", size: 106.0))
                             .frame(width: 350, height: 100, alignment: .leading)
                             .position(x: 194, y: 129)
@@ -257,8 +246,7 @@ struct WidgetView_Single02_M_Comp01_pad160x160_: View { // disable shadow
                             .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
                                 
                     case 2:
-//                        Text("\(unsignedDateInt)")
-                            Text("2004")
+                        Text("\(unsignedDateInt)")
                             .font(.custom("Inter-Bold", size: 101.0))
                             .frame(width: 350, height: 100, alignment: .leading)
                             .position(x: 196, y: 129)
@@ -268,8 +256,7 @@ struct WidgetView_Single02_M_Comp01_pad160x160_: View { // disable shadow
                             .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
                             
                     case 4:
-//                        Text("\(unsignedDateInt)")
-                            Text("4004")
+                        Text("\(unsignedDateInt)")
                             .font(.custom("Inter-Bold", size: 101.0))
                             .frame(width: 350, height: 100, alignment: .leading)
                             .position(x: 191, y: 130)
@@ -279,8 +266,7 @@ struct WidgetView_Single02_M_Comp01_pad160x160_: View { // disable shadow
                             .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
                             
                     case 7:
-//                        Text("\(unsignedDateInt)")
-                            Text("7004")
+                        Text("\(unsignedDateInt)")
                             .font(.custom("Inter-Bold", size: 102.0))
                             .frame(width: 350, height: 100, alignment: .leading)
                             .position(x: 199, y: 130)
@@ -290,8 +276,7 @@ struct WidgetView_Single02_M_Comp01_pad160x160_: View { // disable shadow
                             .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
                         
                     case 3, 5, 6, 8, 9:
-//                        Text("\(unsignedDateInt)")
-                            Text("3004")
+                        Text("\(unsignedDateInt)")
                             .font(.custom("Inter-Bold", size: 101.0))
                             .frame(width: 350, height: 100, alignment: .leading)
                             .position(x: 196, y: 130)
@@ -306,11 +291,9 @@ struct WidgetView_Single02_M_Comp01_pad160x160_: View { // disable shadow
                     
                     
                 case 5...:
-//                    switch Int(unsignedDateInt)! / 10000 {
-                        switch 3 {
+                    switch Int(unsignedDateInt)! / 10000 {
                     case 1:
-//                        Text("\(unsignedDateInt)")
-                            Text("10004")
+                        Text("\(unsignedDateInt)")
                             .font(.custom("Inter-Bold", size: 90.0))
                             .frame(width: 350, height: 100, alignment: .leading)
                             .position(x: 188, y: 131)
@@ -320,8 +303,7 @@ struct WidgetView_Single02_M_Comp01_pad160x160_: View { // disable shadow
                             .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
                                 
                     case 2, 7:
-//                        Text("\(unsignedDateInt)")
-                            Text("20004")
+                        Text("\(unsignedDateInt)")
                             .font(.custom("Inter-Bold", size: 86.0))
                             .frame(width: 350, height: 100, alignment: .leading)
                             .position(x: 187, y: 131)
@@ -331,8 +313,7 @@ struct WidgetView_Single02_M_Comp01_pad160x160_: View { // disable shadow
                             .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
                             
                     case 4:
-//                        Text("\(unsignedDateInt)")
-                            Text("40004")
+                        Text("\(unsignedDateInt)")
                             .font(.custom("Inter-Bold", size: 89.0))
                             .frame(width: 350, height: 100, alignment: .leading)
                             .position(x: 182, y: 131)
@@ -342,8 +323,7 @@ struct WidgetView_Single02_M_Comp01_pad160x160_: View { // disable shadow
                             .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
                         
                     case 3, 5, 6, 8, 9:
-//                        Text("\(unsignedDateInt)")
-                            Text("30004")
+                        Text("\(unsignedDateInt)")
                             .font(.custom("Inter-Bold", size: 86.0))
                             .frame(width: 350, height: 100, alignment: .leading)
                             .position(x: 185, y: 131)

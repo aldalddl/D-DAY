@@ -1,13 +1,13 @@
 //
-//  WidgetView_Single02_M_Comp01(pad124x124).swift
+//  WidgetView_Single02_M_Comp02(pad124x124).swift
 //  D-DAYWidgetExtension
 //
-//  Created by Hakyung Sohn on 1/11/24.
+//  Created by Hakyung Sohn on 5/16/24.
 //
 
 import SwiftUI
 
-struct WidgetView_Single02_M_Comp01_pad124x124_: View { // disable shadow
+struct WidgetView_Single02_M_Comp02_pad124x124_: View { // enable shadow
     
     var entry: Provider.Entry
     
@@ -25,7 +25,7 @@ struct WidgetView_Single02_M_Comp01_pad124x124_: View { // disable shadow
             ZStack {
                 
                 // Language
-                switch (ddaySymbolMenu[safe: 0]?.ddayLanguage ?? "English") { 
+                switch (ddaySymbolMenu[safe: 0]?.ddayLanguage ?? "English") {
                 case "English":
                     
                     switch dateInt <= 0 {
@@ -34,6 +34,7 @@ struct WidgetView_Single02_M_Comp01_pad124x124_: View { // disable shadow
                         Text("Dday")
                             .font(.custom("Inter-Bold", size: 78.0))
                             .frame(width: 300, height: 50, alignment: .topLeading)
+                            .shadow(color: Color("ddayBlack").opacity(0.3), radius: 2.2, x: 0.6, y: 4)
                             .position(x: 157, y: 23)
                             .kerning(-2)
                             .rotationEffect(.degrees(-13))
@@ -43,6 +44,7 @@ struct WidgetView_Single02_M_Comp01_pad124x124_: View { // disable shadow
                         Text("Day+")
                             .font(.custom("Inter-Bold", size: 78.0))
                             .frame(width: 300, height: 50, alignment: .topLeading)
+                            .shadow(color: Color("ddayBlack").opacity(0.3), radius: 2.2, x: 0.6, y: 4)
                             .position(x: 157, y: 20)
                             .kerning(-2)
                             .rotationEffect(.degrees(-13))
@@ -60,6 +62,7 @@ struct WidgetView_Single02_M_Comp01_pad124x124_: View { // disable shadow
                         Text("디데이")
                             .font(.custom("Inter-Bold", size: 72.0))
                             .frame(width: 300, height: 50, alignment: .topLeading)
+                            .shadow(color: Color("ddayBlack").opacity(0.3), radius: 2.2, x: 0.6, y: 4)
                             .position(x: 156, y: 36)
                             .kerning(-4)
                             .rotationEffect(.degrees(-12))
@@ -69,6 +72,7 @@ struct WidgetView_Single02_M_Comp01_pad124x124_: View { // disable shadow
                         Text("데이+")
                             .font(.custom("Inter-Bold", size: 72.0))
                             .frame(width: 300, height: 50, alignment: .topLeading)
+                            .shadow(color: Color("ddayBlack").opacity(0.3), radius: 2.2, x: 0.6, y: 4)
                             .position(x: 156, y: 30)
                             .kerning(-2)
                             .rotationEffect(.degrees(-12))
@@ -86,6 +90,7 @@ struct WidgetView_Single02_M_Comp01_pad124x124_: View { // disable shadow
                         Text("ディ-デイ")
                             .font(.custom("Inter-Bold", size: 60.0))
                             .frame(width: 300, height: 50, alignment: .topLeading)
+                            .shadow(color: Color("ddayBlack").opacity(0.3), radius: 2.2, x: 0.6, y: 4)
                             .position(x: 148, y: 42)
                             .kerning(-7)
                             .rotationEffect(.degrees(-10))
@@ -95,6 +100,7 @@ struct WidgetView_Single02_M_Comp01_pad124x124_: View { // disable shadow
                         Text("デイ+")
                             .font(.custom("Inter-Bold", size: 81.0))
                             .frame(width: 300, height: 50, alignment: .topLeading)
+                            .shadow(color: Color("ddayBlack").opacity(0.3), radius: 2.2, x: 0.6, y: 4)
                             .position(x: 154, y: 27)
                             .kerning(-8)
                             .rotationEffect(.degrees(-10))
@@ -168,6 +174,7 @@ struct WidgetView_Single02_M_Comp01_pad124x124_: View { // disable shadow
                     Text("\(unsignedDateInt)")
                             .font(.custom("Inter-Bold", size: 120.0))
                             .frame(width: 350, height: 100, alignment: .leading)
+                            .shadow(color: Color("ddayBlack").opacity(0.3), radius: 2.2, x: 0.6, y: 4)
                             .position(x: 220, y: 126)
                             .multilineTextAlignment(.trailing)
                             .kerning(-10)
@@ -182,6 +189,7 @@ struct WidgetView_Single02_M_Comp01_pad124x124_: View { // disable shadow
                         Text("\(unsignedDateInt)")
                             .font(.custom("Inter-Bold", size: 120.0))
                             .frame(width: 350, height: 100, alignment: .leading)
+                            .shadow(color: Color("ddayBlack").opacity(0.3), radius: 2.2, x: 0.6, y: 4)
                             .position(x: 220, y: 126)
                             .multilineTextAlignment(.trailing)
                             .kerning(-10)
@@ -192,6 +200,7 @@ struct WidgetView_Single02_M_Comp01_pad124x124_: View { // disable shadow
                         Text("\(unsignedDateInt)")
                             .font(.custom("Inter-Bold", size: 110.0))
                             .frame(width: 350, height: 100, alignment: .leading)
+                            .shadow(color: Color("ddayBlack").opacity(0.3), radius: 2.2, x: 0.6, y: 4)
                             .position(x: 203, y: 125)
                             .multilineTextAlignment(.trailing)
                             .kerning(-10)
@@ -202,6 +211,7 @@ struct WidgetView_Single02_M_Comp01_pad124x124_: View { // disable shadow
                         Text("\(unsignedDateInt)")
                             .font(.custom("Inter-Bold", size: 109.0))
                             .frame(width: 350, height: 100, alignment: .leading)
+                            .shadow(color: Color("ddayBlack").opacity(0.3), radius: 2.2, x: 0.6, y: 4)
                             .position(x: 206, y: 123)
                             .multilineTextAlignment(.trailing)
                             .kerning(-10)
@@ -213,6 +223,7 @@ struct WidgetView_Single02_M_Comp01_pad124x124_: View { // disable shadow
                         Text("\(unsignedDateInt)")
                             .font(.custom("Inter-Bold", size: 105.0))
                             .frame(width: 350, height: 100, alignment: .leading)
+                            .shadow(color: Color("ddayBlack").opacity(0.3), radius: 2.2, x: 0.6, y: 4)
                             .position(x: 201, y: 125)
                             .multilineTextAlignment(.trailing)
                             .kerning(-9)
@@ -223,6 +234,7 @@ struct WidgetView_Single02_M_Comp01_pad124x124_: View { // disable shadow
                         Text("\(unsignedDateInt)")
                             .font(.custom("Inter-Bold", size: 108.0))
                             .frame(width: 350, height: 100, alignment: .leading)
+                            .shadow(color: Color("ddayBlack").opacity(0.3), radius: 2.2, x: 0.6, y: 4)
                             .position(x: 205, y: 126)
                             .multilineTextAlignment(.trailing)
                             .kerning(-9)
@@ -239,6 +251,7 @@ struct WidgetView_Single02_M_Comp01_pad124x124_: View { // disable shadow
                         Text("\(unsignedDateInt)")
                             .font(.custom("Inter-Bold", size: 96.0))
                             .frame(width: 350, height: 100, alignment: .leading)
+                            .shadow(color: Color("ddayBlack").opacity(0.3), radius: 2.2, x: 0.6, y: 4)
                             .position(x: 190, y: 126)
                             .multilineTextAlignment(.trailing)
                             .kerning(-9)
@@ -249,6 +262,7 @@ struct WidgetView_Single02_M_Comp01_pad124x124_: View { // disable shadow
                         Text("\(unsignedDateInt)")
                             .font(.custom("Inter-Bold", size: 91.0))
                             .frame(width: 350, height: 100, alignment: .leading)
+                            .shadow(color: Color("ddayBlack").opacity(0.3), radius: 2.2, x: 0.6, y: 4)
                             .position(x: 192, y: 126)
                             .multilineTextAlignment(.trailing)
                             .kerning(-8)
@@ -259,6 +273,7 @@ struct WidgetView_Single02_M_Comp01_pad124x124_: View { // disable shadow
                         Text("\(unsignedDateInt)")
                             .font(.custom("Inter-Bold", size: 90.0))
                             .frame(width: 350, height: 100, alignment: .leading)
+                            .shadow(color: Color("ddayBlack").opacity(0.3), radius: 2.2, x: 0.6, y: 4)
                             .position(x: 191, y: 127)
                             .multilineTextAlignment(.trailing)
                             .kerning(-8)
@@ -269,6 +284,7 @@ struct WidgetView_Single02_M_Comp01_pad124x124_: View { // disable shadow
                         Text("\(unsignedDateInt)")
                             .font(.custom("Inter-Bold", size: 91.0))
                             .frame(width: 350, height: 100, alignment: .leading)
+                            .shadow(color: Color("ddayBlack").opacity(0.3), radius: 2.2, x: 0.6, y: 4)
                             .position(x: 196, y: 127)
                             .multilineTextAlignment(.trailing)
                             .kerning(-8)
@@ -279,6 +295,7 @@ struct WidgetView_Single02_M_Comp01_pad124x124_: View { // disable shadow
                         Text("\(unsignedDateInt)")
                             .font(.custom("Inter-Bold", size: 91.0))
                             .frame(width: 350, height: 100, alignment: .leading)
+                            .shadow(color: Color("ddayBlack").opacity(0.3), radius: 2.2, x: 0.6, y: 4)
                             .position(x: 196, y: 127)
                             .multilineTextAlignment(.trailing)
                             .kerning(-8)
@@ -296,6 +313,7 @@ struct WidgetView_Single02_M_Comp01_pad124x124_: View { // disable shadow
                         Text("\(unsignedDateInt)")
                             .font(.custom("Inter-Bold", size: 83.0))
                             .frame(width: 350, height: 100, alignment: .leading)
+                            .shadow(color: Color("ddayBlack").opacity(0.3), radius: 2.2, x: 0.6, y: 4)
                             .position(x: 190, y: 126)
                             .multilineTextAlignment(.trailing)
                             .kerning(-8)
@@ -306,6 +324,7 @@ struct WidgetView_Single02_M_Comp01_pad124x124_: View { // disable shadow
                         Text("\(unsignedDateInt)")
                             .font(.custom("Inter-Bold", size: 81.0))
                             .frame(width: 350, height: 100, alignment: .leading)
+                            .shadow(color: Color("ddayBlack").opacity(0.3), radius: 2.2, x: 0.6, y: 4)
                             .position(x: 190, y: 126)
                             .multilineTextAlignment(.trailing)
                             .kerning(-8)
@@ -316,6 +335,7 @@ struct WidgetView_Single02_M_Comp01_pad124x124_: View { // disable shadow
                         Text("\(unsignedDateInt)")
                             .font(.custom("Inter-Bold", size: 82.0))
                             .frame(width: 350, height: 100, alignment: .leading)
+                            .shadow(color: Color("ddayBlack").opacity(0.3), radius: 2.2, x: 0.6, y: 4)
                             .position(x: 185, y: 128)
                             .multilineTextAlignment(.trailing)
                             .kerning(-8)
@@ -326,6 +346,7 @@ struct WidgetView_Single02_M_Comp01_pad124x124_: View { // disable shadow
                         Text("\(unsignedDateInt)")
                             .font(.custom("Inter-Bold", size: 81.0))
                             .frame(width: 350, height: 100, alignment: .leading)
+                            .shadow(color: Color("ddayBlack").opacity(0.3), radius: 2.2, x: 0.6, y: 4)
                             .position(x: 185, y: 128)
                             .multilineTextAlignment(.trailing)
                             .kerning(-8)

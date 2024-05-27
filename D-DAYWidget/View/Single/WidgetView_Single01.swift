@@ -18,6 +18,7 @@ struct WidgetView_Single01EntryView : View {
         if #available(iOSApplicationExtension 17.0, *) {
             switch self.family {
                 
+            /// Single - Small Size Widget 01
             case .systemSmall:
                 
                 let ddaySymbolMenu: [DdaySymbol] = DefaultArrForWidget_SS01().getDaySymbolMenu(entry: self.entry)
@@ -29,7 +30,6 @@ struct WidgetView_Single01EntryView : View {
                         
                     /// ** iPhone UI **
                     case CGSize(width: 430, height: 932), CGSize(width: 428, height: 926): // (170x170)
-                        
                         // Mark : - .containerBackground()는 iOS 17 대응을 위함
                         WidgetView_Single01_S_Comp01_170x170_(entry: self.entry, ddaySymbolMenu: ddaySymbolMenu)
                             .body
@@ -179,12 +179,12 @@ struct WidgetView_Single01EntryView : View {
                     }
                     
                 default:
-                    Text("Encountered Error S01-1")
+                    Text("Encountered Error S01")
                 }
                 
                 
                 
-                
+            /// Single - Medium Size Widget 01
             case .systemMedium:
                 
                 let ddaySymbolMenu: [DdaySymbol] = DefaultArrForWidget_SM01().getDaySymbolMenu(entry: self.entry)
@@ -345,11 +345,11 @@ struct WidgetView_Single01EntryView : View {
                     }
                     
                 default:
-                    Text("Encountered Error S02-2")
+                    Text("Encountered Error M01")
                 }
                 
             @unknown default:
-                Text("Encountered Error S01-3")
+                Text("Encountered Error S01-M01")
             }
         }
     }
