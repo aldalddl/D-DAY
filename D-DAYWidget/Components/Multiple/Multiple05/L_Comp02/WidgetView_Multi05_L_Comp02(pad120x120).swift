@@ -1,13 +1,13 @@
 //
-//  WidgetView_Multi05_L_Comp01(pad120x120).swift
+//  WidgetView_Multi05_L_Comp02(pad120x120).swift
 //  D-DAYWidgetExtension
 //
-//  Created by Hakyung Sohn on 2/14/24.
+//  Created by Hakyung Sohn on 5/31/24.
 //
 
 import SwiftUI
 
-struct WidgetView_Multi05_L_Comp01_pad120x120_: View { // disable shadow
+struct WidgetView_Multi05_L_Comp02_pad120x120_: View { // disable shadow
     
     var entry: Provider.Entry
     
@@ -26,6 +26,7 @@ struct WidgetView_Multi05_L_Comp01_pad120x120_: View { // disable shadow
                     Text("\(CustomFunctions().makeSignedDateNumber(dateIntParam: CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu[safe: 0]?.ddayDate ??  "2023.10.16"), isTodayCounted: ddaySymbolMenu[safe: 0]?.ddayIsCountdown ?? "false")))")
                         .font(.custom("Inter-Bold", size: 98.0))
                         .frame(width: 400, height: 50, alignment: .leading)
+                        .shadow(color: Color("ddayBlack").opacity(0.3), radius: 2.2, x: 0.6, y: 4)
                         .padding(EdgeInsets(top: 10, leading: 70, bottom: 25, trailing: 0))
                         .kerning(-8)
                         .rotationEffect(.degrees(-10))
@@ -35,6 +36,7 @@ struct WidgetView_Multi05_L_Comp01_pad120x120_: View { // disable shadow
                     Text("\(CustomFunctions().makeSignedDateNumber(dateIntParam: CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu[safe: 0]?.ddayDate ??  "2023.10.16"), isTodayCounted: ddaySymbolMenu[safe: 0]?.ddayIsCountdown ?? "false")))")
                         .font(.custom("Inter-Bold", size: 84.0))
                         .frame(width: 400, height: 50, alignment: .leading)
+                        .shadow(color: Color("ddayBlack").opacity(0.3), radius: 2.2, x: 0.6, y: 4)
                         .padding(EdgeInsets(top: 13, leading: 68, bottom: 23, trailing: 0))
                         .kerning(-7)
                         .rotationEffect(.degrees(-10))
@@ -44,6 +46,7 @@ struct WidgetView_Multi05_L_Comp01_pad120x120_: View { // disable shadow
                     Text("\(CustomFunctions().makeSignedDateNumber(dateIntParam: CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu[safe: 0]?.ddayDate ??  "2023.10.16"), isTodayCounted: ddaySymbolMenu[safe: 0]?.ddayIsCountdown ?? "false")))")
                         .font(.custom("Inter-Bold", size: 72.0))
                         .frame(width: 400, height: 50, alignment: .leading)
+                        .shadow(color: Color("ddayBlack").opacity(0.3), radius: 2.2, x: 0.6, y: 4)
                         .padding(EdgeInsets(top: 8, leading: 74, bottom: 23, trailing: 0))
                         .kerning(-6)
                         .rotationEffect(.degrees(-10))
@@ -53,6 +56,7 @@ struct WidgetView_Multi05_L_Comp01_pad120x120_: View { // disable shadow
                     Text("\(CustomFunctions().makeSignedDateNumber(dateIntParam: CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu[safe: 0]?.ddayDate ??  "2023.10.16"), isTodayCounted: ddaySymbolMenu[safe: 0]?.ddayIsCountdown ?? "false")))")
                         .font(.custom("Inter-Bold", size: 58.0))
                         .frame(width: 400, height: 50, alignment: .leading)
+                        .shadow(color: Color("ddayBlack").opacity(0.3), radius: 2.2, x: 0.6, y: 4)
                         .padding(EdgeInsets(top: 15, leading: 79, bottom: 25, trailing: 0))
                         .kerning(-5)
                         .rotationEffect(.degrees(-10))
@@ -133,6 +137,7 @@ struct WidgetView_Multi05_L_Comp01_pad120x120_: View { // disable shadow
                     Text("\(CustomFunctions().makeSignedDateNumber(dateIntParam: CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu[safe: 1]?.ddayDate ??  "2023.10.16"), isTodayCounted: ddaySymbolMenu[safe: 1]?.ddayIsCountdown ?? "false")))")
                         .font(.custom("Inter-Bold", size: 98.0))
                         .frame(width: 400, height: 50, alignment: .trailing)
+                        .shadow(color: Color("ddayBlack").opacity(0.3), radius: 2.2, x: 0.6, y: 4)
                         .padding(EdgeInsets(top: 33, leading: 0, bottom: 0, trailing: 107))
                         .kerning(-8)
                         .rotationEffect(.degrees(-10))
@@ -142,6 +147,7 @@ struct WidgetView_Multi05_L_Comp01_pad120x120_: View { // disable shadow
                     Text("\(CustomFunctions().makeSignedDateNumber(dateIntParam: CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu[safe: 1]?.ddayDate ??  "2023.10.16"), isTodayCounted: ddaySymbolMenu[safe: 1]?.ddayIsCountdown ?? "false")))")
                         .font(.custom("Inter-Bold", size: 84.0))
                         .frame(width: 400, height: 50, alignment: .trailing)
+                        .shadow(color: Color("ddayBlack").opacity(0.3), radius: 2.2, x: 0.6, y: 4)
                         .padding(EdgeInsets(top: 32, leading: 0, bottom: 0, trailing: 103))
                         .kerning(-7)
                         .rotationEffect(.degrees(-10))
@@ -151,6 +157,7 @@ struct WidgetView_Multi05_L_Comp01_pad120x120_: View { // disable shadow
                     Text("\(CustomFunctions().makeSignedDateNumber(dateIntParam: CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu[safe: 1]?.ddayDate ??  "2023.10.16"), isTodayCounted: ddaySymbolMenu[safe: 1]?.ddayIsCountdown ?? "false")))")
                         .font(.custom("Inter-Bold", size: 72.0))
                         .frame(width: 400, height: 50, alignment: .trailing)
+                        .shadow(color: Color("ddayBlack").opacity(0.3), radius: 2.2, x: 0.6, y: 4)
                         .padding(EdgeInsets(top: 22, leading: 0, bottom: 0, trailing: 102))
                         .kerning(-6)
                         .rotationEffect(.degrees(-10))
@@ -160,6 +167,7 @@ struct WidgetView_Multi05_L_Comp01_pad120x120_: View { // disable shadow
                     Text("\(CustomFunctions().makeSignedDateNumber(dateIntParam: CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu[safe: 1]?.ddayDate ??  "2023.10.16"), isTodayCounted: ddaySymbolMenu[safe: 1]?.ddayIsCountdown ?? "false")))")
                         .font(.custom("Inter-Bold", size: 58.0))
                         .frame(width: 400, height: 50, alignment: .trailing)
+                        .shadow(color: Color("ddayBlack").opacity(0.3), radius: 2.2, x: 0.6, y: 4)
                         .padding(EdgeInsets(top: 23, leading: 0, bottom: 0, trailing: 99))
                         .kerning(-5)
                         .rotationEffect(.degrees(-10))
@@ -312,6 +320,7 @@ struct WidgetView_Multi05_L_Comp01_pad120x120_: View { // disable shadow
                     Text("\(CustomFunctions().makeSignedDateNumber(dateIntParam: CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu[safe: 2]?.ddayDate ??  "2023.10.16"), isTodayCounted: ddaySymbolMenu[safe: 2]?.ddayIsCountdown ?? "false")))")
                         .font(.custom("Inter-Bold", size: 98.0))
                         .frame(width: 400, height: 50, alignment: .leading)
+                        .shadow(color: Color("ddayBlack").opacity(0.3), radius: 2.2, x: 0.6, y: 4)
                         .padding(EdgeInsets(top: 10, leading: 70, bottom: 25, trailing: 0))
                         .kerning(-8)
                         .rotationEffect(.degrees(-10))
@@ -321,6 +330,7 @@ struct WidgetView_Multi05_L_Comp01_pad120x120_: View { // disable shadow
                     Text("\(CustomFunctions().makeSignedDateNumber(dateIntParam: CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu[safe: 2]?.ddayDate ??  "2023.10.16"), isTodayCounted: ddaySymbolMenu[safe: 2]?.ddayIsCountdown ?? "false")))")
                         .font(.custom("Inter-Bold", size: 84.0))
                         .frame(width: 400, height: 50, alignment: .leading)
+                        .shadow(color: Color("ddayBlack").opacity(0.3), radius: 2.2, x: 0.6, y: 4)
                         .padding(EdgeInsets(top: 13, leading: 68, bottom: 23, trailing: 0))
                         .kerning(-7)
                         .rotationEffect(.degrees(-10))
@@ -330,15 +340,17 @@ struct WidgetView_Multi05_L_Comp01_pad120x120_: View { // disable shadow
                     Text("\(CustomFunctions().makeSignedDateNumber(dateIntParam: CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu[safe: 2]?.ddayDate ??  "2023.10.16"), isTodayCounted: ddaySymbolMenu[safe: 2]?.ddayIsCountdown ?? "false")))")
                         .font(.custom("Inter-Bold", size: 72.0))
                         .frame(width: 400, height: 50, alignment: .leading)
+                        .shadow(color: Color("ddayBlack").opacity(0.3), radius: 2.2, x: 0.6, y: 4)
                         .padding(EdgeInsets(top: 8, leading: 74, bottom: 23, trailing: 0))
                         .kerning(-6)
                         .rotationEffect(.degrees(-10))
                         .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayBgColor ?? "ddayBlack"))
                     
                 case 6...:
-                    Text("\(CustomFunctions().makeSignedDateNumber(dateIntParam: CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu[safe: 2]?.ddayDate ??  "2023.10.16"), isTodayCounted: ddaySymbolMenu[safe: 2]?.ddayIsCountdown ?? "false")))") 
+                    Text("\(CustomFunctions().makeSignedDateNumber(dateIntParam: CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu[safe: 2]?.ddayDate ??  "2023.10.16"), isTodayCounted: ddaySymbolMenu[safe: 2]?.ddayIsCountdown ?? "false")))")
                         .font(.custom("Inter-Bold", size: 58.0))
                         .frame(width: 400, height: 50, alignment: .leading)
+                        .shadow(color: Color("ddayBlack").opacity(0.3), radius: 2.2, x: 0.6, y: 4)
                         .padding(EdgeInsets(top: 15, leading: 79, bottom: 25, trailing: 0))
                         .kerning(-5)
                         .rotationEffect(.degrees(-10))
