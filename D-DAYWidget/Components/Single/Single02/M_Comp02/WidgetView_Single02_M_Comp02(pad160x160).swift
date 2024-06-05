@@ -368,8 +368,8 @@ struct WidgetView_Single02_M_Comp02_pad160x160_: View { // enable shadow
                 GeometryReader { metrics in
                     Text(ddaySymbolMenu[safe: 0]?.ddayDate ?? "2023.12.28")
                         .font(.custom("Inter-Bold", size: 10.0))
-                        .frame(width: 32, height: 70, alignment: .trailing)
-                        .position(x: 335, y: 144)
+                        .frame(width: 33, height: 70, alignment: .trailing)
+                        .position(x: 334, y: 144)
                         .multilineTextAlignment(.leading)
                         .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
                 }

@@ -113,7 +113,7 @@ struct WidgetView_Multi05_L_Comp01_pad132x132_: View { // disable shadow
                 }
                 
                 // Date 1
-                Text(ddaySymbolMenu[safe: 0]?.ddayDate ?? "2000.00.00")
+                Text(ddaySymbolMenu[safe: 0]?.ddayDate ?? "0000.00.00")
                     .font(.custom("Inter-Bold", size: 10.0))
                     .frame(width: 70, height: 50, alignment: .topTrailing)
                     .padding(EdgeInsets(top: 72, leading: 215, bottom: 0, trailing: 0))
@@ -223,7 +223,7 @@ struct WidgetView_Multi05_L_Comp01_pad132x132_: View { // disable shadow
 
                 
                 // Date 2
-                Text(ddaySymbolMenu[safe: 1]?.ddayDate ?? "2000.00.00")
+                Text(ddaySymbolMenu[safe: 1]?.ddayDate ?? "0000.00.00")
                     .font(.custom("Inter-Bold", size: 10.0))
                     .frame(width: 70, height: 50, alignment: .topLeading)
                     .padding(EdgeInsets(top: 72, leading: 0, bottom: 0, trailing: 211))
@@ -289,7 +289,7 @@ struct WidgetView_Multi05_L_Comp01_pad132x132_: View { // disable shadow
                 
                 
                 // Date 3
-                Text(ddaySymbolMenu[safe: 2]?.ddayDate ?? "2000.00.00")
+                Text(ddaySymbolMenu[safe: 2]?.ddayDate ?? "0000.00.00")
                     .font(.custom("Inter-Bold", size: 10.0))
                     .frame(width: 70, height: 50, alignment: .topTrailing)
                     .padding(EdgeInsets(top: 72, leading: 215, bottom: 0, trailing: 0))

@@ -834,7 +834,7 @@ struct WidgetView_Single01_M_Comp01_pad160x160_: View { // disable shadow
                     Text(ddaySymbolMenu[safe: 0]?.ddayDate ?? "2023.12.31")
                         .font(.custom("Inter-Bold", size: 12.0))
                         .frame(width: 300, height: 20, alignment: .trailing)
-                        .position(x: metrics.size.width * 0.523, y: metrics.size.height * 0.77)
+                        .position(x: metrics.size.width * 0.523, y: metrics.size.height * 0.791)
                         .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayBlack"))
                 }
             }

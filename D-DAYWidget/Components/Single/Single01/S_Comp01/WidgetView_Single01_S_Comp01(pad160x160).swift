@@ -85,8 +85,8 @@ struct WidgetView_Single01_S_Comp01_pad160x160_: View { // disable shadow
                        
                    case 15...:
                        Text(ddaySymbolMenu[safe: 0]?.ddayTitle ?? localizedKey.stringValue())
-                           .frame(width: 60, height: 50, alignment: .topTrailing)
-                           .position(x: metrics.size.width * 0.718, y: metrics.size.height * 0.273)
+                           .frame(width: 65, height: 50, alignment: .topTrailing)
+                           .position(x: metrics.size.width * 0.705, y: metrics.size.height * 0.295)
                            .font(.custom("Inter-Bold", size: 11.0))
                            .multilineTextAlignment(.trailing)
                         

@@ -20,14 +20,14 @@ struct WidgetView_Multi06EntryView : View { // hex done
             
             switch self.family {
                 
-            // Extra Large For iPad
-                
+            /// Multiple - Extra large Size for iPad
             case .systemExtraLarge:
                 switch entry.configuration.shadow?.stringValue ?? "0" {
                 case "0": // disable shadow
                     
                     switch UIScreen.main.bounds.size { // Depends on Device
                         
+                        /// ** iPadUI **
                         case CGSize(width: 768, height: 1024), CGSize(width: 744, height: 1133): // (768x1024, 744x1133)
                             // Mark : - .containerBackground()는 iOS 17 대응을 위함
                             WidgetView_Multi06_XL_Comp01_pad120x120_(entry: self.entry, ddaySymbolMenu: ddaySymbolMenu)
@@ -86,6 +86,7 @@ struct WidgetView_Multi06EntryView : View { // hex done
                     
                     switch UIScreen.main.bounds.size { // Depends on Device
                         
+                        /// ** iPadUI **
                         case CGSize(width: 768, height: 1024), CGSize(width: 744, height: 1133): // (768x1024, 744x1133)
                             // Mark : - .containerBackground()는 iOS 17 대응을 위함
                             WidgetView_Multi06_XL_Comp02_pad120x120_(entry: self.entry, ddaySymbolMenu: ddaySymbolMenu)

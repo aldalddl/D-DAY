@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct WidgetView_Multi04_L_Comp02_pad120x120_: View { // disable shadow
+struct WidgetView_Multi04_L_Comp02_pad120x120_: View { // enable shadow
     
     var entry: Provider.Entry
     
@@ -167,11 +167,11 @@ struct WidgetView_Multi04_L_Comp02_pad120x120_: View { // disable shadow
                     
                 case ...3:
                     Text("\(CustomFunctions().makeSignedDateNumber(dateIntParam: CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu[safe: 1]?.ddayDate ??  "2023.10.16"), isTodayCounted: ddaySymbolMenu[safe: 1]?.ddayIsCountdown ?? "false")))")
-                        .font(.custom("Inter-Bold", size: 88.0))
+                        .font(.custom("Inter-Bold", size: 99.0))
                         .frame(width: 400, height: 50, alignment: .leading)
                         .shadow(color: Color("ddayBlack").opacity(0.3), radius: 2.2, x: 0.6, y: 4)
-                        .padding(EdgeInsets(top: 47, leading: 65, bottom: 29, trailing: 0))
-                        .kerning(-8)
+                        .padding(EdgeInsets(top: 47, leading: 68, bottom: 29, trailing: 0))
+                        .kerning(-9)
                         .rotationEffect(.degrees(-82))
                         .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
                     
@@ -266,11 +266,11 @@ struct WidgetView_Multi04_L_Comp02_pad120x120_: View { // disable shadow
                     
                 case ...3:
                     Text("\(CustomFunctions().makeSignedDateNumber(dateIntParam: CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu[safe: 2]?.ddayDate ??  "2023.10.16"), isTodayCounted: ddaySymbolMenu[safe: 2]?.ddayIsCountdown ?? "false")))")
-                        .font(.custom("Inter-Bold", size: 88.0))
+                        .font(.custom("Inter-Bold", size: 99.0))
                         .frame(width: 400, height: 50, alignment: .leading)
                         .shadow(color: Color("ddayBlack").opacity(0.3), radius: 2.2, x: 0.6, y: 4)
-                        .padding(EdgeInsets(top: 47, leading: 65, bottom: 29, trailing: 0))
-                        .kerning(-8)
+                        .padding(EdgeInsets(top: 47, leading: 68, bottom: 29, trailing: 0))
+                        .kerning(-9)
                         .rotationEffect(.degrees(-82))
                         .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayBgColor ?? "ddayBlack"))
                     

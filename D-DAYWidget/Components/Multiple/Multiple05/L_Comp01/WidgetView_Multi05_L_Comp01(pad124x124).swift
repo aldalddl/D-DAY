@@ -113,7 +113,7 @@ struct WidgetView_Multi05_L_Comp01_pad124x124_: View { // disable shadow
                 }
                 
                 // Date 1
-                Text(ddaySymbolMenu[safe: 0]?.ddayDate ?? "2000.00.00")
+                Text(ddaySymbolMenu[safe: 0]?.ddayDate ?? "0000.00.00")
                     .font(.custom("Inter-Bold", size: 10.0))
                     .frame(width: 70, height: 50, alignment: .topTrailing)
                     .padding(EdgeInsets(top: 73, leading: 207, bottom: 0, trailing: 0))
@@ -223,7 +223,7 @@ struct WidgetView_Multi05_L_Comp01_pad124x124_: View { // disable shadow
 
                 
                 // Date 2
-                Text(ddaySymbolMenu[safe: 1]?.ddayDate ?? "2000.00.00")
+                Text(ddaySymbolMenu[safe: 1]?.ddayDate ?? "0000.00.00")
                     .font(.custom("Inter-Bold", size: 10.0))
                     .frame(width: 70, height: 50, alignment: .topLeading)
                     .padding(EdgeInsets(top: 74, leading: 0, bottom: 0, trailing: 205))
@@ -289,7 +289,7 @@ struct WidgetView_Multi05_L_Comp01_pad124x124_: View { // disable shadow
                 
                 
                 // Date 3
-                Text(ddaySymbolMenu[safe: 2]?.ddayDate ?? "2000.00.00")
+                Text(ddaySymbolMenu[safe: 2]?.ddayDate ?? "0000.00.00")
                     .font(.custom("Inter-Bold", size: 10.0))
                     .frame(width: 70, height: 50, alignment: .topTrailing)
                     .padding(EdgeInsets(top: 73, leading: 207, bottom: 0, trailing: 0))
@@ -327,7 +327,7 @@ struct WidgetView_Multi05_L_Comp01_pad124x124_: View { // disable shadow
                         .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayBgColor ?? "ddayBlack"))
                     
                 case 6...:
-                    Text("\(CustomFunctions().makeSignedDateNumber(dateIntParam: CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu[safe: 2]?.ddayDate ??  "2023.10.16"), isTodayCounted: ddaySymbolMenu[safe: 2]?.ddayIsCountdown ?? "false")))") 
+                    Text("\(CustomFunctions().makeSignedDateNumber(dateIntParam: CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu[safe: 2]?.ddayDate ??  "2023.10.16"), isTodayCounted: ddaySymbolMenu[safe: 2]?.ddayIsCountdown ?? "false")))")
                         .font(.custom("Inter-Bold", size: 61.0))
                         .frame(width: 400, height: 50, alignment: .leading)
                         .padding(EdgeInsets(top: 17, leading: 65, bottom: 25, trailing: 0))

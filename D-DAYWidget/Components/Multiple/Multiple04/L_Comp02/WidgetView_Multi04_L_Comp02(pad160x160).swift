@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct WidgetView_Multi04_L_Comp02_pad160x160_: View { // disable shadow
+struct WidgetView_Multi04_L_Comp02_pad160x160_: View { // enable shadow
     
     var entry: Provider.Entry
     

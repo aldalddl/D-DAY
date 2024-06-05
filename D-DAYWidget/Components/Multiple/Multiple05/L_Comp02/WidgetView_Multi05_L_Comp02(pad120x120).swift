@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct WidgetView_Multi05_L_Comp02_pad120x120_: View { // disable shadow
+struct WidgetView_Multi05_L_Comp02_pad120x120_: View { // enable shadow
     
     var entry: Provider.Entry
     
@@ -117,7 +117,7 @@ struct WidgetView_Multi05_L_Comp02_pad120x120_: View { // disable shadow
                 }
                 
                 // Date 1
-                Text(ddaySymbolMenu[safe: 0]?.ddayDate ?? "2000.00.00")
+                Text(ddaySymbolMenu[safe: 0]?.ddayDate ?? "0000.00.00")
                     .font(.custom("Inter-Bold", size: 10.0))
                     .frame(width: 70, height: 50, alignment: .topTrailing)
                     .padding(EdgeInsets(top: 73, leading: 200, bottom: 0, trailing: 0))
@@ -185,7 +185,7 @@ struct WidgetView_Multi05_L_Comp02_pad120x120_: View { // disable shadow
                         .font(.custom("Inter-Bold", size: 16.0))
                         .frame(width: 70, height: 55, alignment: .topLeading)
                         .multilineTextAlignment(.leading)
-                        .padding(EdgeInsets(top: 15, leading: 0, bottom: 0, trailing: 206))
+                        .padding(EdgeInsets(top: 15, leading: 0, bottom: 0, trailing: 196))
                         .lineLimit(3)
                         .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
                     
@@ -194,7 +194,7 @@ struct WidgetView_Multi05_L_Comp02_pad120x120_: View { // disable shadow
                         .font(.custom("Inter-Bold", size: 16.0))
                         .frame(width: 70, height: 55, alignment: .topLeading)
                         .multilineTextAlignment(.leading)
-                        .padding(EdgeInsets(top: 15, leading: 0, bottom: 0, trailing: 206))
+                        .padding(EdgeInsets(top: 15, leading: 0, bottom: 0, trailing: 196))
                         .lineLimit(3)
                         .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
 
@@ -203,7 +203,7 @@ struct WidgetView_Multi05_L_Comp02_pad120x120_: View { // disable shadow
                         .font(.custom("Inter-Bold", size: 15.0))
                         .frame(width: 80, height: 55, alignment: .topLeading)
                         .multilineTextAlignment(.leading)
-                        .padding(EdgeInsets(top: 15, leading: 0, bottom: 0, trailing: 196))
+                        .padding(EdgeInsets(top: 15, leading: 0, bottom: 0, trailing: 186))
                         .lineLimit(3)
                         .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
                         
@@ -212,7 +212,7 @@ struct WidgetView_Multi05_L_Comp02_pad120x120_: View { // disable shadow
                         .font(.custom("Inter-Bold", size: 14.0))
                         .frame(width: 84, height: 55, alignment: .topLeading)
                         .multilineTextAlignment(.leading)
-                        .padding(EdgeInsets(top: 15, leading: 0, bottom: 0, trailing: 192))
+                        .padding(EdgeInsets(top: 15, leading: 0, bottom: 0, trailing: 182))
                         .lineLimit(3)
                         .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
 
@@ -221,7 +221,7 @@ struct WidgetView_Multi05_L_Comp02_pad120x120_: View { // disable shadow
                         .font(.custom("Inter-Bold", size: 13.0))
                         .frame(width: 95, height: 55, alignment: .topLeading)
                         .multilineTextAlignment(.leading)
-                        .padding(EdgeInsets(top: 12, leading: 0, bottom: 0, trailing: 183))
+                        .padding(EdgeInsets(top: 12, leading: 0, bottom: 0, trailing: 173))
                         .lineLimit(3)
                         .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
                     
@@ -230,7 +230,7 @@ struct WidgetView_Multi05_L_Comp02_pad120x120_: View { // disable shadow
                         .font(.custom("Inter-Bold", size: 12.0))
                         .frame(width: 80, height: 55, alignment: .topLeading)
                         .multilineTextAlignment(.leading)
-                        .padding(EdgeInsets(top: 5, leading: 0, bottom: 0, trailing: 197))
+                        .padding(EdgeInsets(top: 5, leading: 0, bottom: 0, trailing: 187))
                         .lineLimit(3)
                         .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
                         
@@ -240,10 +240,10 @@ struct WidgetView_Multi05_L_Comp02_pad120x120_: View { // disable shadow
 
                 
                 // Date 2
-                Text(ddaySymbolMenu[safe: 1]?.ddayDate ?? "2000.00.00")
+                Text(ddaySymbolMenu[safe: 1]?.ddayDate ?? "0000.00.00")
                     .font(.custom("Inter-Bold", size: 11.0))
                     .frame(width: 70, height: 50, alignment: .topLeading)
-                    .padding(EdgeInsets(top: 76, leading: 0, bottom: 0, trailing: 208))
+                    .padding(EdgeInsets(top: 76, leading: 0, bottom: 0, trailing: 198))
                     .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
             }
             .frame(width: 400, height: 70)
@@ -306,7 +306,7 @@ struct WidgetView_Multi05_L_Comp02_pad120x120_: View { // disable shadow
                 
                 
                 // Date 3
-                Text(ddaySymbolMenu[safe: 2]?.ddayDate ?? "2000.00.00")
+                Text(ddaySymbolMenu[safe: 2]?.ddayDate ?? "0000.00.00")
                     .font(.custom("Inter-Bold", size: 10.0))
                     .frame(width: 70, height: 50, alignment: .topTrailing)
                     .padding(EdgeInsets(top: 73, leading: 200, bottom: 0, trailing: 0))
