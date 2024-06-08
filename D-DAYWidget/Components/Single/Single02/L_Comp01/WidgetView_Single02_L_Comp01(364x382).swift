@@ -17,7 +17,7 @@ struct WidgetView_Single02_L_Comp01_364x382_: View { // disable shadow
         
         let localizedKey = LocalizedStringKey("길게 눌러서 디데이 추가하기")
         let isTodayCounted: String = ddaySymbolMenu[safe: 0]?.ddayIsCountdown ?? "false"
-        let dateInt = CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu[safe: 0]?.ddayDate ??  "2024.02.16"), isTodayCounted: isTodayCounted)
+        let dateInt = CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu[safe: 0]?.ddayDate ??  "2025.12.25"), isTodayCounted: isTodayCounted)
         let unsignedDateInt = CustomFunctions().dateIntSign(dateIntParam: dateInt)
         let ddayDorPlus = CustomFunctions().ddaySetDorPlus(dateIntParam: dateInt)
         
@@ -56,9 +56,9 @@ struct WidgetView_Single02_L_Comp01_364x382_: View { // disable shadow
                     
                 case 0...4:
                     Text(ddaySymbolMenu[safe: 0]?.ddayTitle ?? localizedKey.stringValue())
-                        .font(.custom("Inter-Bold", size: 29.0))
+                        .font(.custom("Inter-Bold", size: 19.0))
                         .frame(width: 130, height: 100, alignment: .topTrailing)
-                        .position(x: 271, y: 110)
+                        .position(x: 270, y: 115)
                         .multilineTextAlignment(.trailing)
                         .lineSpacing(2)
                         .lineLimit(3)
@@ -66,9 +66,9 @@ struct WidgetView_Single02_L_Comp01_364x382_: View { // disable shadow
                     
                 case 5...6:
                     Text(ddaySymbolMenu[safe: 0]?.ddayTitle ?? localizedKey.stringValue())
-                        .font(.custom("Inter-Bold", size: 23.0))
+                        .font(.custom("Inter-Bold", size: 19.0))
                         .frame(width: 130, height: 100, alignment: .topTrailing)
-                        .position(x: 271, y: 115)
+                        .position(x: 271, y: 117)
                         .multilineTextAlignment(.trailing)
                         .lineSpacing(2)
                         .lineLimit(3)
@@ -76,9 +76,9 @@ struct WidgetView_Single02_L_Comp01_364x382_: View { // disable shadow
                     
                 case 7...10:
                     Text(ddaySymbolMenu[safe: 0]?.ddayTitle ?? localizedKey.stringValue())
-                        .font(.custom("Inter-Bold", size: 21.0))
+                        .font(.custom("Inter-Bold", size: 18.0))
                         .frame(width: 110, height: 100, alignment: .topTrailing)
-                        .position(x: 281, y: 104)
+                        .position(x: 280, y: 111)
                         .multilineTextAlignment(.trailing)
                         .lineSpacing(2)
                         .lineLimit(3)
@@ -86,7 +86,7 @@ struct WidgetView_Single02_L_Comp01_364x382_: View { // disable shadow
                     
                 case 11...12:
                     Text(ddaySymbolMenu[safe: 0]?.ddayTitle ?? localizedKey.stringValue())
-                        .font(.custom("Inter-Bold", size: 18.0))
+                        .font(.custom("Inter-Bold", size: 17.0))
                         .frame(width: 120, height: 100, alignment: .topTrailing)
                         .position(x: 276, y: 110)
                         .multilineTextAlignment(.trailing)
@@ -96,9 +96,9 @@ struct WidgetView_Single02_L_Comp01_364x382_: View { // disable shadow
                     
                 case 13...14:
                     Text(ddaySymbolMenu[safe: 0]?.ddayTitle ?? localizedKey.stringValue())
-                        .font(.custom("Inter-Bold", size: 17.0))
+                        .font(.custom("Inter-Bold", size: 16.0))
                         .frame(width: 130, height: 100, alignment: .topTrailing)
-                        .position(x: 271, y: 112)
+                        .position(x: 271, y: 118)
                         .multilineTextAlignment(.trailing)
                         .lineSpacing(2)
                         .lineLimit(3)
@@ -106,7 +106,7 @@ struct WidgetView_Single02_L_Comp01_364x382_: View { // disable shadow
                     
                 case 15...:
                     Text(ddaySymbolMenu[safe: 0]?.ddayTitle ?? localizedKey.stringValue())
-                        .font(.custom("Inter-Bold", size: 16.0))
+                        .font(.custom("Inter-Bold", size: 15.0))
                         .frame(width: 130, height: 100, alignment: .topTrailing)
                         .position(x: 271, y: 112)
                         .multilineTextAlignment(.trailing)
@@ -121,10 +121,10 @@ struct WidgetView_Single02_L_Comp01_364x382_: View { // disable shadow
 
 
                 // Date
-                Text(ddaySymbolMenu[safe: 0]?.ddayDate ?? "2023.12.28")
-                    .font(.custom("Inter-Bold", size: 13))
+                Text(ddaySymbolMenu[safe: 0]?.ddayDate ?? "0000.00.00")
+                    .font(.custom("Inter-Bold", size: 11))
                     .frame(width: 110, height: 50, alignment: .topTrailing)
-                    .padding(EdgeInsets(top: 0, leading: 193, bottom: 85, trailing: 0))
+                    .padding(EdgeInsets(top: 0, leading: 194, bottom: 104, trailing: 0))
                     .multilineTextAlignment(.trailing)
                     .lineSpacing(2)
                     .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayBlack"))

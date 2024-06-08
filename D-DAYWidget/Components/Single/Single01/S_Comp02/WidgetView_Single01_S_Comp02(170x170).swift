@@ -17,7 +17,7 @@ struct WidgetView_Single01_S_Comp02_170x170_: View { // enable shadow
         
         let localizedKey = LocalizedStringKey("길게 눌러서 디데이 추가하기")
         let isTodayCounted: String = ddaySymbolMenu[safe: 0]?.ddayIsCountdown ?? "false"
-        let dateInt = CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu[safe: 0]?.ddayDate ??  "2024.02.16"), isTodayCounted: isTodayCounted)
+        let dateInt = CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu[safe: 0]?.ddayDate ??  "2025.12.25"), isTodayCounted: isTodayCounted)
         let ddayDorPlus = CustomFunctions().ddaySetDorPlus(dateIntParam: dateInt)
         
         ZStack {
@@ -58,45 +58,45 @@ struct WidgetView_Single01_S_Comp02_170x170_: View { // enable shadow
                    case ...2:
                        Text(ddaySymbolMenu[safe: 0]?.ddayTitle ?? localizedKey.stringValue())
                            .frame(width: 70, height: 50, alignment: .topTrailing)
-                           .position(x: metrics.size.width * 0.685, y: metrics.size.height * 0.286)
-                           .font(.custom("Inter-Bold", size: 16.0))
+                           .position(x: metrics.size.width * 0.674, y: metrics.size.height * 0.31)
+                           .font(.custom("Inter-Bold", size: 14.0))
                            .multilineTextAlignment(.trailing)
                           
                    case 3...6:
                           Text(ddaySymbolMenu[safe: 0]?.ddayTitle ?? localizedKey.stringValue())
                            .frame(width: 65, height: 50, alignment: .topTrailing)
-                           .position(x: metrics.size.width * 0.72, y: metrics.size.height * 0.28)
-                           .font(.custom("Inter-Bold", size: 14.0))
-                           .multilineTextAlignment(.trailing)
-                       
-                   case 7...9:
-                       Text(ddaySymbolMenu[safe: 0]?.ddayTitle ?? localizedKey.stringValue())
-                           .frame(width: 65, height: 50, alignment: .topTrailing)
-                           .position(x: metrics.size.width * 0.72, y: metrics.size.height * 0.275)
+                           .position(x: metrics.size.width * 0.72, y: metrics.size.height * 0.292)
                            .font(.custom("Inter-Bold", size: 13.0))
                            .multilineTextAlignment(.trailing)
                        
-                   case 10...12:
+                   case 7...10:
                        Text(ddaySymbolMenu[safe: 0]?.ddayTitle ?? localizedKey.stringValue())
-                           .frame(width: 65, height: 50, alignment: .topTrailing)
-                           .position(x: metrics.size.width * 0.7, y: metrics.size.height * 0.265)
-                           .font(.custom("Inter-Bold", size: 12.0))
+                           .frame(width: 60, height: 50, alignment: .topTrailing)
+                           .position(x: metrics.size.width * 0.72, y: metrics.size.height * 0.3)
+                           .font(.custom("Inter-Bold", size: 11.0))
+                           .multilineTextAlignment(.trailing)
+                       
+                   case 11...12:
+                       Text(ddaySymbolMenu[safe: 0]?.ddayTitle ?? localizedKey.stringValue())
+                           .frame(width: 60, height: 50, alignment: .topTrailing)
+                           .position(x: metrics.size.width * 0.72, y: metrics.size.height * 0.29)
+                           .font(.custom("Inter-Bold", size: 11.0))
                            .multilineTextAlignment(.trailing)
                        
                    case 13...14:
                        Text(ddaySymbolMenu[safe: 0]?.ddayTitle ?? localizedKey.stringValue())
                            .frame(width: 65, height: 50, alignment: .topTrailing)
-                           .position(x: metrics.size.width * 0.7, y: metrics.size.height * 0.265)
-                           .font(.custom("Inter-Bold", size: 11.0))
+                           .position(x: metrics.size.width * 0.7, y: metrics.size.height * 0.296)
+                           .font(.custom("Inter-Bold", size: 10.0))
                            .multilineTextAlignment(.trailing)
                       
                   case 15...:
                       Text(ddaySymbolMenu[safe: 0]?.ddayTitle ?? localizedKey.stringValue())
                           .frame(width: 60, height: 50, alignment: .topTrailing)
-                          .position(x: metrics.size.width * 0.74, y: metrics.size.height * 0.265)
-                          .font(.custom("Inter-Bold", size: 10.0))
+                          .position(x: metrics.size.width * 0.72, y: metrics.size.height * 0.292)
+                          .font(.custom("Inter-Bold", size: 9.0))
                           .multilineTextAlignment(.trailing)
-                        
+                       
                     default:
                         Text("Encountered Error S01-1-2")
                     }
