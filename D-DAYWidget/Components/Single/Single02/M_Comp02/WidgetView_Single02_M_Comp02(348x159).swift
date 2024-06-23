@@ -121,33 +121,33 @@ struct WidgetView_Single02_M_Comp02_348x159_: View { // enable shadow
                             
                     case 0...4:
                         Text(ddaySymbolMenu[safe: 0]?.ddayTitle ?? localizedKey.stringValue())
-                            .font(.custom("Inter-Bold", size: 22.0))
+                            .font(.custom("Inter-Bold", size: 21.0))
                             .frame(width: 90, height: 70, alignment: .topTrailing)
-                            .position(x: metrics.size.width * 0.811, y: metrics.size.height * 0.405)
+                            .position(x: metrics.size.width * 0.805, y: metrics.size.height * 0.411)
                             .multilineTextAlignment(.trailing)
                             .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
                         
                     case 5...6:
                         Text(ddaySymbolMenu[safe: 0]?.ddayTitle ?? localizedKey.stringValue())
                             .font(.custom("Inter-Bold", size: 19.0))
-                            .frame(width: 75, height: 70, alignment: .topTrailing)
-                            .position(x: metrics.size.width * 0.827, y: metrics.size.height * 0.4)
+                            .frame(width: 65, height: 70, alignment: .topTrailing)
+                            .position(x: metrics.size.width * 0.845, y: metrics.size.height * 0.414)
                             .multilineTextAlignment(.trailing)
                             .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
                         
-                    case 7...10:
+                    case 7...9:
                         Text(ddaySymbolMenu[safe: 0]?.ddayTitle ?? localizedKey.stringValue())
                             .font(.custom("Inter-Bold", size: 16.0))
-                            .frame(width: 75, height: 70, alignment: .topTrailing)
-                            .position(x: metrics.size.width * 0.827, y: metrics.size.height * 0.4)
+                            .frame(width: 65, height: 70, alignment: .topTrailing)
+                            .position(x: metrics.size.width * 0.845, y: metrics.size.height * 0.41)
                             .multilineTextAlignment(.trailing)
                             .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
                         
-                    case 11...14:
+                    case 10...14:
                         Text(ddaySymbolMenu[safe: 0]?.ddayTitle ?? localizedKey.stringValue())
                             .font(.custom("Inter-Bold", size: 15.0))
-                            .frame(width: 75, height: 70, alignment: .topTrailing)
-                            .position(x: metrics.size.width * 0.827, y: metrics.size.height * 0.39)
+                            .frame(width: 75, height: 100, alignment: .topTrailing)
+                            .position(x: metrics.size.width * 0.827, y: metrics.size.height * 0.48)
                             .multilineTextAlignment(.trailing)
                             .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
                         
@@ -365,10 +365,10 @@ struct WidgetView_Single02_M_Comp02_348x159_: View { // enable shadow
                 
                 // Date
                 GeometryReader { metrics in
-                    Text(ddaySymbolMenu[safe: 0]?.ddayDate ?? "2023.12.28")
+                    Text(ddaySymbolMenu[safe: 0]?.ddayDate ?? "2025.12.25")
                         .font(.custom("Inter-Bold", size: 10.0))
                         .frame(width: 32, height: 70, alignment: .trailing)
-                        .position(x: metrics.size.width * 0.891, y: metrics.size.height * 0.74)
+                        .position(x: metrics.size.width * 0.891, y: metrics.size.height * 0.73)
                         .multilineTextAlignment(.leading)
                         .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
                 }

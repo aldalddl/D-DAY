@@ -204,7 +204,6 @@ struct WidgetView_Single02EntryView : View {
                             .body
                             .containerBackground(for: .widget) {}
                         
-                        
                     case CGSize(width: 414, height: 736), CGSize(width: 393, height: 852), CGSize(width: 390, height: 844): // (348x357, 338x354)
                         WidgetView_Single02_L_Comp01_338x354_(entry: self.entry, ddaySymbolMenu: ddaySymbolMenu)
                             .body

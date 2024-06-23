@@ -136,7 +136,7 @@ struct WidgetView_Single01_S_Comp01_170x170_: View { // disable shadow
                             .position(x: 107, y: 118)
                             .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
                         
-                    case 154, 164, 184, 194:
+                    case 100, 154, 164, 184, 194, 134:
                         Text("\(dateNumber)")
                             .frame(width: 230, alignment: .leading)
                             .font(.custom("Inter-Bold", size: 102.0))
@@ -170,7 +170,7 @@ struct WidgetView_Single01_S_Comp01_170x170_: View { // disable shadow
                             .position(x: 107, y: 117)
                             .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
                         
-                    case 234, 254, 264, 284, 294:
+                    case 200, 234, 254, 264, 284, 294:
                         Text("\(dateNumber)")
                             .frame(width: 230, alignment: .leading)
                             .font(.custom("Inter-Bold", size: 94.0))
@@ -203,7 +203,7 @@ struct WidgetView_Single01_S_Comp01_170x170_: View { // disable shadow
                             .position(x: 106, y: 118)
                             .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
                         
-                    case 544, 564, 584, 594, 624, 644, 664, 684, 694, 844, 854, 864, 884, 894:
+                    case 544, 564, 584, 594, 624, 644, 664, 684, 694, 844, 854, 864, 884, 894, 300, 400, 500, 600, 700, 800:
                         Text("\(dateNumber)")
                             .frame(width: 230, alignment: .leading)
                             .font(.custom("Inter-Bold", size: 93.0))

@@ -17,7 +17,7 @@ struct WidgetView_Single01_M_Comp01_360x169_: View { // disable shadow
         
         let localizedKey = LocalizedStringKey("길게 눌러서 디데이 추가하기")
         let isTodayCounted: String = ddaySymbolMenu[safe: 0]?.ddayIsCountdown ?? "false"
-        let dateInt = CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu[safe: 0]?.ddayDate ??  "2024.02.16"), isTodayCounted: isTodayCounted)
+        let dateInt = CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu[safe: 0]?.ddayDate ??  "2025.12.25"), isTodayCounted: isTodayCounted)
         
         
         ZStack {
@@ -30,32 +30,32 @@ struct WidgetView_Single01_M_Comp01_360x169_: View { // disable shadow
                         
                     case ...5:
                         Text(ddaySymbolMenu[safe: 0]?.ddayTitle ?? localizedKey.stringValue())
-                            .font(.custom("Inter-Bold", size: 23.0))
+                            .font(.custom("Inter-Bold", size: 18.0))
                             .frame(width: 200, height: 20, alignment: .topLeading)
-                            .position(x: metrics.size.width * 0.352, y: metrics.size.height * 0.224)
+                            .position(x: metrics.size.width * 0.364, y: metrics.size.height * 0.23)
                         
                     case 6...7:
                         Text(ddaySymbolMenu[safe: 0]?.ddayTitle ?? localizedKey.stringValue())
-                            .font(.custom("Inter-Bold", size: 20.0))
+                            .font(.custom("Inter-Bold", size: 17.0))
                             .frame(width: 200, height: 20, alignment: .topLeading)
                             .position(x: metrics.size.width * 0.352, y: metrics.size.height * 0.224)
                             
                         
                     case 8...10:
                         Text(ddaySymbolMenu[safe: 0]?.ddayTitle ?? localizedKey.stringValue())
-                            .font(.custom("Inter-Bold", size: 18.0))
+                            .font(.custom("Inter-Bold", size: 16.0))
                             .frame(width: 200, height: 20, alignment: .topLeading)
                             .position(x: metrics.size.width * 0.345, y: metrics.size.height * 0.224)
                         
                     case 11...14:
                         Text(ddaySymbolMenu[safe: 0]?.ddayTitle ?? localizedKey.stringValue())
-                            .font(.custom("Inter-Bold", size: 17.0))
+                            .font(.custom("Inter-Bold", size: 15.0))
                             .frame(width: 200, height: 20, alignment: .topLeading)
-                            .position(x: metrics.size.width * 0.345, y: metrics.size.height * 0.224)
+                            .position(x: metrics.size.width * 0.345, y: metrics.size.height * 0.23)
                         
                     case 15...:
                         Text(ddaySymbolMenu[safe: 0]?.ddayTitle ?? localizedKey.stringValue())
-                            .font(.custom("Inter-Bold", size: 15.0))
+                            .font(.custom("Inter-Bold", size: 14.0))
                             .frame(width: 200, height: 80, alignment: .topLeading)
                             .position(x: metrics.size.width * 0.33, y: metrics.size.height * 0.376)
                             .multilineTextAlignment(.leading)
@@ -822,10 +822,10 @@ struct WidgetView_Single01_M_Comp01_360x169_: View { // disable shadow
                 
                 // Date
                 GeometryReader { metrics in
-                    Text(ddaySymbolMenu[safe: 0]?.ddayDate ?? "2023.12.31")
-                        .font(.custom("Inter-Bold", size: 12.0))
+                    Text(ddaySymbolMenu[safe: 0]?.ddayDate ?? "0000.00.00")
+                        .font(.custom("Inter-Bold", size: 11.0))
                         .frame(width: 300, height: 20, alignment: .trailing)
-                        .position(x: metrics.size.width * 0.52, y: metrics.size.height * 0.81)
+                        .position(x: metrics.size.width * 0.515, y: metrics.size.height * 0.795)
                         .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayBlack"))
                 }
             }

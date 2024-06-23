@@ -23,44 +23,53 @@ struct WidgetView_Multi04_L_Comp01_338x354_: View { // disable shadow
                 switch (ddaySymbolMenu[safe: 0]?.ddayTitle ?? localizedKey.stringValue()).count {
                 case ...3:
                     Text(ddaySymbolMenu[safe: 0]?.ddayTitle ?? localizedKey.stringValue())
-                        .font(.custom("Inter-Bold", size: 19.0))
-                        .frame(width: 70, height: 55, alignment: .topTrailing)
+                        .font(.custom("Inter-Bold", size: 14.0))
+                        .frame(width: 65, height: 55, alignment: .topTrailing)
                         .multilineTextAlignment(.trailing)
-                        .padding(EdgeInsets(top: 0, leading: 0, bottom: 235, trailing: 4))
+                        .padding(EdgeInsets(top: 0, leading: 0, bottom: 220, trailing: 4))
                         .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayBgColor ?? "ddayBlack"))
                     
                 case 4:
                     Text(ddaySymbolMenu[safe: 0]?.ddayTitle ?? localizedKey.stringValue())
-                        .font(.custom("Inter-Bold", size: 17.0))
-                        .frame(width: 70, height: 55, alignment: .topTrailing)
+                        .font(.custom("Inter-Bold", size: 14.0))
+                        .frame(width: 65, height: 55, alignment: .topTrailing)
                         .multilineTextAlignment(.trailing)
-                        .padding(EdgeInsets(top: 0, leading: 0, bottom: 235, trailing: 0))
+                        .padding(EdgeInsets(top: 0, leading: 0, bottom: 220, trailing: 2))
                         .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayBgColor ?? "ddayBlack"))
                     
                 case 5...10:
                     Text(ddaySymbolMenu[safe: 0]?.ddayTitle ?? localizedKey.stringValue())
-                        .font(.custom("Inter-Bold", size: 15.0))
-                        .frame(width: 70, height: 55, alignment: .topTrailing)
+                        .font(.custom("Inter-Bold", size: 13.0))
+                        .frame(width: 60, height: 55, alignment: .topTrailing)
                         .multilineTextAlignment(.trailing)
-                        .padding(EdgeInsets(top: 0, leading: 0, bottom: 235, trailing: 0))
+                        .padding(EdgeInsets(top: 0, leading: 2, bottom: 220, trailing: 0))
                         .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayBgColor ?? "ddayBlack"))
                     
-                case 11...:
+                case 11...14:
                     Text(ddaySymbolMenu[safe: 0]?.ddayTitle ?? localizedKey.stringValue())
-                        .font(.custom("Inter-Bold", size: 13.0))
-                        .frame(width: 70, height: 55, alignment: .topTrailing)
+                        .font(.custom("Inter-Bold", size: 12.0))
+                        .frame(width: 65, height: 55, alignment: .topTrailing)
                         .multilineTextAlignment(.trailing)
-                        .padding(EdgeInsets(top: 0, leading: 0, bottom: 243, trailing: 0))
+                        .padding(EdgeInsets(top: 0, leading: 0, bottom: 220, trailing: 5))
                         .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayBgColor ?? "ddayBlack"))
+                    
+                case 15...:
+                    Text(ddaySymbolMenu[safe: 0]?.ddayTitle ?? localizedKey.stringValue())
+                        .font(.custom("Inter-Bold", size: 11.0))
+                        .frame(width: 60, height: 55, alignment: .topTrailing)
+                        .multilineTextAlignment(.trailing)
+                        .padding(EdgeInsets(top: 0, leading: 1, bottom: 220, trailing: 0))
+                        .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayBgColor ?? "ddayBlack"))
+                    
                 default:
                     Text("Error #F-Size M04-1-1")
                 }
                 
                 // Date 1
-                Text(ddaySymbolMenu[safe: 0]?.ddayDate ?? "2000.00.00")
-                    .font(.custom("Inter-Bold", size: 11.0))
+                Text(ddaySymbolMenu[safe: 0]?.ddayDate ?? "0000.00.00")
+                    .font(.custom("Inter-Bold", size: 10.0))
                     .frame(width: 70, height: 50, alignment: .topTrailing)
-                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 140, trailing: 0))
+                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 125, trailing: 8))
                     .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayBgColor ?? "ddayBlack"))
                 
                 // DayNumber 1
@@ -117,34 +126,42 @@ struct WidgetView_Multi04_L_Comp01_338x354_: View { // disable shadow
                 switch (ddaySymbolMenu[safe: 1]?.ddayTitle ?? localizedKey.stringValue()).count {
                 case ...3:
                     Text(ddaySymbolMenu[safe: 1]?.ddayTitle ?? localizedKey.stringValue())
-                        .font(.custom("Inter-Bold", size: 19.0))
-                        .frame(width: 70, height: 55, alignment: .topTrailing)
+                        .font(.custom("Inter-Bold", size: 14.0))
+                        .frame(width: 65, height: 55, alignment: .topTrailing)
                         .multilineTextAlignment(.trailing)
-                        .padding(EdgeInsets(top: 0, leading: 0, bottom: 235, trailing: 4))
+                        .padding(EdgeInsets(top: 0, leading: 0, bottom: 220, trailing: 4))
                         .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
                     
                 case 4:
                     Text(ddaySymbolMenu[safe: 1]?.ddayTitle ?? localizedKey.stringValue())
-                        .font(.custom("Inter-Bold", size: 17.0))
-                        .frame(width: 70, height: 55, alignment: .topTrailing)
+                        .font(.custom("Inter-Bold", size: 14.0))
+                        .frame(width: 65, height: 55, alignment: .topTrailing)
                         .multilineTextAlignment(.trailing)
-                        .padding(EdgeInsets(top: 0, leading: 0, bottom: 235, trailing: 0))
+                        .padding(EdgeInsets(top: 0, leading: 0, bottom: 220, trailing: 2))
                         .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
                     
                 case 5...10:
                     Text(ddaySymbolMenu[safe: 1]?.ddayTitle ?? localizedKey.stringValue())
-                        .font(.custom("Inter-Bold", size: 15.0))
-                        .frame(width: 70, height: 55, alignment: .topTrailing)
+                        .font(.custom("Inter-Bold", size: 13.0))
+                        .frame(width: 60, height: 55, alignment: .topTrailing)
                         .multilineTextAlignment(.trailing)
-                        .padding(EdgeInsets(top: 0, leading: 0, bottom: 235, trailing: 0))
+                        .padding(EdgeInsets(top: 0, leading: 2, bottom: 220, trailing: 0))
                         .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
                     
-                case 11...:
+                case 11...14:
                     Text(ddaySymbolMenu[safe: 1]?.ddayTitle ?? localizedKey.stringValue())
-                        .font(.custom("Inter-Bold", size: 13.0))
-                        .frame(width: 70, height: 55, alignment: .topTrailing)
+                        .font(.custom("Inter-Bold", size: 12.0))
+                        .frame(width: 65, height: 55, alignment: .topTrailing)
                         .multilineTextAlignment(.trailing)
-                        .padding(EdgeInsets(top: 0, leading: 0, bottom: 243, trailing: 0))
+                        .padding(EdgeInsets(top: 0, leading: 0, bottom: 220, trailing: 5))
+                        .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
+                    
+                case 15...:
+                    Text(ddaySymbolMenu[safe: 1]?.ddayTitle ?? localizedKey.stringValue())
+                        .font(.custom("Inter-Bold", size: 11.0))
+                        .frame(width: 60, height: 55, alignment: .topTrailing)
+                        .multilineTextAlignment(.trailing)
+                        .padding(EdgeInsets(top: 0, leading: 1, bottom: 220, trailing: 0))
                         .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
                     
                 default:
@@ -152,10 +169,10 @@ struct WidgetView_Multi04_L_Comp01_338x354_: View { // disable shadow
                 }
                 
                 // Date 2
-                Text(ddaySymbolMenu[safe: 1]?.ddayDate ?? "2000.00.00")
-                    .font(.custom("Inter-Bold", size: 11.0))
+                Text(ddaySymbolMenu[safe: 1]?.ddayDate ?? "0000.00.00")
+                    .font(.custom("Inter-Bold", size: 10.0))
                     .frame(width: 70, height: 50, alignment: .topTrailing)
-                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 140, trailing: 0))
+                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 125, trailing: 8))
                     .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
                 
                 // DayNumber 2
@@ -211,34 +228,42 @@ struct WidgetView_Multi04_L_Comp01_338x354_: View { // disable shadow
                 switch (ddaySymbolMenu[safe: 2]?.ddayTitle ?? localizedKey.stringValue()).count {
                 case ...3:
                     Text(ddaySymbolMenu[safe: 2]?.ddayTitle ?? localizedKey.stringValue())
-                        .font(.custom("Inter-Bold", size: 19.0))
-                        .frame(width: 70, height: 55, alignment: .topTrailing)
+                        .font(.custom("Inter-Bold", size: 14.0))
+                        .frame(width: 65, height: 55, alignment: .topTrailing)
                         .multilineTextAlignment(.trailing)
-                        .padding(EdgeInsets(top: 0, leading: 0, bottom: 235, trailing: 4))
+                        .padding(EdgeInsets(top: 0, leading: 0, bottom: 220, trailing: 4))
                         .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayBgColor ?? "ddayBlack"))
                     
                 case 4:
                     Text(ddaySymbolMenu[safe: 2]?.ddayTitle ?? localizedKey.stringValue())
-                        .font(.custom("Inter-Bold", size: 17.0))
-                        .frame(width: 70, height: 55, alignment: .topTrailing)
+                        .font(.custom("Inter-Bold", size: 14.0))
+                        .frame(width: 65, height: 55, alignment: .topTrailing)
                         .multilineTextAlignment(.trailing)
-                        .padding(EdgeInsets(top: 0, leading: 0, bottom: 235, trailing: 0))
+                        .padding(EdgeInsets(top: 0, leading: 0, bottom: 220, trailing: 2))
                         .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayBgColor ?? "ddayBlack"))
                     
                 case 5...10:
                     Text(ddaySymbolMenu[safe: 2]?.ddayTitle ?? localizedKey.stringValue())
-                        .font(.custom("Inter-Bold", size: 15.0))
-                        .frame(width: 70, height: 55, alignment: .topTrailing)
+                        .font(.custom("Inter-Bold", size: 13.0))
+                        .frame(width: 60, height: 55, alignment: .topTrailing)
                         .multilineTextAlignment(.trailing)
-                        .padding(EdgeInsets(top: 0, leading: 0, bottom: 235, trailing: 0))
+                        .padding(EdgeInsets(top: 0, leading: 2, bottom: 220, trailing: 0))
                         .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayBgColor ?? "ddayBlack"))
                     
-                case 11...:
+                case 11...14:
                     Text(ddaySymbolMenu[safe: 2]?.ddayTitle ?? localizedKey.stringValue())
-                        .font(.custom("Inter-Bold", size: 13.0))
-                        .frame(width: 70, height: 55, alignment: .topTrailing)
+                        .font(.custom("Inter-Bold", size: 12.0))
+                        .frame(width: 65, height: 55, alignment: .topTrailing)
                         .multilineTextAlignment(.trailing)
-                        .padding(EdgeInsets(top: 0, leading: 0, bottom: 243, trailing: 0))
+                        .padding(EdgeInsets(top: 0, leading: 0, bottom: 220, trailing: 5))
+                        .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayBgColor ?? "ddayBlack"))
+                    
+                case 15...:
+                    Text(ddaySymbolMenu[safe: 2]?.ddayTitle ?? localizedKey.stringValue())
+                        .font(.custom("Inter-Bold", size: 11.0))
+                        .frame(width: 60, height: 55, alignment: .topTrailing)
+                        .multilineTextAlignment(.trailing)
+                        .padding(EdgeInsets(top: 0, leading: 1, bottom: 220, trailing: 0))
                         .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayBgColor ?? "ddayBlack"))
                     
                 default:
@@ -246,10 +271,10 @@ struct WidgetView_Multi04_L_Comp01_338x354_: View { // disable shadow
                 }
                 
                 // Date 3
-                Text(ddaySymbolMenu[safe: 2]?.ddayDate ?? "2000.00.00")
-                    .font(.custom("Inter-Bold", size: 11.0))
+                Text(ddaySymbolMenu[safe: 2]?.ddayDate ?? "0000.00.00")
+                    .font(.custom("Inter-Bold", size: 10.0))
                     .frame(width: 70, height: 50, alignment: .topTrailing)
-                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 140, trailing: 0))
+                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 125, trailing: 8))
                     .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayBgColor ?? "ddayBlack"))
                 
                 // DayNumber 3
