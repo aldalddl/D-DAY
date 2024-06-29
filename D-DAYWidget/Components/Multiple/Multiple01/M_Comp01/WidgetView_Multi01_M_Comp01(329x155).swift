@@ -28,21 +28,14 @@ struct WidgetView_Multi01_M_Comp01_329x155_: View { // disable shadow
                     switch (ddaySymbolMenu[safe: 0]?.ddayTitle ?? localizedKey.stringValue()).count {
                     case 0...4:
                         Text(ddaySymbolMenu[safe: 0]?.ddayTitle ?? localizedKey.stringValue())
-                            .font(.custom("Inter-Bold", size: 16.0))
-                            .frame(width: 200, height: 50, alignment: .topLeading)
-                            .position(x: 133, y: 86)
-                            .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
-                        
-                    case 5...7:
-                        Text(ddaySymbolMenu[safe: 0]?.ddayTitle ?? localizedKey.stringValue())
-                            .font(.custom("Inter-Bold", size: 15.0))
-                            .frame(width: 200, height: 50, alignment: .topLeading)
-                            .position(x: 133, y: 87)
-                            .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
-                        
-                    case 8...11:
-                        Text(ddaySymbolMenu[safe: 0]?.ddayTitle ?? localizedKey.stringValue())
                             .font(.custom("Inter-Bold", size: 14.0))
+                            .frame(width: 200, height: 50, alignment: .topLeading)
+                            .position(x: 135, y: 86)
+                            .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
+                        
+                    case 5...11:
+                        Text(ddaySymbolMenu[safe: 0]?.ddayTitle ?? localizedKey.stringValue())
+                            .font(.custom("Inter-Bold", size: 13.0))
                             .frame(width: 200, height: 50, alignment: .topLeading)
                             .position(x: 132, y: 87)
                             .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
@@ -69,7 +62,7 @@ struct WidgetView_Multi01_M_Comp01_329x155_: View { // disable shadow
                     Text(ddaySymbolMenu[safe: 0]?.ddayDate ?? "0000.00.00")
                         .font(.custom("Inter-Bold", size: 8.0))
                         .multilineTextAlignment(.leading)
-                        .frame(width: 26, height: 50, alignment: .topLeading)
+                        .frame(width: 25, height: 50, alignment: .topLeading)
                         .position(x: 38, y: 125)
                         .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
                     
@@ -82,7 +75,7 @@ struct WidgetView_Multi01_M_Comp01_329x155_: View { // disable shadow
                             Text("\(CustomFunctions().makeSignedDateNumber(dateIntParam: CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu[safe: 0]?.ddayDate ??  defaultStringArr[0][1]), isTodayCounted: ddaySymbolMenu[safe: 0]?.ddayIsCountdown ?? "false")))")
                                 .font(.custom("Inter-ExtraBold", size: 52.0))
                                 .frame(width: 200, height: 49, alignment: .topTrailing)
-                                .position(x: 22, y: 22)
+                                .position(x: 22, y: 21)
                                 .kerning(-5)
                                 .clipped()
                                 .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayBgColor ?? "ddayBlack"))
@@ -91,7 +84,7 @@ struct WidgetView_Multi01_M_Comp01_329x155_: View { // disable shadow
                             Text("\(CustomFunctions().makeSignedDateNumber(dateIntParam: CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu[safe: 0]?.ddayDate ??  defaultStringArr[0][1]), isTodayCounted: ddaySymbolMenu[safe: 0]?.ddayIsCountdown ?? "false")))")
                                 .font(.custom("Inter-ExtraBold", size: 43.0))
                                 .frame(width: 200, height: 49, alignment: .topTrailing)
-                                .position(x: 22, y: 31)
+                                .position(x: 22, y: 30)
                                 .kerning(-5)
                                 .clipped()
                                 .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayBgColor ?? "ddayBlack"))
@@ -124,21 +117,14 @@ struct WidgetView_Multi01_M_Comp01_329x155_: View { // disable shadow
                     switch (ddaySymbolMenu[safe: 1]?.ddayTitle ?? localizedKey.stringValue()).count {
                     case 0...4:
                         Text(ddaySymbolMenu[safe: 1]?.ddayTitle ?? localizedKey.stringValue())
-                            .font(.custom("Inter-Bold", size: 16.0))
-                            .frame(width: 200, height: 50, alignment: .topTrailing)
-                            .position(x: 103, y: 86)
-                            .foregroundColor(Color(hex: ddaySymbolMenu[safe: 1]?.ddayTxtColor ?? "ddayBlack"))
-                        
-                    case 5...7:
-                        Text(ddaySymbolMenu[safe: 1]?.ddayTitle ?? localizedKey.stringValue())
-                            .font(.custom("Inter-Bold", size: 15.0))
-                            .frame(width: 200, height: 50, alignment: .topTrailing)
-                            .position(x: 103, y: 87)
-                            .foregroundColor(Color(hex: ddaySymbolMenu[safe: 1]?.ddayTxtColor ?? "ddayBlack"))
-                        
-                    case 8...11:
-                        Text(ddaySymbolMenu[safe: 1]?.ddayTitle ?? localizedKey.stringValue())
                             .font(.custom("Inter-Bold", size: 14.0))
+                            .frame(width: 200, height: 50, alignment: .topTrailing)
+                            .position(x: 101, y: 86)
+                            .foregroundColor(Color(hex: ddaySymbolMenu[safe: 1]?.ddayTxtColor ?? "ddayBlack"))
+                        
+                    case 5...11:
+                        Text(ddaySymbolMenu[safe: 1]?.ddayTitle ?? localizedKey.stringValue())
+                            .font(.custom("Inter-Bold", size: 13.0))
                             .frame(width: 200, height: 50, alignment: .topTrailing)
                             .position(x: 104, y: 87)
                             .foregroundColor(Color(hex: ddaySymbolMenu[safe: 1]?.ddayTxtColor ?? "ddayBlack"))
@@ -166,7 +152,7 @@ struct WidgetView_Multi01_M_Comp01_329x155_: View { // disable shadow
                     Text(ddaySymbolMenu[safe: 1]?.ddayDate ?? "0000.00.00")
                         .font(.custom("Inter-Bold", size: 8.0))
                         .multilineTextAlignment(.leading)
-                        .frame(width: 26, height: 50, alignment: .topTrailing)
+                        .frame(width: 25, height: 50, alignment: .topTrailing)
                         .position(x: 198, y: 125)
                         .foregroundColor(Color(hex: ddaySymbolMenu[safe: 1]?.ddayTxtColor ?? "ddayBlack"))
                     
@@ -179,7 +165,7 @@ struct WidgetView_Multi01_M_Comp01_329x155_: View { // disable shadow
                             Text("\(CustomFunctions().makeSignedDateNumber(dateIntParam: CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu[safe: 1]?.ddayDate ??  defaultStringArr[1][1]), isTodayCounted: ddaySymbolMenu[safe: 1]?.ddayIsCountdown ?? "false")))")
                                 .font(.custom("Inter-ExtraBold", size: 52.0))
                                 .frame(width: 200, height: 49, alignment: .topLeading)
-                                .position(x: 96, y: 22)
+                                .position(x: 96, y: 21)
                                 .kerning(-5)
                                 .clipped()
                                 .foregroundColor(Color(hex: ddaySymbolMenu[safe: 1]?.ddayBgColor ?? "ddayWhite"))
@@ -188,7 +174,7 @@ struct WidgetView_Multi01_M_Comp01_329x155_: View { // disable shadow
                             Text("\(CustomFunctions().makeSignedDateNumber(dateIntParam: CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu[safe: 1]?.ddayDate ??  defaultStringArr[1][1]), isTodayCounted: ddaySymbolMenu[safe: 1]?.ddayIsCountdown ?? "false")))")
                                 .font(.custom("Inter-ExtraBold", size: 43.0))
                                 .frame(width: 200, height: 49, alignment: .topLeading)
-                                .position(x: 97, y: 31)
+                                .position(x: 97, y: 30)
                                 .kerning(-5)
                                 .clipped()
                                 .foregroundColor(Color(hex: ddaySymbolMenu[safe: 1]?.ddayBgColor ?? "ddayWhite"))
@@ -223,37 +209,30 @@ struct WidgetView_Multi01_M_Comp01_329x155_: View { // disable shadow
                     switch (ddaySymbolMenu[safe: 2]?.ddayTitle ?? localizedKey.stringValue()).count {
                     case 0...4:
                         Text(ddaySymbolMenu[safe: 2]?.ddayTitle ?? localizedKey.stringValue())
-                            .font(.custom("Inter-Bold", size: 16.0))
-                            .frame(width: 200, height: 50, alignment: .topLeading)
-                            .position(x: 133, y: 76)
-                            .foregroundColor(Color(hex: ddaySymbolMenu[safe: 1]?.ddayTxtColor ?? "ddayBlack"))
-                        
-                    case 5...7:
-                        Text(ddaySymbolMenu[safe: 2]?.ddayTitle ?? localizedKey.stringValue())
-                            .font(.custom("Inter-Bold", size: 15.0))
-                            .frame(width: 200, height: 50, alignment: .topLeading)
-                            .position(x: 133, y: 77)
-                            .foregroundColor(Color(hex: ddaySymbolMenu[safe: 1]?.ddayTxtColor ?? "ddayBlack"))
-                        
-                    case 8...11:
-                        Text(ddaySymbolMenu[safe: 2]?.ddayTitle ?? localizedKey.stringValue())
                             .font(.custom("Inter-Bold", size: 14.0))
                             .frame(width: 200, height: 50, alignment: .topLeading)
-                            .position(x: 132, y: 77)
+                            .position(x: 135, y: 77)
+                            .foregroundColor(Color(hex: ddaySymbolMenu[safe: 1]?.ddayTxtColor ?? "ddayBlack"))
+                        
+                    case 5...11:
+                        Text(ddaySymbolMenu[safe: 2]?.ddayTitle ?? localizedKey.stringValue())
+                            .font(.custom("Inter-Bold", size: 13.0))
+                            .frame(width: 200, height: 50, alignment: .topLeading)
+                            .position(x: 132, y: 78)
                             .foregroundColor(Color(hex: ddaySymbolMenu[safe: 1]?.ddayTxtColor ?? "ddayBlack"))
                         
                     case 12...14:
                         Text(ddaySymbolMenu[safe: 2]?.ddayTitle ?? localizedKey.stringValue())
                             .font(.custom("Inter-Bold", size: 12.0))
                             .frame(width: 200, height: 50, alignment: .topLeading)
-                            .position(x: 128, y: 78)
+                            .position(x: 128, y: 79)
                             .foregroundColor(Color(hex: ddaySymbolMenu[safe: 1]?.ddayTxtColor ?? "ddayBlack"))
                         
                     case 15...:
                         Text(ddaySymbolMenu[safe: 2]?.ddayTitle ?? localizedKey.stringValue())
                             .font(.custom("Inter-Bold", size: 11.0))
                             .frame(width: 200, height: 50, alignment: .topLeading)
-                            .position(x: 132, y: 78)
+                            .position(x: 132, y: 79)
                             .foregroundColor(Color(hex: ddaySymbolMenu[safe: 1]?.ddayTxtColor ?? "ddayBlack"))
                         
                     default:
@@ -265,7 +244,7 @@ struct WidgetView_Multi01_M_Comp01_329x155_: View { // disable shadow
                     Text(ddaySymbolMenu[safe: 2]?.ddayDate ?? "0000.00.00")
                         .font(.custom("Inter-Bold", size: 8.0))
                         .multilineTextAlignment(.leading)
-                        .frame(width: 26, height: 50, alignment: .topLeading)
+                        .frame(width: 25, height: 50, alignment: .topLeading)
                         .position(x: 38, y: 35)
                         .foregroundColor(Color(hex: ddaySymbolMenu[safe: 1]?.ddayTxtColor ?? "ddayBlack"))
                     
@@ -320,37 +299,30 @@ struct WidgetView_Multi01_M_Comp01_329x155_: View { // disable shadow
                     switch (ddaySymbolMenu[safe: 3]?.ddayTitle ?? localizedKey.stringValue()).count {
                     case 0...4:
                         Text(ddaySymbolMenu[safe: 3]?.ddayTitle ?? localizedKey.stringValue())
-                            .font(.custom("Inter-Bold", size: 16.0))
-                            .frame(width: 200, height: 50, alignment: .topTrailing)
-                            .position(x: 103, y: 76)
-                            .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
-                        
-                    case 5...7:
-                        Text(ddaySymbolMenu[safe: 3]?.ddayTitle ?? localizedKey.stringValue())
-                            .font(.custom("Inter-Bold", size: 15.0))
-                            .frame(width: 200, height: 50, alignment: .topTrailing)
-                            .position(x: 103, y: 77)
-                            .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
-                        
-                    case 8...11:
-                        Text(ddaySymbolMenu[safe: 3]?.ddayTitle ?? localizedKey.stringValue())
                             .font(.custom("Inter-Bold", size: 14.0))
                             .frame(width: 200, height: 50, alignment: .topTrailing)
-                            .position(x: 104, y: 77)
+                            .position(x: 101, y: 77)
+                            .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
+                        
+                    case 5...11:
+                        Text(ddaySymbolMenu[safe: 3]?.ddayTitle ?? localizedKey.stringValue())
+                            .font(.custom("Inter-Bold", size: 13.0))
+                            .frame(width: 200, height: 50, alignment: .topTrailing)
+                            .position(x: 104, y: 78)
                             .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
                         
                     case 12...14:
                         Text(ddaySymbolMenu[safe: 3]?.ddayTitle ?? localizedKey.stringValue())
                             .font(.custom("Inter-Bold", size: 12.0))
                             .frame(width: 200, height: 50, alignment: .topTrailing)
-                            .position(x: 108, y: 78)
+                            .position(x: 108, y: 79)
                             .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
                         
                     case 15...:
                         Text(ddaySymbolMenu[safe: 3]?.ddayTitle ?? localizedKey.stringValue())
                             .font(.custom("Inter-Bold", size: 11.0))
                             .frame(width: 200, height: 50, alignment: .topTrailing)
-                            .position(x: 104, y: 78)
+                            .position(x: 104, y: 79)
                             .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
                         
                     default:
@@ -362,7 +334,7 @@ struct WidgetView_Multi01_M_Comp01_329x155_: View { // disable shadow
                     Text(ddaySymbolMenu[safe: 3]?.ddayDate ?? "0000.00.00")
                         .font(.custom("Inter-Bold", size: 8.0))
                         .multilineTextAlignment(.leading)
-                        .frame(width: 26, height: 50, alignment: .topTrailing)
+                        .frame(width: 25, height: 50, alignment: .topTrailing)
                         .position(x: 198, y: 35)
                         .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
                     

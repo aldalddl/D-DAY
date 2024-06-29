@@ -53,39 +53,32 @@ struct WidgetView_Single01_S_Comp01_155x155_: View { // disable shadow
                     // Title
                     switch (ddaySymbolMenu[safe: 0]?.ddayTitle ?? localizedKey.stringValue()).count {
                         
-                    case ...3:
+                    case ...4:
                         Text(ddaySymbolMenu[safe: 0]?.ddayTitle ?? localizedKey.stringValue())
-                            .frame(width: 65, height: 50, alignment: .topTrailing)
-                            .position(x: metrics.size.width * 0.68, y: metrics.size.height * 0.31)
-                            .font(.custom("Inter-Bold", size: 17.0))
-                            .multilineTextAlignment(.trailing)
-                        
-                    case 4:
-                        Text(ddaySymbolMenu[safe: 0]?.ddayTitle ?? localizedKey.stringValue())
-                            .frame(width: 65, height: 50, alignment: .topTrailing)
-                            .position(x: metrics.size.width * 0.71, y: metrics.size.height * 0.32)
-                            .font(.custom("Inter-Bold", size: 15.0))
+                            .frame(width: 60, height: 50, alignment: .topTrailing)
+                            .position(x: metrics.size.width * 0.695, y: metrics.size.height * 0.338)
+                            .font(.custom("Inter-Bold", size: 13.0))
                             .multilineTextAlignment(.trailing)
                         
                     case 5...10:
                         Text(ddaySymbolMenu[safe: 0]?.ddayTitle ?? localizedKey.stringValue())
-                            .frame(width: 65, height: 50, alignment: .topTrailing)
-                            .position(x: metrics.size.width * 0.7, y: metrics.size.height * 0.3)
-                            .font(.custom("Inter-Bold", size: 14.0))
+                            .frame(width: 60, height: 50, alignment: .topTrailing)
+                            .position(x: metrics.size.width * 0.71, y: metrics.size.height * 0.32)
+                            .font(.custom("Inter-Bold", size: 12.0))
                             .multilineTextAlignment(.trailing)
                         
                     case 11...14:
                         Text(ddaySymbolMenu[safe: 0]?.ddayTitle ?? localizedKey.stringValue())
-                            .frame(width: 65, height: 80, alignment: .topTrailing)
-                            .position(x: metrics.size.width * 0.694, y: metrics.size.height * 0.4)
-                            .font(.custom("Inter-Bold", size: 13.0))
+                            .frame(width: 55, height: 80, alignment: .topTrailing)
+                            .position(x: metrics.size.width * 0.716, y: metrics.size.height * 0.41)
+                            .font(.custom("Inter-Bold", size: 11.0))
                             .multilineTextAlignment(.trailing)
                        
                    case 15...:
                        Text(ddaySymbolMenu[safe: 0]?.ddayTitle ?? localizedKey.stringValue())
-                           .frame(width: 60, height: 50, alignment: .topTrailing)
-                           .position(x: metrics.size.width * 0.72, y: metrics.size.height * 0.295)
-                           .font(.custom("Inter-Bold", size: 11.0))
+                           .frame(width: 55, height: 50, alignment: .topTrailing)
+                           .position(x: metrics.size.width * 0.72, y: metrics.size.height * 0.316)
+                           .font(.custom("Inter-Bold", size: 10.0))
                            .multilineTextAlignment(.trailing)
                         
                     default:
@@ -214,7 +207,7 @@ struct WidgetView_Single01_S_Comp01_155x155_: View { // disable shadow
                             .multilineTextAlignment(.leading)
                             .kerning(-8)
                             .rotationEffect(.degrees(-10))
-                            .position(x: 107, y: 105)
+                            .position(x: 108, y: 107)
                             .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
                     }
                     

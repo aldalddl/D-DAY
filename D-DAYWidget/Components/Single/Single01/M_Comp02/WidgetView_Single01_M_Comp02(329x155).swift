@@ -17,7 +17,7 @@ struct WidgetView_Single01_M_Comp02_329x155_: View { // enable shadow
         
         let localizedKey = LocalizedStringKey("길게 눌러서 디데이 추가하기")
         let isTodayCounted: String = ddaySymbolMenu[safe: 0]?.ddayIsCountdown ?? "false"
-        let dateInt = CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu[safe: 0]?.ddayDate ??  "2024.02.16"), isTodayCounted: isTodayCounted)
+        let dateInt = CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu[safe: 0]?.ddayDate ??  "2025.12.25"), isTodayCounted: isTodayCounted)
         
         
         ZStack {
@@ -30,33 +30,33 @@ struct WidgetView_Single01_M_Comp02_329x155_: View { // enable shadow
                         
                     case ...5:
                         Text(ddaySymbolMenu[safe: 0]?.ddayTitle ?? localizedKey.stringValue())
-                            .font(.custom("Inter-Bold", size: 21.0))
+                            .font(.custom("Inter-Bold", size: 16.0))
                             .frame(width: 200, height: 20, alignment: .topLeading)
                             .position(x: metrics.size.width * 0.3875, y: metrics.size.height * 0.253)
                             
                     case 6...7:
                         Text(ddaySymbolMenu[safe: 0]?.ddayTitle ?? localizedKey.stringValue())
-                            .font(.custom("Inter-Bold", size: 18.0))
+                            .font(.custom("Inter-Bold", size: 15.0))
                             .frame(width: 200, height: 20, alignment: .topLeading)
                             .position(x: metrics.size.width * 0.379, y: metrics.size.height * 0.253)
                         
                     case 8...10:
                         Text(ddaySymbolMenu[safe: 0]?.ddayTitle ?? localizedKey.stringValue())
-                            .font(.custom("Inter-Bold", size: 17.0))
+                            .font(.custom("Inter-Bold", size: 14.0))
                             .frame(width: 200, height: 20, alignment: .topLeading)
                             .position(x: metrics.size.width * 0.376, y: metrics.size.height * 0.253)
                         
                     case 11...14:
                         Text(ddaySymbolMenu[safe: 0]?.ddayTitle ?? localizedKey.stringValue())
-                                .font(.custom("Inter-Bold", size: 15.0))
+                                .font(.custom("Inter-Bold", size: 13.0))
                             .frame(width: 200, height: 20, alignment: .topLeading)
-                            .position(x: metrics.size.width * 0.37, y: metrics.size.height * 0.249)
+                            .position(x: metrics.size.width * 0.37, y: metrics.size.height * 0.251)
                         
                     case 15...:
                         Text(ddaySymbolMenu[safe: 0]?.ddayTitle ?? localizedKey.stringValue())
-                            .font(.custom("Inter-Bold", size: 14.0))
+                            .font(.custom("Inter-Bold", size: 12.0))
                             .frame(width: 200, height: 80, alignment: .topLeading)
-                            .position(x: metrics.size.width * 0.37, y: metrics.size.height * 0.397)
+                            .position(x: metrics.size.width * 0.37, y: metrics.size.height * 0.399)
                             .multilineTextAlignment(.leading)
                         
                     default:
@@ -116,7 +116,7 @@ struct WidgetView_Single01_M_Comp02_329x155_: View { // enable shadow
                             .font(.custom("Inter-Bold", size: 118.0))
                             .frame(width: 400, height: 100, alignment: .leading)
                             .shadow(color: Color("ddayBlack").opacity(0.3), radius: 2.2, x: 0.6, y: 4)
-                            .position(x: 192, y: 108)
+                            .position(x: 193, y: 109)
                             .multilineTextAlignment(.leading)
                             .kerning(-10)
                             .rotationEffect(.degrees(-10))
@@ -144,7 +144,7 @@ struct WidgetView_Single01_M_Comp02_329x155_: View { // enable shadow
                                     .font(.custom("Inter-Bold", size: 109.0))
                                     .frame(width: 400, height: 100, alignment: .leading)
                                     .shadow(color: Color("ddayBlack").opacity(0.3), radius: 2.2, x: 0.6, y: 4)
-                                    .position(x: 190, y: 108)
+                                    .position(x: 192, y: 108)
                                     .multilineTextAlignment(.leading)
                                     .kerning(-8)
                                     .rotationEffect(.degrees(-10))
@@ -400,7 +400,7 @@ struct WidgetView_Single01_M_Comp02_329x155_: View { // enable shadow
                             
                         case 2...9:
                             Text("D+")
-                                .font(.custom("Inter-Bold", size: 107.0))
+                                .font(.custom("Inter-Bold", size: 112.0))
                                 .frame(width: 400, height: 100, alignment: .leading)
                                 .shadow(color: Color("ddayBlack").opacity(0.3), radius: 2.2, x: 0.6, y: 4)
                                 .position(x: 193, y: 108)
@@ -409,16 +409,15 @@ struct WidgetView_Single01_M_Comp02_329x155_: View { // enable shadow
                                 .rotationEffect(.degrees(-10))
                                 .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayBlack"))
                             
-//                        Text("\(ddayNumber)")
-                            Text("904")
-                                .font(.custom("Inter-Bold", size: 112.0))
-                                .frame(width: 400, height: 100, alignment: .leading)
-                                .shadow(color: Color("ddayBlack").opacity(0.3), radius: 2.2, x: 0.6, y: 4)
-                                .position(x: 325, y: 108)
-                                .multilineTextAlignment(.leading)
-                                .kerning(-10)
-                                .rotationEffect(.degrees(-10))
-                                .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayBlack"))
+                            Text("\(ddayNumber)")
+                                    .font(.custom("Inter-Bold", size: 112.0))
+                                    .frame(width: 400, height: 100, alignment: .leading)
+                                    .shadow(color: Color("ddayBlack").opacity(0.3), radius: 2.2, x: 0.6, y: 4)
+                                    .position(x: 325, y: 108)
+                                    .multilineTextAlignment(.leading)
+                                    .kerning(-10)
+                                    .rotationEffect(.degrees(-10))
+                                    .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayBlack"))
                         
                         default:
                             Text("Default ES01-1-2")
@@ -674,7 +673,7 @@ struct WidgetView_Single01_M_Comp02_329x155_: View { // enable shadow
                                             .font(.custom("Inter-Bold", size: 98.0))
                                             .frame(width: 400, height: 100, alignment: .leading)
                                             .shadow(color: Color("ddayBlack").opacity(0.3), radius: 2.2, x: 0.6, y: 4)
-                                            .position(x: 189, y: 108)
+                                            .position(x: 192, y: 108)
                                             .multilineTextAlignment(.leading)
                                             .rotationEffect(.degrees(-10))
                                             .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayBlack"))
@@ -683,7 +682,7 @@ struct WidgetView_Single01_M_Comp02_329x155_: View { // enable shadow
                                             .font(.custom("Inter-ExtraBold", size: 88.0))
                                             .frame(width: 400, height: 100, alignment: .leading)
                                             .shadow(color: Color("ddayBlack").opacity(0.3), radius: 2.2, x: 0.6, y: 4)
-                                            .position(x: 252, y: 102)
+                                            .position(x: 255, y: 102)
                                             .multilineTextAlignment(.leading)
                                             .rotationEffect(.degrees(-10))
                                             .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayBlack"))
@@ -692,7 +691,7 @@ struct WidgetView_Single01_M_Comp02_329x155_: View { // enable shadow
                                             .font(.custom("Inter-Bold", size: 94.0))
                                             .frame(width: 400, height: 100, alignment: .leading)
                                             .shadow(color: Color("ddayBlack").opacity(0.3), radius: 2.2, x: 0.6, y: 4)
-                                            .position(x: 303, y: 108)
+                                            .position(x: 306, y: 108)
                                             .multilineTextAlignment(.leading)
                                             .kerning(-7)
                                             .rotationEffect(.degrees(-10))
@@ -892,13 +891,12 @@ struct WidgetView_Single01_M_Comp02_329x155_: View { // enable shadow
                     Text("Default Error S01-1")
                 }
                 
-                
                 // Date
                 GeometryReader { metrics in
-                    Text(ddaySymbolMenu[safe: 0]?.ddayDate ?? "2023.12.31")
-                        .font(.custom("Inter-Bold", size: 12.0))
+                    Text(ddaySymbolMenu[safe: 0]?.ddayDate ?? "0000.00.00")
+                        .font(.custom("Inter-Bold", size: 10.0))
                         .frame(width: 300, height: 20, alignment: .trailing)
-                        .position(x: metrics.size.width * 0.46, y: metrics.size.height * 0.787)
+                        .position(x: metrics.size.width * 0.47, y: metrics.size.height * 0.765)
                         .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayBlack"))
                 }
             }
