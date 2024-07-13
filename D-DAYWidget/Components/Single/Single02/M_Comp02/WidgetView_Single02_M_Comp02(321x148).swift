@@ -17,7 +17,7 @@ struct WidgetView_Single02_M_Comp02_321x148_: View { // enable shadow
         
         let localizedKey = LocalizedStringKey("길게 눌러서 디데이 추가하기")
         let isTodayCounted: String = ddaySymbolMenu[safe: 0]?.ddayIsCountdown ?? "false"
-        let dateInt = CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu[safe: 0]?.ddayDate ??  "2024.02.16"), isTodayCounted: isTodayCounted)
+        let dateInt = CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu[safe: 0]?.ddayDate ??  "2025.12.25"), isTodayCounted: isTodayCounted)
         
         let unsignedDateInt = CustomFunctions().dateIntSign(dateIntParam: dateInt)
         
@@ -122,33 +122,33 @@ struct WidgetView_Single02_M_Comp02_321x148_: View { // enable shadow
                         
                     case 0...4:
                         Text(ddaySymbolMenu[safe: 0]?.ddayTitle ?? localizedKey.stringValue())
-                            .font(.custom("Inter-Bold", size: 21.0))
-                            .frame(width: 90, height: 70, alignment: .topTrailing)
-                            .position(x: metrics.size.width * 0.808, y: metrics.size.height * 0.43)
+                            .font(.custom("Inter-Bold", size: 18.0))
+                            .frame(width: 45, height: 80, alignment: .topTrailing)
+                            .position(x: metrics.size.width * 0.852, y: metrics.size.height * 0.459)
                             .multilineTextAlignment(.trailing)
                             .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
                         
                     case 5...6:
                         Text(ddaySymbolMenu[safe: 0]?.ddayTitle ?? localizedKey.stringValue())
-                            .font(.custom("Inter-Bold", size: 18.0))
+                            .font(.custom("Inter-Bold", size: 15.0))
                             .frame(width: 60, height: 70, alignment: .topTrailing)
-                            .position(x: metrics.size.width * 0.855, y: metrics.size.height * 0.421)
+                            .position(x: metrics.size.width * 0.827, y: metrics.size.height * 0.427)
                             .multilineTextAlignment(.trailing)
                             .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
                         
                     case 7...10:
                         Text(ddaySymbolMenu[safe: 0]?.ddayTitle ?? localizedKey.stringValue())
-                            .font(.custom("Inter-Bold", size: 16.0))
+                            .font(.custom("Inter-Bold", size: 14.0))
                             .frame(width: 60, height: 70, alignment: .topTrailing)
-                            .position(x: metrics.size.width * 0.849, y: metrics.size.height * 0.42)
+                            .position(x: metrics.size.width * 0.828, y: metrics.size.height * 0.428)
                             .multilineTextAlignment(.trailing)
                             .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
                         
                     case 11...14:
                         Text(ddaySymbolMenu[safe: 0]?.ddayTitle ?? localizedKey.stringValue())
-                            .font(.custom("Inter-Bold", size: 15.0))
+                            .font(.custom("Inter-Bold", size: 13.0))
                             .frame(width: 65, height: 70, alignment: .topTrailing)
-                            .position(x: metrics.size.width * 0.84, y: metrics.size.height * 0.418)
+                            .position(x: metrics.size.width * 0.82, y: metrics.size.height * 0.418)
                             .multilineTextAlignment(.trailing)
                             .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
                         
@@ -156,7 +156,7 @@ struct WidgetView_Single02_M_Comp02_321x148_: View { // enable shadow
                         Text(ddaySymbolMenu[safe: 0]?.ddayTitle ?? localizedKey.stringValue())
                             .font(.custom("Inter-Bold", size: 12.0))
                             .frame(width: 65, height: 70, alignment: .topTrailing)
-                            .position(x: metrics.size.width * 0.84, y: metrics.size.height * 0.415)
+                            .position(x: metrics.size.width * 0.82, y: metrics.size.height * 0.415)
                             .multilineTextAlignment(.trailing)
                             .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
                         
@@ -365,10 +365,10 @@ struct WidgetView_Single02_M_Comp02_321x148_: View { // enable shadow
                 
                 // Date
                 GeometryReader { metrics in
-                    Text(ddaySymbolMenu[safe: 0]?.ddayDate ?? "2023.12.28")
-                        .font(.custom("Inter-Bold", size: 10.0))
-                        .frame(width: 30, height: 70, alignment: .trailing)
-                        .position(x: metrics.size.width * 0.9, y: metrics.size.height * 0.72)
+                    Text(ddaySymbolMenu[safe: 0]?.ddayDate ?? "0000.00.00")
+                        .font(.custom("Inter-Bold", size: 9.0))
+                        .frame(width: 27, height: 70, alignment: .trailing)
+                        .position(x: metrics.size.width * 0.88, y: metrics.size.height * 0.7)
                         .multilineTextAlignment(.leading)
                         .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
                 }

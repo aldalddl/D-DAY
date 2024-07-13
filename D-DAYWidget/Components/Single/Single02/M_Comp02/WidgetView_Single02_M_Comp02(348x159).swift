@@ -16,7 +16,7 @@ struct WidgetView_Single02_M_Comp02_348x159_: View { // enable shadow
     var body: some View {
         let localizedKey = LocalizedStringKey("길게 눌러서 디데이 추가하기")
         let isTodayCounted: String = ddaySymbolMenu[safe: 0]?.ddayIsCountdown ?? "false"
-        let dateInt = CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu[safe: 0]?.ddayDate ??  "2024.02.16"), isTodayCounted: isTodayCounted)
+        let dateInt = CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu[safe: 0]?.ddayDate ??  "2025.12.25"), isTodayCounted: isTodayCounted)
 
         let unsignedDateInt = CustomFunctions().dateIntSign(dateIntParam: dateInt)
         
@@ -365,7 +365,7 @@ struct WidgetView_Single02_M_Comp02_348x159_: View { // enable shadow
                 
                 // Date
                 GeometryReader { metrics in
-                    Text(ddaySymbolMenu[safe: 0]?.ddayDate ?? "2025.12.25")
+                    Text(ddaySymbolMenu[safe: 0]?.ddayDate ?? "0000.00.00")
                         .font(.custom("Inter-Bold", size: 10.0))
                         .frame(width: 32, height: 70, alignment: .trailing)
                         .position(x: metrics.size.width * 0.891, y: metrics.size.height * 0.73)

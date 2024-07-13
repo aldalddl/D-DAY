@@ -204,7 +204,7 @@ struct WidgetView_Multi05_L_Comp01_329x345_: View { // disable shadow
                 case 10...14:
                     Text(ddaySymbolMenu[safe: 1]?.ddayTitle ?? localizedKey.stringValue())
                         .font(.custom("Inter-Bold", size: 12.0))
-                        .frame(width: 90, height: 55, alignment: .topTrailing)
+                        .frame(width: 90, height: 55, alignment: .topLeading)
                         .multilineTextAlignment(.leading)
                         .padding(EdgeInsets(top: 10, leading: 0, bottom: 0, trailing: 203))
                         .lineLimit(3)
@@ -213,7 +213,7 @@ struct WidgetView_Multi05_L_Comp01_329x345_: View { // disable shadow
                 case 15...:
                     Text(ddaySymbolMenu[safe: 1]?.ddayTitle ?? localizedKey.stringValue())
                         .font(.custom("Inter-Bold", size: 11.0))
-                        .frame(width: 90, height: 55, alignment: .topTrailing)
+                        .frame(width: 90, height: 55, alignment: .topLeading)
                         .multilineTextAlignment(.leading)
                         .padding(EdgeInsets(top: 10, leading: 0, bottom: 0, trailing: 203))
                         .lineLimit(3)

@@ -27,7 +27,7 @@ struct WidgetView_Single01_S_Comp02_148x148_: View { // enable shadow
                 switch ddayDorPlus {
                 case "D":
                     Text("D")
-                        .position(x: 12, y: -26)
+                        .position(x: 14, y: -26)
                         .frame(width: 85, height: 36, alignment: .leading)
                         .shadow(color: Color("ddayBlack").opacity(0.3), radius: 2.2, x: 0.6, y: 4)
                         .font(.custom("Inter-Bold", size: 103))
@@ -57,38 +57,31 @@ struct WidgetView_Single01_S_Comp02_148x148_: View { // enable shadow
                     // Title
                     switch (ddaySymbolMenu[safe: 0]?.ddayTitle ?? localizedKey.stringValue()).count {
                         
-                    case ...3:
+                    case ...4:
                         Text(ddaySymbolMenu[safe: 0]?.ddayTitle ?? localizedKey.stringValue())
                             .frame(width: 60, height: 50, alignment: .topTrailing)
-                            .position(x: metrics.size.width * 0.7, y: metrics.size.height * 0.32)
-                            .font(.custom("Inter-Bold", size: 16.0))
-                            .multilineTextAlignment(.trailing)
-                        
-                    case 4:
-                        Text(ddaySymbolMenu[safe: 0]?.ddayTitle ?? localizedKey.stringValue())
-                            .frame(width: 60, height: 50, alignment: .topTrailing)
-                            .position(x: metrics.size.width * 0.71, y: metrics.size.height * 0.32)
-                            .font(.custom("Inter-Bold", size: 14.0))
+                            .position(x: metrics.size.width * 0.7, y: metrics.size.height * 0.335)
+                            .font(.custom("Inter-Bold", size: 13.0))
                             .multilineTextAlignment(.trailing)
                         
                     case 5...10:
                         Text(ddaySymbolMenu[safe: 0]?.ddayTitle ?? localizedKey.stringValue())
-                            .frame(width: 60, height: 50, alignment: .topTrailing)
-                            .position(x: metrics.size.width * 0.695, y: metrics.size.height * 0.3)
-                            .font(.custom("Inter-Bold", size: 13.0))
+                            .frame(width: 55, height: 50, alignment: .topTrailing)
+                            .position(x: metrics.size.width * 0.7, y: metrics.size.height * 0.325)
+                            .font(.custom("Inter-Bold", size: 12.0))
                             .multilineTextAlignment(.trailing)
                         
                     case 11...14:
                         Text(ddaySymbolMenu[safe: 0]?.ddayTitle ?? localizedKey.stringValue())
                             .frame(width: 60, height: 50, alignment: .topTrailing)
-                            .position(x: metrics.size.width * 0.7, y: metrics.size.height * 0.31)
+                            .position(x: metrics.size.width * 0.7, y: metrics.size.height * 0.34)
                             .font(.custom("Inter-Bold", size: 11.0))
                             .multilineTextAlignment(.trailing)
                        
                    case 15...:
                        Text(ddaySymbolMenu[safe: 0]?.ddayTitle ?? localizedKey.stringValue())
-                           .frame(width: 60, height: 50, alignment: .topTrailing)
-                           .position(x: metrics.size.width * 0.7, y: metrics.size.height * 0.29)
+                           .frame(width: 55, height: 50, alignment: .topTrailing)
+                           .position(x: metrics.size.width * 0.7, y: metrics.size.height * 0.315)
                            .font(.custom("Inter-Bold", size: 10.0))
                            .multilineTextAlignment(.trailing)
                         
@@ -134,7 +127,7 @@ struct WidgetView_Single01_S_Comp02_148x148_: View { // enable shadow
                             .position(x: 107, y: 102)
                             .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
                         
-                    case 154, 164, 184, 194:
+                    case 100, 154, 164, 184, 194, 134:
                         Text("\(dateNumber)")
                             .frame(width: 230, alignment: .leading)
                             .font(.custom("Inter-Bold", size: 100.0))
@@ -172,7 +165,7 @@ struct WidgetView_Single01_S_Comp02_148x148_: View { // enable shadow
                             .position(x: 110, y: 100)
                             .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
                         
-                    case 234, 254, 264, 284, 294:
+                    case 200, 234, 254, 264, 284, 294:
                         Text("\(dateNumber)")
                             .frame(width: 230, alignment: .leading)
                             .font(.custom("Inter-Bold", size: 89.0))
@@ -209,7 +202,7 @@ struct WidgetView_Single01_S_Comp02_148x148_: View { // enable shadow
                             .position(x: 109, y: 100)
                             .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
                         
-                    case 544, 564, 584, 594, 624, 644, 664, 684, 694, 844, 854, 864, 884, 894:
+                    case 544, 564, 584, 594, 624, 644, 664, 684, 694, 844, 854, 864, 884, 894, 300, 400, 500, 600, 700, 800:
                         Text("\(dateNumber)")
                             .frame(width: 230, alignment: .leading)
                             .font(.custom("Inter-Bold", size: 86.0))
@@ -341,7 +334,6 @@ struct WidgetView_Single01_S_Comp02_148x148_: View { // enable shadow
                         Text("\(dateNumber)")
                             .frame(width: 270, alignment: .leading)
                             .font(.custom("Inter-Bold", size: 82.0))
-                            .shadow(color: Color("ddayBlack").opacity(0.3), radius: 2.2, x: 0.6, y: 4)
                             .multilineTextAlignment(.leading)
                             .kerning(-7)
                             .rotationEffect(.degrees(-10))

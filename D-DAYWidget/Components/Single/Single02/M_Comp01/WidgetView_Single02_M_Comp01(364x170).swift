@@ -350,7 +350,7 @@ struct WidgetView_Single02_M_Comp01_364x170_: View { // disable shadow
                     Text(ddaySymbolMenu[safe: 0]?.ddayDate ?? "0000.00.00")
                         .font(.custom("Inter-Bold", size: 9.0))
                         .frame(width: 30, height: 70, alignment: .trailing)
-                        .position(x: 320, y: 146)
+                        .position(x: 320, y: 144)
                         .multilineTextAlignment(.leading)
                         .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
                 }

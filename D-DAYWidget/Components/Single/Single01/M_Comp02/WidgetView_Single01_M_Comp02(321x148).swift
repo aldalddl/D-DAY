@@ -29,34 +29,35 @@ struct WidgetView_Single01_M_Comp02_321x148_: View { // enable shadow
                         
                     case ...5:
                         Text(ddaySymbolMenu[safe: 0]?.ddayTitle ?? localizedKey.stringValue())
-                            .font(.custom("Inter-Bold", size: 20.0))
+                            .font(.custom("Inter-Bold", size: 16.0))
                             .frame(width: 200, height: 20, alignment: .topLeading)
-                            .position(x: metrics.size.width * 0.388, y: metrics.size.height * 0.27)
+                            .position(x: metrics.size.width * 0.4, y: metrics.size.height * 0.275)
                         
                     case 6...7:
                         Text(ddaySymbolMenu[safe: 0]?.ddayTitle ?? localizedKey.stringValue())
-                            .font(.custom("Inter-Bold", size: 17.0))
+                            .font(.custom("Inter-Bold", size: 15.0))
                             .frame(width: 200, height: 20, alignment: .topLeading)
-                            .position(x: metrics.size.width * 0.38, y: metrics.size.height * 0.268)
+                            .position(x: metrics.size.width * 0.383, y: metrics.size.height * 0.27)
                             
                     case 8...10:
                         Text(ddaySymbolMenu[safe: 0]?.ddayTitle ?? localizedKey.stringValue())
-                            .font(.custom("Inter-Bold", size: 16.0))
+                            .font(.custom("Inter-Bold", size: 14.0))
                             .frame(width: 200, height: 20, alignment: .topLeading)
-                            .position(x: metrics.size.width * 0.376, y: metrics.size.height * 0.268)
+                            .position(x: metrics.size.width * 0.388, y: metrics.size.height * 0.27)
                         
                     case 11...14:
                         Text(ddaySymbolMenu[safe: 0]?.ddayTitle ?? localizedKey.stringValue())
-                            .font(.custom("Inter-Bold", size: 14.0))
+                            .font(.custom("Inter-Bold", size: 13.0))
                             .frame(width: 200, height: 20, alignment: .topLeading)
-                            .position(x: metrics.size.width * 0.37, y: metrics.size.height * 0.268)
+                            .position(x: metrics.size.width * 0.38, y: metrics.size.height * 0.268)
                         
                     case 15...:
                         Text(ddaySymbolMenu[safe: 0]?.ddayTitle ?? localizedKey.stringValue())
-                            .font(.custom("Inter-Bold", size: 13.0))
+                            .font(.custom("Inter-Bold", size: 12.0))
                             .frame(width: 200, height: 80, alignment: .topLeading)
                             .position(x: metrics.size.width * 0.37, y: metrics.size.height * 0.418)
                             .multilineTextAlignment(.leading)
+                        
                     default:
                         Text("Default E S01-1-0")
                         
@@ -65,7 +66,7 @@ struct WidgetView_Single01_M_Comp02_321x148_: View { // enable shadow
                 .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayBlack"))
                 
                 
-                let ddayNumber = CustomFunctions().dateIntSign(dateIntParam: dateInt)
+                let ddayNumber = CustomFunctions().dateIntSign00(dateIntParam: dateInt)
                 
                 // DayNumber
                 switch dateInt <= 0 {
@@ -790,63 +791,62 @@ struct WidgetView_Single01_M_Comp02_321x148_: View { // enable shadow
                             case 3: // 0갯수 = 3개
                                 switch (ddayNumber.components(separatedBy: "1").count - 1) { // 1의 갯수
                                 case 1: // 1갯수 1개 (ex. 1000)
-                                        Text("D")
-                                            .font(.custom("Inter-Bold", size: 98.0))
-                                            .frame(width: 400, height: 100, alignment: .leading)
-                                            .shadow(color: Color("ddayBlack").opacity(0.3), radius: 2.2, x: 0.6, y: 4)
-                                            .position(x: 191, y: 107)
-                                            .multilineTextAlignment(.leading)
-                                            .rotationEffect(.degrees(-10))
-                                            .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayBlack"))
-                                        
-                                        Text("+")
-                                            .font(.custom("Inter-ExtraBold", size: 88.0))
-                                            .frame(width: 400, height: 100, alignment: .leading)
-                                            .shadow(color: Color("ddayBlack").opacity(0.3), radius: 2.2, x: 0.6, y: 4)
-                                            .position(x: 253, y: 101)
-                                            .multilineTextAlignment(.leading)
-                                            .rotationEffect(.degrees(-10))
-                                            .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayBlack"))
-                                        
-                                        Text("\(ddayNumber)")
-                                            .font(.custom("Inter-Bold", size: 99.0))
-                                            .frame(width: 400, height: 100, alignment: .leading)
-                                            .shadow(color: Color("ddayBlack").opacity(0.3), radius: 2.2, x: 0.6, y: 4)
-                                            .position(x: 303, y: 107)
-                                            .multilineTextAlignment(.leading)
-                                            .kerning(-8)
-                                            .rotationEffect(.degrees(-10))
-                                            .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayBlack"))
+                                    Text("D")
+                                        .font(.custom("Inter-Bold", size: 98.0))
+                                        .frame(width: 400, height: 100, alignment: .leading)
+                                        .shadow(color: Color("ddayBlack").opacity(0.3), radius: 2.2, x: 0.6, y: 4)
+                                        .position(x: 191, y: 107)
+                                        .multilineTextAlignment(.leading)
+                                        .rotationEffect(.degrees(-10))
+                                        .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayBlack"))
+                                    
+                                    Text("+")
+                                        .font(.custom("Inter-ExtraBold", size: 88.0))
+                                        .frame(width: 400, height: 100, alignment: .leading)
+                                        .shadow(color: Color("ddayBlack").opacity(0.3), radius: 2.2, x: 0.6, y: 4)
+                                        .position(x: 253, y: 101)
+                                        .multilineTextAlignment(.leading)
+                                        .rotationEffect(.degrees(-10))
+                                        .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayBlack"))
+                                    
+                                    Text("\(ddayNumber)")
+                                        .font(.custom("Inter-Bold", size: 99.0))
+                                        .frame(width: 400, height: 100, alignment: .leading)
+                                        .shadow(color: Color("ddayBlack").opacity(0.3), radius: 2.2, x: 0.6, y: 4)
+                                        .position(x: 303, y: 107)
+                                        .multilineTextAlignment(.leading)
+                                        .kerning(-8)
+                                        .rotationEffect(.degrees(-10))
+                                        .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayBlack"))
                                     
                                 default: // 1갯수 0개 (ex. 9000)
-                                        Text("D")
-                                            .font(.custom("Inter-Bold", size: 94.0))
-                                            .frame(width: 400, height: 100, alignment: .leading)
-                                            .shadow(color: Color("ddayBlack").opacity(0.3), radius: 2.2, x: 0.6, y: 4)
-                                            .position(x: 191, y: 107)
-                                            .multilineTextAlignment(.leading)
-                                            .rotationEffect(.degrees(-10))
-                                            .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayBlack"))
-                                        
-                                        Text("+")
-                                            .font(.custom("Inter-ExtraBold", size: 84.0))
-                                            .frame(width: 400, height: 100, alignment: .leading)
-                                            .shadow(color: Color("ddayBlack").opacity(0.3), radius: 2.2, x: 0.6, y: 4)
-                                            .position(x: 250, y: 101)
-                                            .multilineTextAlignment(.leading)
-                                            .rotationEffect(.degrees(-10))
-                                            .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayBlack"))
-                                        
-                                        Text("\(ddayNumber)")
-                                            .font(.custom("Inter-Bold", size: 95.0))
-                                            .frame(width: 400, height: 100, alignment: .leading)
-                                            .shadow(color: Color("ddayBlack").opacity(0.3), radius: 2.2, x: 0.6, y: 4)
-                                            .position(x: 298, y: 107)
-                                            .multilineTextAlignment(.leading)
-                                            .kerning(-8)
-                                            .rotationEffect(.degrees(-10))
-                                            .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayBlack"))
+                                    Text("D")
+                                        .font(.custom("Inter-Bold", size: 94.0))
+                                        .frame(width: 400, height: 100, alignment: .leading)
+                                        .shadow(color: Color("ddayBlack").opacity(0.3), radius: 2.2, x: 0.6, y: 4)
+                                        .position(x: 191, y: 107)
+                                        .multilineTextAlignment(.leading)
+                                        .rotationEffect(.degrees(-10))
+                                        .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayBlack"))
                                     
+                                    Text("+")
+                                        .font(.custom("Inter-ExtraBold", size: 84.0))
+                                        .frame(width: 400, height: 100, alignment: .leading)
+                                        .shadow(color: Color("ddayBlack").opacity(0.3), radius: 2.2, x: 0.6, y: 4)
+                                        .position(x: 250, y: 101)
+                                        .multilineTextAlignment(.leading)
+                                        .rotationEffect(.degrees(-10))
+                                        .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayBlack"))
+                                    
+                                    Text("\(ddayNumber)")
+                                        .font(.custom("Inter-Bold", size: 95.0))
+                                        .frame(width: 400, height: 100, alignment: .leading)
+                                        .shadow(color: Color("ddayBlack").opacity(0.3), radius: 2.2, x: 0.6, y: 4)
+                                        .position(x: 298, y: 107)
+                                        .multilineTextAlignment(.leading)
+                                        .kerning(-8)
+                                        .rotationEffect(.degrees(-10))
+                                        .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayBlack"))
                                 }
                                 
                             default:
@@ -894,10 +894,10 @@ struct WidgetView_Single01_M_Comp02_321x148_: View { // enable shadow
                 
                 // Date
                 GeometryReader { metrics in
-                    Text(ddaySymbolMenu[safe: 0]?.ddayDate ?? "2023.12.31")
-                        .font(.custom("Inter-Bold", size: 11.0))
+                    Text(ddaySymbolMenu[safe: 0]?.ddayDate ?? "0000.00.00")
+                        .font(.custom("Inter-Bold", size: 10.0))
                         .frame(width: 300, height: 20, alignment: .trailing)
-                        .position(x: metrics.size.width * 0.464, y: metrics.size.height * 0.768)
+                        .position(x: metrics.size.width * 0.464, y: metrics.size.height * 0.76)
                         .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayBlack"))
                 }
             }
