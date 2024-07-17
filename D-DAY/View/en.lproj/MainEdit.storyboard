@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -218,7 +218,7 @@
                                                 <state key="normal" title="Language"/>
                                             </button>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bbc-W9-gBM">
-                                                <rect key="frame" x="35" y="560" width="331" height="150.33333333333337"/>
+                                                <rect key="frame" x="35" y="560" width="331" height="165"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h3I-gb-NPl">
                                                         <rect key="frame" x="-3" y="-15" width="136.66666666666666" height="73"/>
@@ -233,7 +233,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qIM-Uw-gCT">
-                                                        <rect key="frame" x="30" y="54.999999999999993" width="170.33333333333334" height="125.33333333333331"/>
+                                                        <rect key="frame" x="30" y="69.666666666666629" width="170.33333333333334" height="125.33333333333331"/>
                                                         <attributedString key="attributedText">
                                                             <fragment content="153">
                                                                 <attributes>
@@ -246,7 +246,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PREVIEW" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rca-St-3wi">
-                                                        <rect key="frame" x="241" y="20" width="70" height="19.333333333333329"/>
+                                                        <rect key="frame" x="241" y="25" width="70" height="19.333333333333329"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="70" id="gN2-jn-2jq"/>
                                                         </constraints>
@@ -255,7 +255,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2023.12.25" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Yw-xh-1US">
-                                                        <rect key="frame" x="281" y="104" width="30" height="26.333333333333343"/>
+                                                        <rect key="frame" x="281" y="118.66666666666661" width="30" height="26.333333333333329"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="30" id="AJM-9U-4dg"/>
                                                         </constraints>
@@ -266,12 +266,14 @@
                                                 </subviews>
                                                 <color key="backgroundColor" name="ddayNeonGreen"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" secondItem="Bbc-W9-gBM" secondAttribute="height" multiplier="11:5" id="27g-3q-iKH"/>
+                                                    <constraint firstAttribute="width" secondItem="Bbc-W9-gBM" secondAttribute="height" multiplier="12:8" priority="1" id="27g-3q-iKH"/>
                                                     <constraint firstItem="h3I-gb-NPl" firstAttribute="top" secondItem="Bbc-W9-gBM" secondAttribute="top" constant="-15" id="CHk-Fd-cqV"/>
-                                                    <constraint firstItem="rca-St-3wi" firstAttribute="top" secondItem="Bbc-W9-gBM" secondAttribute="top" constant="20" id="IVy-VD-zxR"/>
+                                                    <constraint firstItem="rca-St-3wi" firstAttribute="top" secondItem="Bbc-W9-gBM" secondAttribute="top" constant="25" id="IVy-VD-zxR"/>
                                                     <constraint firstItem="h3I-gb-NPl" firstAttribute="leading" secondItem="Bbc-W9-gBM" secondAttribute="leading" constant="-3" id="Lc7-dr-XYE"/>
+                                                    <constraint firstAttribute="height" constant="165" id="TxM-Xx-tS2"/>
                                                     <constraint firstAttribute="bottom" secondItem="6Yw-xh-1US" secondAttribute="bottom" constant="20" id="ZS3-Sa-w3v"/>
                                                     <constraint firstAttribute="trailing" secondItem="6Yw-xh-1US" secondAttribute="trailing" constant="20" id="ash-AV-jRx"/>
+                                                    <constraint firstAttribute="width" relation="lessThanOrEqual" priority="100" constant="350" id="cG6-IP-Pqy"/>
                                                     <constraint firstAttribute="trailing" secondItem="rca-St-3wi" secondAttribute="trailing" constant="20" id="ijU-HH-BG6"/>
                                                     <constraint firstAttribute="bottom" secondItem="qIM-Uw-gCT" secondAttribute="bottom" constant="-30" id="jJl-4Y-AHk"/>
                                                     <constraint firstItem="qIM-Uw-gCT" firstAttribute="leading" secondItem="Bbc-W9-gBM" secondAttribute="leading" constant="30" id="zy4-kU-rmC"/>
@@ -311,7 +313,7 @@
                                             <constraint firstItem="iUS-yc-hRX" firstAttribute="top" secondItem="1Br-7S-n7q" secondAttribute="bottom" constant="10" id="mS5-cq-Haa"/>
                                             <constraint firstItem="AaW-Va-7nb" firstAttribute="bottom" secondItem="iUS-yc-hRX" secondAttribute="bottom" constant="50" id="oaC-NB-kxu"/>
                                             <constraint firstItem="kxd-xi-5o5" firstAttribute="leading" secondItem="AaW-Va-7nb" secondAttribute="trailing" constant="10" id="qrA-QG-IqF"/>
-                                            <constraint firstAttribute="trailing" secondItem="Bbc-W9-gBM" secondAttribute="trailing" constant="28" id="sKG-MG-T43"/>
+                                            <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="Bbc-W9-gBM" secondAttribute="trailing" priority="10" constant="28" id="sKG-MG-T43"/>
                                             <constraint firstItem="l6J-nq-zuL" firstAttribute="leading" secondItem="i0L-B7-2Sk" secondAttribute="leading" id="y5U-4k-f29"/>
                                         </constraints>
                                     </view>

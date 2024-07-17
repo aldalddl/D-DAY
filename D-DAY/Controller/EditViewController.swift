@@ -248,17 +248,17 @@ extension EditViewController {
         switch lan {
         case "English":
             self.mediumDday.text = "Dday"
-            self.mediumDday.font = UIFont(name: "Inter-Bold", size: 69.0)
+            self.mediumDday.font = UIFont(name: "Inter-Bold", size: 82.0)
             self.mediumDday.addCharacterSpacing(-0.03)
             self.mediumDday.transform = CGAffineTransform(rotationAngle: .pi * -0.08)
             
             self.mediumDday.bottomAnchor.constraint(
-                equalTo: self.mediumView.bottomAnchor, constant: -70
+                equalTo: self.mediumView.bottomAnchor, constant: -82
             ).isActive = true
             
         case "Korean":
             self.mediumDday.text = "디데이"
-            self.mediumDday.font = UIFont(name: "Inter-Bold", size: 68.0)
+            self.mediumDday.font = UIFont(name: "Inter-Bold", size: 78.0)
             self.mediumDday.addCharacterSpacing(-0.03)
             self.mediumDday.transform = CGAffineTransform(rotationAngle: .pi * -0.05)
             
@@ -268,7 +268,7 @@ extension EditViewController {
             
         case "Japanese":
             self.mediumDday.text = "ディ-デイ"
-            self.mediumDday.font = UIFont(name: "Inter-Bold", size: 62.0)
+            self.mediumDday.font = UIFont(name: "Inter-Bold", size: 65.0)
             self.mediumDday.addCharacterSpacing(-0.15)
             self.mediumDday.transform = CGAffineTransform(rotationAngle: .pi * -0.05)
             
