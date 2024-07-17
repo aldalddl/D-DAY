@@ -460,7 +460,7 @@ struct WidgetView_Single01_M_Comp02_pad132x132_: View { // enable shadow
                                         .font(.custom("Inter-Bold", size: 100.0))
                                         .frame(width: 500, height: 100, alignment: .leading)
                                         .shadow(color: Color("ddayBlack").opacity(0.3), radius: 2.2, x: 0.6, y: 4)
-                                        .position(x: 356, y: 108)
+                                        .position(x: 361, y: 108)
                                         .multilineTextAlignment(.leading)
                                         .kerning(-8)
                                         .rotationEffect(.degrees(-10))

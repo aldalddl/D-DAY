@@ -429,7 +429,7 @@ struct WidgetView_Single01_M_Comp01_pad132x132_: View { // disable shadow
                                     Text("\(ddayNumber)")
                                         .font(.custom("Inter-Bold", size: 100.0))
                                         .frame(width: 500, height: 100, alignment: .leading)
-                                        .position(x: 356, y: 108)
+                                        .position(x: 361, y: 108)
                                         .multilineTextAlignment(.leading)
                                         .kerning(-8)
                                         .rotationEffect(.degrees(-10))
