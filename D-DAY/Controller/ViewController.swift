@@ -38,10 +38,6 @@ class ViewController: UIViewController, CALayerDelegate {
         super.viewDidLoad()
         
         titleView.layer.cornerRadius = 20
-        titleView.layer.shadowColor = UIColor.gray.cgColor
-        titleView.layer.shadowOpacity = 0.8
-        titleView.layer.shadowOffset = CGSize(width: 3, height: 3)
-        titleView.layer.shadowRadius = 2
         
         tableView.delegate = self
         tableView.dataSource = self
@@ -59,16 +55,16 @@ class ViewController: UIViewController, CALayerDelegate {
         addButton.layer.shadowRadius = 3
 
         gradient = CAGradientLayer()
-        gradient.colors = [UIColor.black.cgColor, UIColor.black.cgColor, UIColor.black.cgColor, UIColor.clear.cgColor]
-        gradient.locations = [0, 0.1, 0.9, 1]
-        gradient.delegate = self
-        tableView.layer.mask = gradient
+//        gradient.colors = [UIColor.black.cgColor, UIColor.black.cgColor, UIColor.black.cgColor, UIColor.clear.cgColor]
+//        gradient.locations = [0, 0.1, 0.9, 1]
+//        gradient.delegate = self
+//        tableView.layer.mask = gradient
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
 
-        gradient.colors = [UIColor.black.cgColor, UIColor.black.cgColor, UIColor.black.cgColor, UIColor.clear.cgColor]
+//        gradient.colors = [UIColor.black.cgColor, UIColor.black.cgColor, UIColor.black.cgColor, UIColor.clear.cgColor]
 
         updateGradientFrame()
     }
@@ -253,24 +249,19 @@ extension ViewController: UIScrollViewDelegate {
         updateGradientFrame()
         
         if !isAnimationInProgress {
-            if scrollView.contentOffset.y > .zero &&
-                topViewHeightConstraint.constant > .zero { // 스크롤을 내리고 있을 때
-                
+            if scrollView.contentOffset.y > .zero { // 스크롤을 내리고 있을 때
                 scrollViewTopConstraint.constant = .zero
                 topViewHeightConstraint.constant = .zero
+                addButton.isHidden = true
                 
                 animateTopViewHeight()
-                
-                gradient.colors = [UIColor.black.cgColor, UIColor.black.cgColor, UIColor.black.cgColor, UIColor.clear.cgColor]
             }
-            else if scrollView.contentOffset.y <= .zero
-                        && topViewHeightConstraint.constant <= .zero { // 스크롤을 맨위로 다 올렸을 때
+            else if scrollView.contentOffset.y < .zero { // 스크롤을 맨위로 다 올렸을 때
                 scrollViewTopConstraint.constant = 20
                 topViewHeightConstraint.constant = viewHeight
+                addButton.isHidden = false
                 
                 animateTopViewHeight2()
-
-                gradient.colors = [UIColor.black.cgColor, UIColor.black.cgColor, UIColor.black.cgColor, UIColor.clear.cgColor]
             }
         }
     }
@@ -279,7 +270,7 @@ extension ViewController: UIScrollViewDelegate {
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         if (scrollView.contentOffset.y + 1) >= (scrollView.contentSize.height - scrollView.frame.size.height) {
             gradient.colors = [UIColor.clear.cgColor, UIColor.black.cgColor, UIColor.black.cgColor, UIColor.black.cgColor]
-        }
+            }
     }
     
     private func updateGradientFrame() {
@@ -301,7 +292,7 @@ extension ViewController: UIScrollViewDelegate {
             self.titleView.alpha = 0
             self.view.layoutIfNeeded()
         }, completion: { [weak self] (_) in
-            self?.navigationController?.navigationBar.barTintColor = self?.titleView.backgroundColor
+            self?.navigationController?.navigationBar.barTintColor = UIColor.white
             self?.isAnimationInProgress = false
         })
     }
